@@ -169,7 +169,7 @@ h2{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4vw,3.15rem
 .anniv-orbit,.anniv-chip,.anniv-eyebrow,.anniv-tagline{display:none}
 .anniv-frame,.anniv-panel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}
 .anniv-frame{width:min(370px,90%);height:520px;border:1px solid rgba(201,164,83,.75);border-radius:185px 185px 6px 6px}
-.anniv-frame::before{content:"";position:absolute;inset:26px;border:1px solid rgba(201,164,83,.4);border-radius:176px 176px 3px 3px}
+.anniv-frame::before{content:"";position:absolute;inset:9px;border:1px solid rgba(201,164,83,.4);border-radius:176px 176px 3px 3px}
 .anniv-frame::after{content:"";position:absolute;left:50%;top:-7px;width:13px;height:13px;margin-left:-6.5px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 14px rgba(232,209,142,.6)}
 .anniv-panel{width:calc(min(370px,90%) - 36px);height:484px;border-radius:167px 167px 2px 2px;
   background:
@@ -481,7 +481,7 @@ footer .contact svg{width:17px;height:17px;color:var(--gold)}
 .hero-stage{grid-template-columns:minmax(340px,.95fr) minmax(0,1.05fr);gap:3rem}
 .jubilee-badge-wrap{order:-1;min-height:600px}
 .hero-copy{justify-self:end}
-.anniv-frame{width:550px;height:550px;border-radius:50%}
+.anniv-frame{width:480px;height:480px;border-radius:50%}
 .anniv-frame::before{border-radius:50%}
 .anniv-panel{width:444px;height:444px;border-radius:50%}
 .anniv-orbit-one{display:block;position:absolute;left:50%;top:50%;width:540px;height:540px;margin:-270px 0 0 -270px;border-radius:50%;border:1px dashed rgba(201,164,83,.45);pointer-events:none;animation:orbit-spin 80s linear infinite;animation-play-state:var(--banner-play-state)}
@@ -552,7 +552,51 @@ footer .contact svg{width:17px;height:17px;color:var(--gold)}
 @media (max-width:640px){.sth-chakra{width:760px;height:760px;margin:-380px 0 0 -380px;opacity:.1}}
 @media (prefers-reduced-motion:reduce){.sth-chakra{animation:none}}
 
-.anniv-orbit-one{display:none}.sth-chakra{opacity:.1}.anniv-fifty{font-size:7.4rem}.anniv-laurel{width:350px;transform:translate(-50%,-50%)}@media (max-width:1080px){.anniv-fifty{font-size:6.4rem}.anniv-laurel{width:300px}}@media (max-width:640px){.anniv-fifty{font-size:5.2rem}.anniv-laurel{width:min(250px,66vw);transform:translate(-50%,-48%)}.anniv-center{padding-top:0}}
+
+.anniv-orbit-one{display:none}.sth-chakra{opacity:.1;width:1300px;height:1300px;margin:-650px 0 0 -650px}
+/* bigger medallion */
+.jubilee-badge-wrap{min-height:660px}
+.anniv-frame{width:590px;height:590px}
+.anniv-frame::before{inset:11px}
+.anniv-panel{width:546px;height:546px}
+.anniv-dates{font-size:1.12rem;margin-bottom:.5rem}
+.anniv-fifty{font-size:10rem}
+.anniv-years{font-size:2.3rem;margin:-.1rem 0 1.1rem}
+.anniv-golden{font-size:1.3rem;margin-bottom:.9rem}
+.anniv-rule{width:150px;margin-bottom:.9rem}
+.anniv-liberty{font-size:1.2rem}
+.anniv-laurel{width:450px;transform:translate(-50%,-54%)}
+.anniv-sparkles i:nth-child(1){left:4%;top:14%}.anniv-sparkles i:nth-child(3){left:2%;bottom:18%}
+@media (max-width:1180px){
+  .anniv-frame{width:520px;height:520px}.anniv-panel{width:480px;height:480px}
+  .anniv-fifty{font-size:8.6rem}.anniv-laurel{width:395px}.jubilee-badge-wrap{min-height:580px}
+}
+@media (max-width:1080px){
+  .anniv-frame{width:410px;height:410px}.anniv-panel{width:376px;height:376px}
+  .jubilee-badge-wrap{min-height:480px}
+  .anniv-fifty{font-size:6.8rem}.anniv-years{font-size:1.75rem;margin-bottom:.8rem}.anniv-golden{font-size:1rem;margin-bottom:.6rem}.anniv-rule{margin-bottom:.6rem}
+  .anniv-laurel{width:310px}.anniv-liberty{display:block;font-size:1.02rem}
+}
+@media (max-width:880px){
+  .anniv-frame{width:min(500px,90vw);height:min(500px,90vw)}.anniv-panel{width:calc(min(500px,90vw) - 40px);height:calc(min(500px,90vw) - 40px)}
+  .jubilee-badge-wrap{min-height:min(560px,100vw)}
+  .anniv-fifty{font-size:clamp(5.8rem,16vw,8.4rem)}.anniv-laurel{width:min(380px,68vw)}
+}
+@media (max-width:640px){
+  .jubilee-badge-wrap{min-height:400px}
+  .anniv-frame{width:94vw;height:94vw}.anniv-frame::before{inset:7px}
+  .anniv-panel{width:calc(94vw - 26px);height:calc(94vw - 26px)}
+  .sth-chakra{width:820px;height:820px;margin:-410px 0 0 -410px}
+  .anniv-center{padding-top:0}
+  .anniv-dates{font-size:.82rem;margin-bottom:.2rem}
+  .anniv-fifty{font-size:5.9rem}
+  .anniv-years{font-size:1.55rem;margin-bottom:.6rem}
+  .anniv-golden{font-size:.9rem;margin-bottom:.4rem}
+  .anniv-rule{display:block;width:90px;margin-bottom:.5rem}
+  .anniv-liberty{display:block;font-size:.88rem}
+  .anniv-laurel{width:min(275px,72vw);transform:translate(-50%,-50%)}
+}
+
 </style>
 </head>
 <body>
