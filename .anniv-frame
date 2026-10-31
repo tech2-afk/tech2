@@ -481,7 +481,7 @@ footer .contact svg{width:17px;height:17px;color:var(--gold)}
 .hero-stage{grid-template-columns:minmax(340px,.95fr) minmax(0,1.05fr);gap:3rem}
 .jubilee-badge-wrap{order:-1;min-height:600px}
 .hero-copy{justify-self:end}
-.anniv-frame{width:480px;height:480px;border-radius:50%}
+.anniv-frame{width:550px;height:550px;border-radius:50%}
 .anniv-frame::before{border-radius:50%}
 .anniv-panel{width:444px;height:444px;border-radius:50%}
 .anniv-orbit-one{display:block;position:absolute;left:50%;top:50%;width:540px;height:540px;margin:-270px 0 0 -270px;border-radius:50%;border:1px dashed rgba(201,164,83,.45);pointer-events:none;animation:orbit-spin 80s linear infinite;animation-play-state:var(--banner-play-state)}
