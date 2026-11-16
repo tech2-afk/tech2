@@ -337,6 +337,120 @@ footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
   #rsvp .rsvp-wrap{max-width:100%}
   #rsvp .rsvp-card{width:100%;padding:1.8rem 1.35rem 2rem;border-radius:20px}
 }
+
+/* Celebration details: same quiet white / soft gray / black / gold visual language as the rest of the site. */
+#details.details{
+  position:relative;overflow:visible;isolation:auto;
+  margin-top:5.5rem;
+  padding:clamp(1.75rem,3.8vw,3rem);
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:none;
+}
+#details.details::before{content:none;display:none}
+#details .details-heading{margin:0 0 2rem;max-width:900px}
+#details .label{
+  display:block;margin:0 0 .8rem;
+  color:var(--gold-dk);
+  font-family:var(--sans);font-size:.7rem;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;
+}
+#details .label::before{content:none;display:none}
+#details h2{
+  max-width:900px;margin:0;
+  color:var(--fg);
+  font-family:var(--serif);
+  font-size:clamp(2.25rem,4.4vw,3.3rem);
+  font-weight:600;
+  line-height:1.12;letter-spacing:-.025em;
+  text-wrap:balance;
+}
+#details .facts{
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);
+  gap:1rem;margin:0 0 1rem;
+  background:transparent;border:0;border-radius:0;
+  overflow:visible;box-shadow:none;
+}
+#details .fact,#details .fact+.fact{
+  display:flex;align-items:center;gap:1.05rem;
+  min-height:125px;min-width:0;margin:0;
+  padding:1.35rem clamp(1.2rem,2vw,1.65rem);
+  background:var(--card);border:1px solid var(--line);
+  border-radius:18px;box-shadow:none;
+}
+#details .fact .ic,#details .venue-icon{
+  width:52px;height:52px;flex:none;
+  display:grid;place-items:center;
+  border:0;border-radius:50%;
+  background:var(--gold-bg);color:var(--gold-dk);
+}
+#details .fact .ic svg,#details .venue-icon svg{width:23px;height:23px;stroke-width:1.7}
+#details .fact-text{min-width:0}
+#details .fact small,#details .venue-eyebrow{
+  display:block;margin:0 0 .25rem;
+  color:var(--muted);
+  font-family:var(--sans);font-size:.67rem;font-weight:600;
+  line-height:1.4;letter-spacing:.15em;text-transform:uppercase;
+}
+#details .fact b{
+  display:block;color:var(--fg);
+  font-family:var(--serif);font-size:clamp(1.18rem,1.8vw,1.45rem);
+  line-height:1.25;font-weight:600;letter-spacing:-.015em;
+}
+#details .venue-panel{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1.5rem;min-width:0;
+  padding:1.5rem clamp(1.2rem,2vw,1.65rem);
+  border:1px solid var(--line);border-radius:18px;
+  background:var(--card);box-shadow:none;color:var(--fg);
+}
+#details .venue-info{
+  display:flex;align-items:center;gap:1.05rem;
+  min-width:0;flex:1;
+}
+#details .venue-copy{min-width:0}
+#details .venue-copy h3{
+  margin:0 0 .2rem;color:var(--fg);
+  font-family:var(--serif);font-weight:600;
+  font-size:clamp(1.45rem,2.3vw,1.8rem);
+  line-height:1.2;letter-spacing:-.018em;
+}
+#details .venue-copy p{
+  margin:0;color:var(--muted);
+  font-family:var(--sans);font-size:.9rem;
+  line-height:1.65;letter-spacing:0;
+}
+#details #mapLink{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:50px;flex:none;margin:0;
+  padding:.95rem 1.4rem;
+  color:var(--on-fg);background:var(--fg);
+  border:1.5px solid var(--fg);border-radius:999px;
+  box-shadow:none;text-decoration:none;
+  font-family:var(--sans);font-size:.76rem;font-weight:700;
+  line-height:1.3;letter-spacing:.1em;text-transform:uppercase;
+  transition:opacity .2s ease;
+}
+#details #mapLink:hover{opacity:.86;transform:none;filter:none}
+#details #mapLink svg{width:18px;height:18px}
+@media(max-width:740px){
+  #details.details{padding:2.2rem 1.25rem;border-radius:22px}
+  #details .details-heading{margin-bottom:1.55rem}
+  #details h2{font-size:clamp(2.05rem,7vw,2.6rem)}
+  #details .facts{grid-template-columns:minmax(0,1fr)}
+  #details .fact,#details .fact+.fact{min-height:105px;padding:1.2rem 1.1rem}
+  #details .venue-panel{align-items:stretch;flex-direction:column;gap:1.25rem;padding:1.3rem 1.1rem}
+  #details .venue-info{align-items:flex-start}
+  #details #mapLink{width:100%;max-width:100%}
+}
+@media(max-width:380px){
+  #details.details{padding:1.7rem 1rem}
+  #details .venue-info,#details .fact{gap:.8rem}
+  #details .venue-icon,#details .fact .ic{width:46px;height:46px}
+  #details .venue-copy p{font-size:.84rem}
+}
+
 </style>
 </head>
 <body>
@@ -386,14 +500,31 @@ footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
 
 <div class="wrap">
 <div class="details" id="details">
-<p class="label">Celebration details</p>
-<h2>It would be our privilege to welcome you.</h2>
-<div class="facts">
-<div class="fact"><span class="ic"><i data-lucide="calendar"></i></span><div><small>Date</small><b data-c="date"></b></div></div>
-<div class="fact"><span class="ic"><i data-lucide="clock"></i></span><div><small>Time</small><b data-c="time"></b></div></div>
-<div class="fact"><span class="ic"><i data-lucide="map-pin"></i></span><div><small>Venue</small><b data-c="venue"></b></div></div>
-</div>
-<a class="btn btn-dark" href="#" id="mapLink" rel="noopener" target="_blank"><i data-lucide="navigation"></i>Get directions</a>
+  <div class="details-heading">
+    <p class="label">Celebration details</p>
+    <h2>It would be our privilege to welcome you.</h2>
+  </div>
+  <div class="facts" aria-label="Celebration date and time">
+    <div class="fact">
+      <span class="ic" aria-hidden="true"><i data-lucide="calendar-days"></i></span>
+      <div class="fact-text"><small>Date</small><b data-c="date"></b></div>
+    </div>
+    <div class="fact">
+      <span class="ic" aria-hidden="true"><i data-lucide="clock-3"></i></span>
+      <div class="fact-text"><small>Time</small><b data-c="time"></b></div>
+    </div>
+  </div>
+  <div class="venue-panel">
+    <div class="venue-info">
+      <span class="venue-icon" aria-hidden="true"><i data-lucide="map-pin"></i></span>
+      <div class="venue-copy">
+        <span class="venue-eyebrow">The venue</span>
+        <h3>Taj Skyline</h3>
+        <p>Sankalp Square III, Sindhu Bhavan Road<br>Shilaj, Ahmedabad, Gujarat 380059</p>
+      </div>
+    </div>
+    <a class="btn btn-gold venue-directions" id="mapLink" href="#" target="_blank" rel="noopener" aria-label="Get directions to Taj Skyline, Ahmedabad"><i data-lucide="navigation" aria-hidden="true"></i>Get directions</a>
+  </div>
 </div>
 </div>
 
@@ -484,9 +615,9 @@ footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
 
 <script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script><script>
 const CONFIG = {
-  date: "[Date]",
+  date: "Saturday, 2 January 2027",
   time: "5:30 PM onwards",
-  venue: "[Venue name and address]",
+  venue: "Taj Skyline, Sankalp Square III, Sindhu Bhavan Road, Shilaj, Ahmedabad, Gujarat 380059, India",
   phone: "[Phone number]",
   eventISO: "",
   maxGuests: 5
@@ -522,27 +653,11 @@ else map.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURICo
   tick(); setInterval(tick, 1000);
 })();
 
-$("shareBtn").addEventListener("click", async () => {
-  const url = location.href.split("#")[0];
-  const data = { title: "Liberty Publications Golden Jubilee Invitation 2027", text: "You are cordially invited to the Golden Jubilee celebration of Liberty Publications.", url };
-  try { if (navigator.share) { await navigator.share(data); return; } }
-  catch(e) { if (e && e.name === "AbortError") return; }
-  try {
-    await navigator.clipboard.writeText(url);
-    const btn = $("shareBtn"), oldTitle = btn.title;
-    btn.title = "Invitation link copied";
-    btn.setAttribute("aria-label", "Invitation link copied");
-    setTimeout(() => { btn.title = oldTitle || "Share invitation"; btn.setAttribute("aria-label", "Share this invitation"); }, 1800);
-  } catch(e) {
-    $("shareBtn").title = "Copy this page link from the address bar";
-  }
-});
-
 const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
 let reduceMotion = motionPreference.matches;
 let animationPausedByUser = false;
 let bannerInView = true;
-const banner = $("invitationBanner"), motionToggle = $("motionToggle");
+const banner = $("invitationBanner");
 
 const fwCanvas = $("heroFireworks"), fwCtx = fwCanvas && fwCanvas.getContext("2d");
 let fwParticles = [], fwRaf = null, fwLastBurst = 0, fwNextBurstAt = 0;
@@ -671,12 +786,8 @@ function syncDecorativeMotion(){
   const paused=reduceMotion||animationPausedByUser;
   banner.dataset.motion=paused||document.hidden||!bannerInView?"paused":"playing";
   document.documentElement.classList.toggle("decorative-motion-paused",paused||document.hidden);
-  motionToggle.setAttribute("aria-pressed",String(paused));motionToggle.disabled=reduceMotion;
-  const action=reduceMotion?"Animation off":paused?"Resume animation":"Pause animation";
-  $("motionLabel").textContent=action;motionToggle.title=action;
   if(paused||document.hidden)stopConfetti();syncFireworks();
 }
-motionToggle.addEventListener("click",()=>{if(reduceMotion)return;animationPausedByUser=!animationPausedByUser;syncDecorativeMotion();});
 const updateMotionPreference=()=>{reduceMotion=motionPreference.matches;syncDecorativeMotion();};
 if(typeof motionPreference.addEventListener==="function")motionPreference.addEventListener("change",updateMotionPreference);else if(typeof motionPreference.addListener==="function")motionPreference.addListener(updateMotionPreference);
 document.addEventListener("visibilitychange",syncDecorativeMotion);
