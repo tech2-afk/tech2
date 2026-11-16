@@ -821,33 +821,203 @@ function showAlreadySubmitted(data={}){
   $("alreadyResponse").textContent=response;$("alreadyPersons").textContent=coming?String(data.persons??data.guests??"—"):"0";$("alreadyArrival").textContent=coming?(data.arrivalTime||"—"):"—";$("alreadySubmittedAt").textContent=formatSubmittedAt(data.submittedAt);
   $("alreadyPersonsRow").hidden=!coming;$("alreadyArrivalRow").hidden=!coming;$("alreadySummary").hidden=false;showResponseStep("already");const p=$("alreadySubmittedPanel");if(p)p.focus();try{if(window.lucide)lucide.createIcons();}catch(e){}
 }
+/* Server-verified RSVP: the Google Sheet, never localStorage or an iframe load,
+   determines whether a response has been saved. */
+function clearSubmissionLock(){
+  if (!RSVP_LOCK_KEY) return;
+  try { localStorage.removeItem(RSVP_LOCK_KEY); } catch(e) {}
+}
+
+function showAttendStatus(message, error=true){
+  const step=document.querySelector('#rsvp .step[data-s="attend"]');
+  if (!step) return;
+  let notice=document.getElementById('attendStatusMessage');
+  if (!notice){
+    notice=document.createElement('p');
+    notice.id='attendStatusMessage';
+    notice.className='err';
+    notice.setAttribute('role','status');
+    step.appendChild(notice);
+  }
+  notice.textContent=message||'';
+  notice.style.color=error?'var(--err)':'var(--muted)';
+  notice.hidden=!message;
+}
+function showRsvpError(message){
+  if (state.attend === 'no'){
+    showResponseStep('attend');
+    showAttendStatus(message,true);
+  } else {
+    const error=$('submitError');
+    if (error){ error.textContent=message;error.hidden=false; }
+  }
+}
+
 function checkRemoteSubmission(){
-  if(!RSVP_GUEST_ID||!RSVP_ENDPOINT)return Promise.resolve(false);
+  if (!RSVP_GUEST_ID || !RSVP_ENDPOINT) {
+    return Promise.resolve({ok:false,error:''});
+  }
   return new Promise(resolve=>{
-    const cb="__libertyRsvpStatus_"+Date.now()+"_"+Math.random().toString(36).slice(2),script=document.createElement("script");let settled=false;
-    const finish=v=>{if(settled)return;settled=true;try{delete window[cb];script.remove();}catch(e){}resolve(v);};
-    window[cb]=result=>{if(result&&result.ok&&result.submitted){const data={response:result.response||"Submitted",persons:result.persons||0,arrivalTime:result.arrivalTime||"",submittedAt:result.submittedAt||""};saveSubmissionLock(data);showAlreadySubmitted(data);finish(true);}else finish(false);};
-    script.async=true;script.onerror=()=>finish(false);script.src=RSVP_ENDPOINT+(RSVP_ENDPOINT.includes("?")?"&":"?")+"id="+encodeURIComponent(RSVP_GUEST_ID)+"&check=1&callback="+encodeURIComponent(cb)+"&_="+Date.now();document.head.appendChild(script);setTimeout(()=>finish(false),4500);
+    const callback='__libertyRsvpVerify_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    const script=document.createElement('script');
+    let settled=false;
+    let timeoutId=null;
+    const finish=(result)=>{
+      if (settled) return;
+      settled=true;
+      if(timeoutId!==null) clearTimeout(timeoutId);
+      try { delete window[callback]; script.remove(); } catch(e){}
+      resolve(result);
+    };
+    window[callback]=result=>{
+      if (result && result.ok===true) finish(result);
+      else finish({ok:false,error:result?.error||'The RSVP service did not confirm the guest ID.'});
+    };
+    script.onerror=()=>finish({ok:false,error:'Unable to reach the RSVP service.'});
+    script.async=true;
+    script.src=RSVP_ENDPOINT+(RSVP_ENDPOINT.includes('?')?'&':'?')+
+      'id='+encodeURIComponent(RSVP_GUEST_ID)+'&check=1&callback='+encodeURIComponent(callback)+'&_='+Date.now();
+    timeoutId=setTimeout(()=>finish({ok:false,error:'The RSVP service did not respond. Please try again.'}),5000);
+    document.head.appendChild(script);
   });
 }
-function postRsvpToEndpoint(fields){
-  return new Promise(resolve=>{
-    const frameName="libertyRsvpFrame_"+Date.now(),iframe=document.createElement("iframe");iframe.name=frameName;iframe.style.display="none";iframe.setAttribute("aria-hidden","true");document.body.appendChild(iframe);
-    const form=document.createElement("form");form.method="POST";form.action=RSVP_ENDPOINT;form.target=frameName;form.style.display="none";
-    Object.entries(fields).forEach(([name,value])=>{const input=document.createElement("input");input.type="hidden";input.name=name;input.value=value==null?"":String(value);form.appendChild(input);});document.body.appendChild(form);
-    let done=false;const finish=()=>{if(done)return;done=true;setTimeout(()=>{try{form.remove();iframe.remove();}catch(e){}},250);resolve();};iframe.addEventListener("load",()=>setTimeout(finish,500),{once:true});form.submit();setTimeout(finish,2200);
+
+const waitForRsvp=(ms)=>new Promise(resolve=>setTimeout(resolve,ms));
+async function postRsvpToEndpoint(fields){
+  // No CORS-reading is attempted. A subsequent signed-by-Google-Sheet GET confirms the write.
+  const formData=new URLSearchParams();
+  Object.entries(fields).forEach(([key,value])=>formData.set(key,String(value??'')));
+  try {
+    await fetch(RSVP_ENDPOINT,{
+      method:'POST',mode:'no-cors',credentials:'omit',redirect:'follow',
+      body:formData,cache:'no-store'
+    });
+  } catch(e) {
+    // Some in-app browsers prevent the fetch; a standard form POST works as a fallback.
+    await postRsvpViaForm(fields);
+  }
+}
+
+function postRsvpViaForm(fields){
+  return new Promise((resolve,reject)=>{
+    const iframe=document.createElement('iframe');
+    const frameName='libertyRsvpSubmit_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    iframe.name=frameName;
+    iframe.style.display='none';
+    iframe.setAttribute('aria-hidden','true');
+    document.body.appendChild(iframe);
+    const form=document.createElement('form');
+    form.method='POST';form.action=RSVP_ENDPOINT;form.target=frameName;
+    form.style.display='none';
+    Object.entries(fields).forEach(([name,value])=>{
+      const input=document.createElement('input');input.type='hidden';
+      input.name=name;input.value=String(value??'');form.appendChild(input);
+    });
+    document.body.appendChild(form);
+    try {form.submit();}
+    catch(error){form.remove();iframe.remove();reject(error);return;}
+    // Do not treat the iframe's initial about:blank load as a successful submission.
+    // Keep the frame alive for the server to process the POST, then verify from Sheet.
+    setTimeout(()=>{try{form.remove();iframe.remove();}catch(e){}},12000);
+    setTimeout(resolve,1200);
   });
 }
+
+async function waitForConfirmedResponse(delays){
+  let last={ok:false,error:'The response has not appeared in the Google Sheet yet.'};
+  for(const delay of delays){
+    await waitForRsvp(delay);
+    const result=await checkRemoteSubmission();
+    last=result;
+    if(result?.ok && result.submitted && result.response) return result;
+    if(!result?.ok && /Guest ID not found|Invalid guest ID/i.test(result.error||'')) break;
+  }
+  return last;
+}
+
 async function submitSimpleResponse(){
-  if(submitting||confirmed||!state.attend)return;const yes=state.attend==="yes",payload={guestId:RSVP_GUEST_ID,attend:state.attend,guests:yes?state.guests:0,arrivalTime:yes?state.arrivalTime:"",website:$("website")?$("website").value:""},payloadKey=JSON.stringify(payload);
-  submitting=true;const btn=$("sendResponseBtn"),status=$("submitStatus"),error=$("submitError");if(btn){btn.disabled=true;btn.textContent="Sending…";}if(error){error.hidden=true;error.textContent="";}if(status){status.hidden=false;status.textContent="Sharing your response…";}
+  if (submitting || confirmed || !state.attend) return;
+  if (!RSVP_GUEST_ID || !RSVP_ENDPOINT){
+    showRsvpError('Unable to submit RSVP from this page.');
+    return;
+  }
+  const yes=state.attend==='yes';
+  submitting=true;
+  const btn=$('sendResponseBtn'),status=$('submitStatus'),error=$('submitError');
+  if(btn){btn.disabled=true;btn.textContent='Sending…';}
+  if(error){error.hidden=true;error.textContent='';}
+  showAttendStatus('');
+  if(yes){if(status){status.hidden=false;status.textContent='Confirming your response…';}}
+  else showAttendStatus('Confirming your response…',false);
   try{
-    if(!pendingAttempt||pendingAttempt.key!==payloadKey)pendingAttempt={key:payloadKey,id:createSubmissionId()};
-    if(RSVP_ENDPOINT&&RSVP_GUEST_ID){await postRsvpToEndpoint({id:RSVP_GUEST_ID,attending:yes?"Coming":"Not Coming",persons:String(yes?state.guests:0),arrivalTime:yes?formatArrivalTime12():"",submittedAt:new Date().toISOString()});}
-    else{const previewEntry={submissionId:pendingAttempt.id,...payload,submittedAt:new Date().toISOString()};try{const k="libertyGoldenJubileePreviewResponses",saved=JSON.parse(localStorage.getItem(k)||"[]");saved.push(previewEntry);localStorage.setItem(k,JSON.stringify(saved.slice(-100)));}catch(e){}}
-    if(status)status.hidden=true;saveSubmissionLock({response:yes?"Coming":"Not Coming",persons:yes?state.guests:0,arrivalTime:yes?formatArrivalTime12():"",submittedAt:new Date().toISOString()});showThankYou();
-  }catch(err){if(status)status.hidden=true;if(error){error.hidden=false;error.textContent=err&&err.message?err.message:"We couldn’t send your response. Please try again.";}if(btn){btn.disabled=false;btn.textContent="Try again";}}
-  finally{submitting=false;}
+    // Before writing, check the server's one-time lock, not a stale local lock.
+    const before=await checkRemoteSubmission();
+    if(!before.ok) throw new Error(before.error||'Could not connect to the RSVP service.');
+    if(before.submitted){
+      saveSubmissionLock(before);
+      showAlreadySubmitted(before);
+      return;
+    }
+
+    if(!pendingAttempt) pendingAttempt={id:createSubmissionId()};
+    const requested={
+      id:RSVP_GUEST_ID,
+      attending:yes?'Coming':'Not Coming',
+      persons:yes?state.guests:0,
+      arrivalTime:yes?formatArrivalTime12():'',
+      website:$('website')?.value||''
+    };
+    await postRsvpToEndpoint(requested);
+    let saved=await waitForConfirmedResponse([850,1350,1900]);
+    if(!saved?.ok || !saved.submitted){
+      // Retry the transport once by iframe. The Apps Script server lock prevents a duplicate.
+      await postRsvpViaForm(requested);
+      saved=await waitForConfirmedResponse([900,1600,2200]);
+    }
+    if(!saved?.ok || !saved.submitted){
+      throw new Error('Your response could not be verified in Google Sheets. Please retry after the RSVP service is updated.');
+    }
+    saveSubmissionLock(saved); // Only persist a verified server result.
+    const matches=saved.response===requested.attending &&
+      (!yes || Number(saved.persons)===state.guests);
+    if(matches) showThankYou();
+    else showAlreadySubmitted(saved);
+  }catch(err){
+    showRsvpError(err?.message||'We could not confirm your RSVP. Please try again.');
+  }finally{
+    submitting=false;
+    if(status)status.hidden=true;
+    if(confirmed) showAttendStatus('');
+    if(!confirmed && btn){btn.disabled=false;btn.textContent='Send response';}
+  }
+}
+
+async function initializeRsvp(){
+  showResponseStep('attend');
+  // Keep a general invitation view clean: no missing-link notice on page load.
+  // Submissions still require a valid guest ID and a server-confirmed save.
+  if (!RSVP_GUEST_ID || !RSVP_ENDPOINT){
+    showAttendStatus('');
+    return;
+  }
+  const choices=[...document.querySelectorAll('#rsvp [data-attend]')];
+  choices.forEach(button=>button.disabled=true);
+  showAttendStatus('Verifying your invitation…',false);
+  const cached=readSubmissionLock();
+  const result=await checkRemoteSubmission();
+  choices.forEach(button=>button.disabled=false);
+  if(result?.ok && result.submitted){
+    saveSubmissionLock(result);
+    showAlreadySubmitted(result);
+  }else if(result?.ok && !result.submitted){
+    // An old website version showed Thank You before the server saved anything.
+    // Clear such unverified local locks automatically; the guest may submit again.
+    if(cached) clearSubmissionLock();
+    showAttendStatus('');
+  }else{
+    // Network check failed. Never assume localStorage proves the server has saved a response.
+    showAttendStatus(result?.error||'Unable to verify RSVP status. Please try again.',true);
+  }
 }
 
 document.querySelectorAll("[data-attend]").forEach(b=>b.addEventListener("click",()=>{
@@ -870,7 +1040,7 @@ if(arrivalHour)arrivalHour.addEventListener("change",syncArrivalClock);if(arriva
 $("arrivalBackBtn").addEventListener("click",()=>showResponseStep("attend"));$("arrivalContinueBtn").addEventListener("click",()=>{syncArrivalClock();showResponseStep("guests");});
 $("sendResponseBtn").addEventListener("click",submitSimpleResponse);
 
-syncArrivalClock();renderCount();const existingLocalSubmission=readSubmissionLock();if(existingLocalSubmission)showAlreadySubmitted(existingLocalSubmission);else{showResponseStep("attend");checkRemoteSubmission();}
+syncArrivalClock();renderCount();initializeRsvp();
 try{if(window.lucide)lucide.createIcons();}catch(e){}
 </script></body>
 </html>
