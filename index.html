@@ -1,862 +1,505 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Golden Jubilee Invitation | Liberty Publications</title>
-<meta name="description" content="A personal invitation to celebrate 50 remarkable years of Liberty Publications.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Golden Jubilee Invitation | Liberty Publications">
-<meta property="og:description" content="A personal invitation to celebrate 50 remarkable years of Liberty Publications.">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Golden Jubilee Invitation | Liberty Publications">
-<meta name="twitter:description" content="A personal invitation to celebrate 50 remarkable years of Liberty Publications.">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marcellus&display=swap" rel="stylesheet">
-<meta name="theme-color" content="#33123F">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<title>Golden Jubilee Invitation 2027 | Liberty Publications</title>
+<meta content="A personal invitation to celebrate the Golden Jubilee of Liberty Publications in 2027." name="description"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#050505">
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <style>
-/* =========================================================
-   Liberty Publications — Golden Jubilee invitation
-   Maroon card stock, gold foil, ivory reply paper.
-   ========================================================= */
 :root{
-  --maroon:#4A0F1F;
-  --maroon-deep:#2C0711;
-  --wine:#6D1A2E;
-  --wine-hi:#86243B;
-  --gold:#C9A453;
-  --gold-lt:#E8D18E;
-  --gold-dk:#8A6A26;
-  --paper:#F6EFE0;
-  --paper-hi:#FBF7EC;
-  --ink:#2B1A1D;
-  --muted:#6A5856;
-  --faint:#958784;
-  --shade:44 7 17;--panel-a:#5C1528;--panel-b:#3A0B17;
-  --book1:#6D1A2E;--book2:#B5835A;--book3:#8E3445;--book4:#A0654C;
-  --line:#DCCDA6;
-  --err:#A33C31;
-  --foil:linear-gradient(100deg,#8A6A26 0%,#E8D18E 30%,#C9A453 52%,#F4E4AF 70%,#A6812F 100%);
-  --display:"Marcellus","Trajan Pro","Times New Roman",Georgia,serif;
-  --body:"EB Garamond",Garamond,"Times New Roman",Georgia,serif;
-  box-sizing:border-box;color-scheme:light;
+  --bg:#FFFFFF; --fg:#111111; --muted:#5F5F66; --faint:#A3A3AA; --line:#E2E2E6;
+  --soft:#F5F5F3; --card:#FFFFFF; --shadow:0 22px 44px -28px rgba(20,16,0,.35);
+  --on-fg:#FFFFFF; --gold:#D4A72C; --gold-lt:#F3D27A; --gold-dk:#8A6414; --gold-bg:#FBF1D6;
+  --veg:#1E8A43; --err:#B3261E;
+  --serif:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --sans:"Plus Jakarta Sans", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+  box-sizing:border-box;
   padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111113; --fg:#F2F2F4; --muted:#A6A6AE; --faint:#66666E; --line:#2E2E34;
+    --soft:#18181B; --card:#19191C; --shadow:0 22px 44px -28px rgba(0,0,0,.9);
+    --on-fg:#111113; --gold-dk:#F3D27A; --gold-bg:rgba(212,167,44,.14); --veg:#4CC27A; --err:#F2867D;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111113; --fg:#F2F2F4; --muted:#A6A6AE; --faint:#66666E; --line:#2E2E34;
+  --soft:#18181B; --card:#19191C; --shadow:0 22px 44px -28px rgba(0,0,0,.9);
+  --on-fg:#111113; --gold-dk:#F3D27A; --gold-bg:rgba(212,167,44,.14); --veg:#4CC27A; --err:#F2867D;
+  color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:inherit}
 [hidden]{display:none!important}
-html{scroll-padding-top:1.5rem;scroll-behavior:smooth;background:var(--maroon-deep)}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:inherit}
 button{font:inherit;color:inherit}
-:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 img,svg{max-width:100%}
-.wrap{max-width:1120px;margin:0 auto;padding:0 2rem}
-section{padding:7rem 0 0}
 
-/* Shared type */
-.label{display:flex;align-items:center;gap:.8rem;margin:0 0 1.1rem;font-family:var(--body);font-style:italic;font-size:1.2rem;font-weight:400;color:var(--gold-dk);letter-spacing:0}
-.label::before{content:"";width:2.4rem;height:1px;background:var(--gold)}
-h2{font-family:var(--display);font-weight:400;font-size:clamp(2.2rem,4vw,3.15rem);line-height:1.14;letter-spacing:-.01em;color:var(--maroon);margin:0 0 1.4rem;text-wrap:balance}
-.lede{color:var(--muted);font-size:1.2rem;line-height:1.75;max-width:33rem;margin:0}
+.wrap{max-width:1060px;margin:0 auto;padding:0 1.5rem}
+section{padding:5.5rem 0 0}
+.label{font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dk);margin:0 0 .9rem}
+h2{font-family:var(--serif);font-weight:600;font-variation-settings:"opsz" 120;font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.05;letter-spacing:-.02em;margin:0 0 1.3rem}
+.lede{color:var(--muted);font-size:1.08rem;max-width:34rem;margin:0}
+
+/* Icons */
+.ic{display:inline-grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;background:var(--gold-bg);color:var(--gold-dk)}
+.ic svg{width:24px;height:24px;stroke-width:1.7}
 
 /* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:54px;padding:.85rem 1.6rem;border:1px solid transparent;border-radius:999px;font-family:var(--body);font-size:1.08rem;font-weight:500;line-height:1.3;letter-spacing:.01em;text-decoration:none;cursor:pointer;background:transparent;transition:background-color .2s,border-color .2s,color .2s,box-shadow .2s}
-.btn svg{width:18px;height:18px;flex:none}
-.btn-dark{background:var(--wine);color:var(--paper-hi);border-color:var(--wine)}
-.btn-dark:hover{background:var(--wine-hi);border-color:var(--wine-hi)}
-.btn-gold{background:var(--foil);background-size:160% 100%;background-position:0 0;color:var(--maroon-deep);border-color:#B8913F;box-shadow:0 10px 26px -14px rgba(232,209,142,.55);transition:background-position .5s ease,box-shadow .2s}
-.btn-gold:hover{background-position:100% 0;box-shadow:0 12px 30px -12px rgba(232,209,142,.7)}
-.btn-ghost{color:var(--paper-hi);border-color:rgba(232,209,142,.45)}
-.btn-ghost:hover{border-color:var(--gold-lt);background:rgba(232,209,142,.08)}
-.btn-line{color:var(--wine);border-color:var(--line);background:var(--paper-hi)}
-.btn-line:hover{border-color:var(--gold-dk)}
-.btn[disabled]{opacity:.45;cursor:not-allowed}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;text-decoration:none;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:1rem 1.8rem;border-radius:999px;border:1.5px solid var(--fg);cursor:pointer;background:transparent;min-height:50px}
+.btn svg{width:18px;height:18px}
+.btn-dark{background:var(--fg);color:var(--on-fg)}
+.btn-dark:hover{opacity:.88}
+.btn-line:hover{background:var(--soft)}
+.btn[disabled]{opacity:.3;cursor:not-allowed}
+.btn-gold{background:linear-gradient(180deg,#F3D27A,#D4A72C);color:#1A1200;border-color:#D4A72C;box-shadow:0 12px 30px -10px rgba(212,167,44,.75)}
+.btn-gold:hover{filter:brightness(1.07)}
+.btn-ghost{color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.07)}
 
-.ic{display:inline-grid;place-items:center;flex:none;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);color:var(--wine);background:var(--paper-hi)}
-.ic svg{width:22px;height:22px;stroke-width:1.5}
-
-/* =========================================================
-   HERO — the invitation card
-   ========================================================= */
-.hero{position:relative;isolation:isolate;overflow:hidden;color:var(--paper);
-  background-color:var(--maroon);
-  background-image:
-    radial-gradient(ellipse 60% 55% at 78% 42%,rgba(201,164,83,.16),transparent 70%),
-    radial-gradient(ellipse 80% 60% at 10% 110%,rgb(var(--shade) / .7),transparent 70%);
-  --banner-play-state:running;--fall-distance:820px}
-.hero[data-motion="paused"]{--banner-play-state:paused}
-
-/* Sathiyo (卐) — crowns the emblem inside the arch, drawn in from all four arms */
-.sathiyo-bg{display:block;width:104px;height:104px;margin:0 0 .85rem;overflow:visible;filter:drop-shadow(0 0 14px rgba(232,201,119,.28));
-  animation:sth-breathe 12s ease-in-out infinite;animation-play-state:var(--banner-play-state)}
-.sathiyo-bg *{animation-duration:12s;animation-iteration-count:infinite;animation-play-state:var(--banner-play-state)}
-.sth-ring{fill:none;stroke:url(#sathiyoGold);stroke-width:1.2;stroke-dasharray:100;stroke-dashoffset:100;transform-origin:100px 100px;transform:rotate(-90deg);animation-name:sth-ring;animation-timing-function:ease-in-out}
-.sth-ring-dots{fill:none;stroke:#E8C977;stroke-width:1.6;stroke-linecap:round;stroke-dasharray:0 6.2;opacity:0;transform-origin:100px 100px;animation-name:sth-ring-dots;animation-timing-function:linear}
-.sth-arm{fill:none;stroke:url(#sathiyoGold);stroke-width:15;stroke-linejoin:miter;stroke-linecap:butt;stroke-dasharray:100;stroke-dashoffset:100;animation-name:sth-draw;animation-timing-function:cubic-bezier(.55,.1,.3,1)}
-.sth-inlay path{fill:none;stroke:var(--panel-a);stroke-width:3;stroke-linejoin:miter;stroke-dasharray:100;stroke-dashoffset:100;animation-name:sth-draw;animation-timing-function:cubic-bezier(.55,.1,.3,1)}
-.sth-tips{fill:url(#sathiyoGold);opacity:0;animation-name:sth-pop}
-.sth-dots{fill:url(#sathiyoGold);opacity:0;transform-origin:100px 100px;animation-name:sth-dots;animation-timing-function:cubic-bezier(.2,.8,.2,1.3)}
-.sth-dots .halo{fill:none;stroke:#E8C977;stroke-width:1.2}
-.sth-heart{fill:#F6E3A6;opacity:0;transform-origin:100px 100px;animation-name:sth-heart}
-@keyframes sth-draw{0%{stroke-dashoffset:100}38%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-@keyframes sth-ring{0%,8%{stroke-dashoffset:100}46%{stroke-dashoffset:0}100%{stroke-dashoffset:0}}
-@keyframes sth-ring-dots{0%,40%{opacity:0;transform:rotate(0deg)}50%{opacity:1}100%{opacity:1;transform:rotate(40deg)}}
-@keyframes sth-pop{0%,30%{opacity:0}40%{opacity:1}100%{opacity:1}}
-@keyframes sth-dots{0%,40%{opacity:0;transform:scale(.6)}50%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1)}}
-@keyframes sth-heart{0%,36%{opacity:0;transform:scale(0) rotate(0deg)}44%{opacity:1;transform:scale(1.3) rotate(90deg)}50%,100%{opacity:1;transform:scale(1) rotate(90deg)}}
-@keyframes sth-breathe{0%,86%{opacity:1}95%,100%{opacity:0}}
-
-.hero::after{content:"";position:absolute;inset:14px;border:3px double rgba(201,164,83,.5);border-radius:2px;pointer-events:none;z-index:3}
-.hero-in{position:relative;max-width:1240px;margin:0 auto;padding:0 3.25rem;z-index:4}
-.hero-bar{position:relative;z-index:6;display:flex;justify-content:space-between;align-items:center;gap:1.25rem;min-height:92px;padding:1.4rem 0 1.1rem;border-bottom:1px solid rgba(201,164,83,.22)}
-.brand{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-size:1.02rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper-hi);line-height:1.3}
-.brand svg{flex:none;width:22px;height:22px;color:var(--gold);stroke-width:1.5}
-.hero-tools{display:flex;align-items:center;gap:.5rem;flex:none}
-.share,.motion-control{height:44px;display:inline-flex;align-items:center;justify-content:center;flex:none;cursor:pointer;color:var(--gold-lt);background:rgb(var(--shade) / .55);border:1px solid rgba(201,164,83,.45);transition:border-color .2s,background .2s}
-.share{width:44px;border-radius:50%}
-.motion-control{gap:.5rem;padding:0 1rem;border-radius:999px;font-family:var(--body);font-size:.88rem;line-height:1.2}
-.share:hover,.motion-control:hover:not(:disabled){border-color:var(--gold-lt);background:rgba(201,164,83,.14)}
-.motion-control:disabled{opacity:.6;cursor:default}
+/* ---------- Hero ---------- */
+.hero{position:relative;overflow:hidden;color:#fff;text-align:center;
+  background:radial-gradient(65% 50% at 50% 36%, rgba(212,167,44,.34), rgba(212,167,44,0) 70%), radial-gradient(40% 30% at 12% 92%, rgba(212,167,44,.14), transparent 70%), #050505}
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.07;background:repeating-linear-gradient(90deg,#fff 0 1px,transparent 1px 18px)}
+.hero-in{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:1.4rem 1.5rem 4rem}
+.hero-bar{display:flex;justify-content:space-between;align-items:center;padding-bottom:.9rem;border-bottom:1px solid rgba(255,255,255,.22)}
+.brand{display:flex;align-items:center;gap:.6rem;font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+.brand svg{width:20px;height:20px;color:var(--gold-lt)}
+.share{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,.5);background:transparent;color:#fff;display:grid;place-items:center;cursor:pointer}
+.share:hover{border-color:var(--gold-lt);color:var(--gold-lt)}
 .share svg{width:18px;height:18px}
-.motion-control svg{width:13px;height:13px}
-.motion-control[aria-pressed="false"] .play-icon,.motion-control[aria-pressed="true"] .pause-icon{display:none}
+.hero-kicker{display:inline-flex;align-items:center;gap:.6rem;margin:2.6rem 0 0;font-size:.74rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lt)}
+.hero-kicker svg{width:16px;height:16px}
+.emblem{position:relative;width:min(400px,86vw);aspect-ratio:1;margin:.4rem auto -1.2rem;display:grid;place-items:center}
+.wreath{position:absolute;inset:0;width:100%;height:100%;animation:wreath 1.4s .15s cubic-bezier(.2,.8,.2,1) both}
+@keyframes wreath{from{opacity:0;transform:scale(.85) rotate(-8deg)}to{opacity:1;transform:none}}
+.fifty{position:relative;text-align:center;margin-top:-6%}
+.fifty .num{display:block;font-family:var(--serif);font-weight:800;font-variation-settings:"opsz" 144;font-size:min(11rem,40vw);line-height:.9;letter-spacing:-.04em;padding:0 .06em;
+  background:linear-gradient(100deg,#9C6E12 0%,#E9B949 22%,#FFF3C4 34%,#D4A72C 46%,#8E6210 62%,#F0C75A 80%,#B98A22 100%);
+  background-size:250% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 10px 36px rgba(212,167,44,.4));animation:sheen 2.6s .35s cubic-bezier(.3,.7,.2,1) both}
+.fifty .yrs{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:min(1.7rem,6vw);color:var(--gold-lt);margin-top:-.2em}
+@keyframes sheen{from{background-position:100% 0;opacity:0;transform:scale(.92)}35%{opacity:1;transform:none}to{background-position:0 0;opacity:1}}
+.hero h1{font-family:var(--serif);font-style:italic;font-weight:300;font-variation-settings:"opsz" 144;font-size:clamp(2.8rem,10vw,5rem);line-height:1;letter-spacing:-.02em;margin:0 0 1rem}
+.hero-sub{color:rgba(255,255,255,.75);max-width:31rem;margin:0 auto 1.7rem;font-size:1.06rem}
+.hero-when{display:inline-flex;align-items:center;gap:.55rem;border:1px solid rgba(243,210,122,.5);color:var(--gold-lt);border-radius:999px;padding:.55rem 1.2rem;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin:0 0 2rem}
+.hero-when svg{width:16px;height:16px}
+.countdown{display:flex;justify-content:center;gap:.6rem;margin:0 0 1.6rem}
+.countdown[hidden]{display:none}
+.countdown div{min-width:74px;border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:.6rem .4rem;background:rgba(255,255,255,.05)}
+.countdown b{display:block;font-family:var(--serif);font-weight:700;font-size:2rem;line-height:1.1;color:#fff}
+.countdown small{font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.hero-cta{display:flex;justify-content:center;flex-wrap:wrap;gap:.8rem}
+.toast{font-size:.82rem;color:rgba(255,255,255,.7);min-height:1.3em;margin:.9rem 0 0}
 
-.hero-stage{position:relative;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);align-items:center;gap:2.5rem;min-height:740px;padding:3.5rem 0 4.5rem}
-.hero-copy{position:relative;z-index:5;max-width:600px;opacity:0;transform:translateY(14px);animation:hero-rise 1s .15s cubic-bezier(.2,.7,.2,1) forwards}
-@keyframes hero-rise{to{opacity:1;transform:none}}
-
-.hero-kicker,.hero-highlights,.hero-mini-note{display:none}
-.hero-script{margin:0 0 .9rem;font-family:var(--body);font-style:italic;font-weight:400;font-size:clamp(1.7rem,2.6vw,2.2rem);line-height:1.2;color:var(--gold-lt)}
-.hero h1{margin:0 0 1.8rem;font-family:var(--display);font-weight:400;color:var(--paper-hi);line-height:.95}
-.hero-title-main{display:block;font-size:clamp(4.4rem,8.2vw,7.2rem);letter-spacing:-.005em;white-space:nowrap}
-.hero-title-sub{display:block;margin-top:.55rem;font-size:clamp(1.55rem,2.6vw,2.3rem);letter-spacing:.42em;white-space:nowrap;color:var(--paper)}
-.hero-sub{max-width:31rem;margin:0 0 2rem;padding-top:1.6rem;border-top:1px solid rgba(201,164,83,.35);font-size:1.22rem;line-height:1.7;color:rgba(246,239,224,.82)}
-.hero-when{display:flex;align-items:center;gap:.7rem;margin:0 0 2rem;font-size:1.08rem;line-height:1.5;color:var(--paper)}
-.hero-when svg{width:20px;height:20px;flex:none;color:var(--gold)}
-.countdown{display:flex;gap:.6rem;margin:0 0 2rem}
-.countdown div{min-width:68px;padding:.55rem .6rem .45rem;text-align:center;border:1px solid rgba(201,164,83,.4);border-radius:4px;background:rgb(var(--shade) / .45)}
-.countdown b{display:block;font-family:var(--display);font-weight:400;font-size:1.9rem;line-height:1.15;color:var(--gold-lt);font-variant-numeric:tabular-nums}
-.countdown small{font-size:.8rem;color:rgba(246,239,224,.7)}
-.hero-cta{display:flex;flex-wrap:wrap;gap:.75rem}
-.toast{min-height:1.4em;margin:.9rem 0 0;font-size:.95rem;font-style:italic;color:var(--gold-lt)}
-
-/* Decorative botanicals and lanterns — gold on maroon */
-.hero-botanical{position:absolute;right:-2.5rem;top:-5rem;width:340px;height:auto;z-index:1;pointer-events:none;opacity:.42;transform-origin:100% 0;animation:branch-sway 11s ease-in-out infinite;animation-play-state:var(--banner-play-state)}
-.hero-botanical use,.hero-botanical ellipse{fill:#B8963F}
-.hero-botanical path{stroke:#B8963F}
-.hanging-lantern{position:absolute;z-index:2;pointer-events:none;transform-origin:50% 0;animation:lantern-sway var(--sway-time,8s) ease-in-out infinite;animation-play-state:var(--banner-play-state)}
-.lantern-one{width:62px;height:232px;left:47%;top:-.5rem;--sway-time:8.5s}
-.lantern-two{width:50px;height:200px;right:6%;top:0;--sway-time:7s;animation-delay:-3s}
-.lantern-three{width:40px;height:170px;left:-3rem;top:-1rem;--sway-time:9.5s;animation-delay:-4s;opacity:.85}
-.lantern-glow{transform-box:fill-box;transform-origin:center;animation:lantern-glow 5s ease-in-out infinite;animation-play-state:var(--banner-play-state)}
-.falling-leaves{position:absolute;inset:0;overflow:hidden;z-index:2;pointer-events:none}
-.falling-leaf{position:absolute;left:var(--leaf-x);top:-50px;width:var(--leaf-width,22px);height:auto;opacity:0;animation:leaf-fall var(--duration,16s) var(--delay,0s) linear infinite;animation-play-state:var(--banner-play-state)}
-.falling-leaf path:first-child{fill:#C9A453}
-.falling-leaf path:last-child{stroke:#F4E4AF}
-@keyframes branch-sway{0%,100%{transform:rotate(-.6deg)}50%{transform:rotate(1.2deg)}}
-@keyframes lantern-sway{0%,100%{transform:rotate(-2.2deg)}50%{transform:rotate(2.2deg)}}
-@keyframes lantern-glow{0%,100%{opacity:.6;transform:scale(.96)}50%{opacity:1;transform:scale(1.05)}}
-@keyframes leaf-fall{0%{transform:translate3d(0,-40px,0) rotate(-25deg);opacity:0}12%{opacity:.75}86%{opacity:.55}100%{transform:translate3d(var(--drift,30px),var(--fall-distance),0) rotate(155deg);opacity:0}}
-#heroFireworks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2;opacity:.95;mix-blend-mode:screen}
+.ticker{background:var(--gold);color:#000;overflow:hidden;white-space:nowrap;border-block:1.5px solid #000}
+.ticker-track{display:inline-flex;animation:tick 34s linear infinite}
+.ticker span{font-family:var(--serif);font-style:italic;font-weight:600;font-size:1.1rem;padding:.7rem 0}
+.ticker i{font-style:normal;padding:0 1.4rem}
+@keyframes tick{to{transform:translateX(-50%)}}
 #confetti{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:60}
 
-/* =========================================================
-   THE EMBLEM — a jharokha arch in gold foil
-   ========================================================= */
-.jubilee-badge-wrap{position:relative;z-index:4;display:grid;place-items:center;min-height:560px}
-.anniv-orbit,.anniv-chip,.anniv-eyebrow,.anniv-tagline{display:none}
-.anniv-frame,.anniv-panel{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);pointer-events:none}
-.anniv-frame{width:min(370px,90%);height:520px;border:1px solid rgba(201,164,83,.75);border-radius:185px 185px 6px 6px}
-.anniv-frame::before{content:"";position:absolute;inset:9px;border:1px solid rgba(201,164,83,.4);border-radius:176px 176px 3px 3px}
-.anniv-frame::after{content:"";position:absolute;left:50%;top:-7px;width:13px;height:13px;margin-left:-6.5px;background:var(--gold);transform:rotate(45deg);box-shadow:0 0 14px rgba(232,209,142,.6)}
-.anniv-panel{width:calc(min(370px,90%) - 36px);height:484px;border-radius:167px 167px 2px 2px;
-  background:
-    radial-gradient(ellipse 70% 45% at 50% 40%,rgba(232,209,142,.17),transparent 72%),
-    linear-gradient(180deg,var(--panel-a) 0%,var(--panel-b) 100%);
-  box-shadow:inset 0 0 0 1px rgba(201,164,83,.12),0 30px 60px -30px rgba(0,0,0,.6)}
-.anniv-panel::after{content:"";position:absolute;inset:0;border-radius:inherit;background:linear-gradient(105deg,transparent 40%,rgba(255,240,190,.10) 50%,transparent 60%);background-size:250% 100%;animation:arch-sheen 7s ease-in-out infinite;animation-play-state:var(--banner-play-state)}
-@keyframes arch-sheen{0%,30%{background-position:120% 0}70%,100%{background-position:-60% 0}}
+/* ---------- Occasion ---------- */
+.occasion{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem;align-items:center}
+.stacks{width:100%;height:auto;color:var(--fg)}
+.stacks .lbl{font:600 13px var(--sans);fill:var(--muted);letter-spacing:.06em}
+.figcap{font-size:.85rem;color:var(--muted);text-align:center;margin:.4rem 0 0}
+@media (max-width:820px){.occasion{grid-template-columns:1fr;gap:2rem}}
 
-.anniv-center{position:relative;z-index:3;display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:2.2rem}
-.anniv-dates{font-family:var(--display);font-size:.98rem;letter-spacing:.32em;color:var(--gold-lt);margin:0 0 .4rem .32em}
-.anniv-dates b{font-weight:400;color:var(--gold);margin:0 .2em;letter-spacing:0}
-.anniv-fifty{display:flex;justify-content:center;font-family:var(--display);font-size:clamp(6.6rem,9.6vw,8rem);line-height:1;letter-spacing:-.02em;margin:.1rem 0 .1rem;background:var(--foil);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 6px 18px rgba(0,0,0,.35))}
-.anniv-fifty span{display:block}
-.anniv-years{font-family:var(--body);font-style:italic;font-size:1.9rem;line-height:1;color:var(--paper-hi);margin:-.2rem 0 1.1rem}
-.anniv-rule{position:relative;width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:0 0 1.1rem}
-.anniv-rule::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;background:var(--gold);transform:translate(-50%,-50%) rotate(45deg)}
-.anniv-golden{font-family:var(--display);font-size:1.12rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold-lt);margin:0 0 .8rem .3em}
-.anniv-liberty{font-family:var(--body);font-size:1.05rem;letter-spacing:.04em;color:rgba(246,239,224,.78)}
-.anniv-laurel{position:absolute;left:50%;top:50%;width:min(372px,100%);transform:translate(-50%,-41%);z-index:2;pointer-events:none;overflow:visible}
-.anniv-laurel path{fill:none;stroke:var(--gold);stroke-width:2;stroke-linecap:round;opacity:.7}
-.anniv-laurel ellipse{fill:var(--gold);opacity:.55}
-.anniv-sparkles{position:absolute;inset:0;pointer-events:none;z-index:3}
-.anniv-sparkles i{position:absolute;width:10px;height:10px;background:var(--gold-lt);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:twinkle 3.6s ease-in-out infinite;animation-play-state:var(--banner-play-state)}
-.anniv-sparkles i:nth-child(1){left:14%;top:22%}
-.anniv-sparkles i:nth-child(2){right:13%;top:30%;animation-delay:-1.2s;width:14px;height:14px}
-.anniv-sparkles i:nth-child(3){left:10%;bottom:24%;animation-delay:-2.1s}
-.anniv-sparkles i:nth-child(4){right:11%;bottom:16%;animation-delay:-.6s;width:8px;height:8px}
-.anniv-sparkles i:nth-child(5){left:50%;bottom:2%;animation-delay:-2.8s}
-@keyframes twinkle{0%,100%{opacity:.25;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+/* ---------- Guests ---------- */
+.tiles{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-top:2.2rem}
+@media (max-width:980px){.tiles{grid-template-columns:repeat(2,1fr)}.tile:last-child{grid-column:1/-1}}
+@media (max-width:420px){.tile{padding:1.1rem 1rem}.tile h3{font-size:1.1rem}}
+.tile{border:1px solid var(--line);border-radius:18px;padding:1.4rem 1.3rem 1.3rem;background:var(--card)}
+.tile h3{font-family:var(--serif);font-weight:600;font-size:1.25rem;line-height:1.25;margin:1rem 0 .35rem}
+.tile p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.55}
 
-/* Ribbon ticker */
-.ticker{position:relative;overflow:hidden;white-space:nowrap;background:var(--maroon-deep);color:var(--gold-lt);border-top:1px solid rgba(201,164,83,.45);border-bottom:1px solid rgba(201,164,83,.45)}
-.ticker-track{display:inline-flex;animation:tick 62s linear infinite}
-.ticker span{font-family:var(--body);font-size:1.02rem;font-style:italic;padding:.85rem 0}
-.ticker i{font-style:normal;font-size:.7rem;color:var(--gold);padding:0 1.8rem;vertical-align:middle}
-.decorative-motion-paused .ticker-track{animation-play-state:paused}
-@keyframes tick{to{transform:translateX(-50%)}}
+/* ---------- Details ---------- */
+.details{background:var(--soft);border-radius:28px;padding:3rem 2rem;margin-top:5.5rem}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin:2rem 0}
+.fact{display:flex;gap:1rem;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:1.2rem}
+.fact small{display:block;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.fact b{font-family:var(--serif);font-weight:600;font-size:1.2rem;line-height:1.3}
+@media (max-width:820px){.facts{grid-template-columns:1fr}.details{padding:2.4rem 1.2rem;border-radius:22px}}
 
-/* =========================================================
-   THE OCCASION
-   ========================================================= */
-main{background:var(--paper)}
-.occasion{display:grid;grid-template-columns:1.05fr 1fr;gap:4rem;align-items:center}
-.stacks{width:100%;height:auto;color:var(--maroon)}
-.stacks .lbl{font:italic 400 19px var(--body);fill:var(--muted)}
-.stacks rect[fill="#59613F"]{fill:var(--book1)}
-.stacks rect[fill="#8D9670"]{fill:var(--book2)}
-.stacks rect[fill="#6F7255"]{fill:var(--book3)}
-.stacks rect[fill="#768357"]{fill:var(--book4)}
-.figcap{margin:.8rem 0 0;text-align:center;font-style:italic;font-size:1.05rem;color:var(--muted)}
+/* ---------- Programme timeline ---------- */
+.timeline{list-style:none;margin:2.2rem 0 0;padding:0;position:relative;max-width:640px}
+.timeline::before{content:"";position:absolute;left:25px;top:26px;bottom:26px;width:2px;background:linear-gradient(var(--gold),var(--line))}
+.timeline li{position:relative;display:flex;gap:1.3rem;align-items:center;padding:.7rem 0}
+.timeline .ic{border:2px solid var(--bg);box-shadow:0 0 0 1px var(--line)}
+.timeline small{display:block;font-size:.66rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.timeline b{font-family:var(--serif);font-weight:600;font-size:1.2rem}
 
-/* =========================================================
-   CELEBRATION DETAILS — an enclosed card
-   ========================================================= */
-.details{position:relative;margin-top:7rem;padding:3.6rem 3.4rem 3.2rem;background:var(--paper-hi);border:1px solid var(--gold);border-radius:3px;text-align:center}
-.details::before{content:"";position:absolute;inset:9px;border:1px solid var(--line);border-radius:1px;pointer-events:none}
-.details .label{justify-content:center}
-.details .label::after{content:"";width:2.4rem;height:1px;background:var(--gold)}
-.details h2{max-width:22ch;margin-inline:auto}
-.facts{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:2.6rem 0 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.fact{display:flex;flex-direction:column;align-items:center;gap:.9rem;padding:2rem 1.2rem;text-align:center}
-.fact+.fact{border-left:1px solid var(--line)}
-.fact small{display:block;margin-bottom:.2rem;font-style:italic;font-size:1.05rem;color:var(--gold-dk)}
-.fact b{display:block;font-family:var(--display);font-weight:400;font-size:1.4rem;line-height:1.35;color:var(--maroon);overflow-wrap:anywhere}
-.details>.btn{position:relative;margin-top:2.2rem}
-
-.fact-time .ic{display:none!important}
-.fact-time b[data-c="time"]{white-space:nowrap}
-.event-clock{position:relative;width:52px;height:52px;flex:0 0 52px;border-radius:50%;background:var(--paper-hi);border:1px solid var(--gold)}
-.event-clock::before{content:"";position:absolute;left:50%;top:50%;width:5px;height:5px;margin:-2.5px 0 0 -2.5px;border-radius:50%;background:var(--wine);z-index:5}
-.event-clock .tick{position:absolute;left:50%;top:3px;width:1px;height:4px;background:var(--gold-dk);transform-origin:50% 23px}
-.event-clock .tick:nth-of-type(2){transform:translateX(-50%) rotate(0deg)}
-.event-clock .tick:nth-of-type(3){transform:translateX(-50%) rotate(30deg)}
-.event-clock .tick:nth-of-type(4){transform:translateX(-50%) rotate(60deg)}
-.event-clock .tick:nth-of-type(5){transform:translateX(-50%) rotate(90deg)}
-.event-clock .tick:nth-of-type(6){transform:translateX(-50%) rotate(120deg)}
-.event-clock .tick:nth-of-type(7){transform:translateX(-50%) rotate(150deg)}
-.event-clock .tick:nth-of-type(8){transform:translateX(-50%) rotate(180deg)}
-.event-clock .tick:nth-of-type(9){transform:translateX(-50%) rotate(210deg)}
-.event-clock .tick:nth-of-type(10){transform:translateX(-50%) rotate(240deg)}
-.event-clock .tick:nth-of-type(11){transform:translateX(-50%) rotate(270deg)}
-.event-clock .tick:nth-of-type(12){transform:translateX(-50%) rotate(300deg)}
-.event-clock .tick:nth-of-type(13){transform:translateX(-50%) rotate(330deg)}
-.event-clock .hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:999px;z-index:4}
-.event-clock .hour-hand{width:3px;height:13px;margin-left:-1.5px;background:var(--wine);transform:rotate(165deg)}
-.event-clock .minute-hand{width:2px;height:18px;margin-left:-1px;background:var(--gold-dk);transform:rotate(180deg)}
-.event-clock .clock-glow{position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(201,164,83,.45);animation:clock-ring 2.8s ease-in-out infinite}
-@keyframes clock-ring{0%,100%{transform:scale(.94);opacity:.3}50%{transform:scale(1.08);opacity:.9}}
-
-/* =========================================================
-   RSVP — reply card on maroon
-   ========================================================= */
-#rsvp{position:relative;margin-top:7rem;padding:6.5rem 0 6rem;background-color:var(--maroon);
-  background-image:
-    radial-gradient(ellipse 55% 60% at 50% 0%,rgba(201,164,83,.16),transparent 70%)}
-#rsvp::before{content:"";position:absolute;left:50%;top:0;width:1px;height:4.5rem;background:linear-gradient(var(--gold),transparent)}
-.rsvp-wrap{display:block;max-width:760px;margin:0 auto}
-.card{position:relative;background:var(--paper-hi);border:1px solid var(--gold);border-radius:3px;box-shadow:0 40px 80px -40px rgba(0,0,0,.65)}
-.card::before{content:"";position:absolute;inset:10px;border:1px solid var(--line);pointer-events:none}
-.rsvp-card{width:min(100%,660px);margin:0 auto;padding:3.2rem 2.8rem 2.8rem;overflow:hidden}
-.prog-head,.track,.nav{display:none!important}
-.step{display:none;position:relative}
-.step.on{display:block;animation:step-in .45s cubic-bezier(.2,.7,.2,1) both}
-@keyframes step-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
-.h3{margin:0 0 2rem;text-align:center;font-family:var(--display);font-weight:400;font-size:clamp(1.75rem,3.1vw,2.3rem);line-height:1.22;color:var(--maroon);text-wrap:balance}
-
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.choice{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.55rem;min-height:156px;padding:1.4rem 1rem;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.15rem;line-height:1.35;text-align:center;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background-color .25s,border-color .25s}
-.choice svg{width:30px;height:30px;stroke-width:1.5}
-.choice>span{display:block}
-.choice:hover{transform:translateY(-3px);box-shadow:0 18px 30px -20px rgb(var(--shade) / .45)}
-.choice[data-attend="yes"]{background:var(--wine);border-color:var(--wine);color:var(--paper-hi)}
-.choice[data-attend="yes"] svg{color:var(--gold-lt)}
-.choice[data-attend="yes"]::before{content:"Tap to confirm";order:3;font-size:.86rem;font-style:italic;color:var(--gold-lt);opacity:.9}
-.choice[data-attend="yes"]:hover{background:var(--wine-hi)}
-.choice[data-attend="no"]{color:var(--muted)}
-.choice[data-attend="no"] svg{color:var(--gold-dk)}
-.choice[data-attend="no"]:hover{border-color:var(--gold-dk);color:var(--ink)}
-.choice[data-attend="yes"][aria-pressed="true"]{background:var(--maroon);box-shadow:0 0 0 3px var(--paper-hi),0 0 0 4px var(--gold);animation:choice-pop .6s ease}
-.choice[data-attend="no"][aria-pressed="true"]{background:#EFE4C8;border-color:var(--gold-dk);color:var(--ink);box-shadow:0 0 0 3px var(--paper-hi),0 0 0 4px var(--gold-dk);animation:choice-pop .6s ease}
-@keyframes choice-pop{0%{transform:scale(1)}45%{transform:scale(1.04)}100%{transform:scale(1)}}
-
-/* Arrival step */
-.arrival-step{text-align:center}
-.arrival-clock-wrap{display:grid;place-items:center;margin:0 auto 1.6rem}
-.arrival-clock{position:relative;width:164px;height:164px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#FFFDF6 0 55%,#F3E9D0 100%);border:1px solid var(--gold);box-shadow:0 0 0 6px var(--paper-hi),0 0 0 7px var(--line),0 18px 36px -20px rgb(var(--shade) / .45)}
-.arrival-clock::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;border-radius:50%;background:var(--wine);transform:translate(-50%,-50%);z-index:6;box-shadow:0 0 0 3px var(--gold-lt)}
-.arrival-clock .mark{position:absolute;left:50%;top:8px;width:2px;height:10px;background:var(--gold-dk);transform-origin:50% 74px}
-.arrival-clock .mark:nth-child(1){transform:translateX(-50%) rotate(0deg);height:14px;background:var(--wine)}
-.arrival-clock .mark:nth-child(2){transform:translateX(-50%) rotate(30deg)}
-.arrival-clock .mark:nth-child(3){transform:translateX(-50%) rotate(60deg)}
-.arrival-clock .mark:nth-child(4){transform:translateX(-50%) rotate(90deg);height:14px;background:var(--wine)}
-.arrival-clock .mark:nth-child(5){transform:translateX(-50%) rotate(120deg)}
-.arrival-clock .mark:nth-child(6){transform:translateX(-50%) rotate(150deg)}
-.arrival-clock .mark:nth-child(7){transform:translateX(-50%) rotate(180deg);height:14px;background:var(--wine)}
-.arrival-clock .mark:nth-child(8){transform:translateX(-50%) rotate(210deg)}
-.arrival-clock .mark:nth-child(9){transform:translateX(-50%) rotate(240deg)}
-.arrival-clock .mark:nth-child(10){transform:translateX(-50%) rotate(270deg);height:14px;background:var(--wine)}
-.arrival-clock .mark:nth-child(11){transform:translateX(-50%) rotate(300deg)}
-.arrival-clock .mark:nth-child(12){transform:translateX(-50%) rotate(330deg)}
-.arrival-clock .clock-hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:999px;z-index:5;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
-.arrival-clock .hour{width:5px;height:42px;margin-left:-2.5px;background:var(--wine)}
-.arrival-clock .minute{width:3px;height:58px;margin-left:-1.5px;background:var(--gold-dk)}
-.arrival-clock .second{width:1.5px;height:62px;margin-left:-.75px;background:#A8432F;animation:arrival-second 60s linear infinite}
-@keyframes arrival-second{to{transform:rotate(360deg)}}
-
-.arrival-time-card{max-width:420px;margin:0 auto;padding:0}
-.arrival-time-card label{display:block;margin-bottom:.7rem;font-style:italic;font-size:1.05rem;color:var(--gold-dk)}
-.arrival-picker{display:grid;grid-template-columns:1fr auto 1fr auto;gap:.55rem;align-items:center}
-.arrival-segment{position:relative}
-.arrival-segment select{width:100%;min-height:58px;appearance:none;-webkit-appearance:none;padding:.6rem 2rem .6rem .8rem;border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--maroon);font:400 1.5rem var(--display);text-align:center;text-align-last:center;cursor:pointer;outline:none;transition:border-color .2s,box-shadow .2s}
-.arrival-segment select:hover{border-color:var(--gold)}
-.arrival-segment select:focus-visible{border-color:var(--wine);box-shadow:0 0 0 3px rgb(var(--shade) / .18)}
-.arrival-segment::after{content:"";position:absolute;right:.9rem;top:50%;width:7px;height:7px;margin-top:-6px;border-right:1.5px solid var(--gold-dk);border-bottom:1.5px solid var(--gold-dk);transform:rotate(45deg);pointer-events:none}
-.arrival-colon{font-family:var(--display);font-size:1.6rem;color:var(--gold-dk)}
-.arrival-ampm{display:block;min-width:84px}
-.arrival-period-fixed{min-height:58px;display:flex;align-items:center;justify-content:center;border-radius:6px;background:var(--wine);color:var(--gold-lt);font:400 1.15rem var(--display);letter-spacing:.08em}
-.arrival-time-value{display:inline-block;margin:1.2rem auto 0;font-family:var(--display);font-size:1.5rem;color:var(--maroon)}
-.arrival-time-caption{display:none}
-.arrival-min-note{margin:.2rem 0 0;font-size:.98rem;font-style:italic;color:var(--muted)}
-.arrival-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.7rem;margin-top:1.8rem}
-.arrival-actions .btn{min-width:160px}
-
-/* Guests step */
-.stepper{display:grid;grid-template-columns:60px 1fr 60px;align-items:center;max-width:380px;margin:0 auto .6rem}
-.round{width:60px;height:60px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--gold-dk);background:var(--paper);color:var(--wine);cursor:pointer;transition:background-color .2s,color .2s}
-.round:hover:not([disabled]){background:var(--wine);color:var(--paper-hi);border-color:var(--wine)}
+/* ---------- RSVP ---------- */
+.rsvp-wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:3rem;align-items:start}
+@media (max-width:880px){.rsvp-wrap{grid-template-columns:1fr;gap:2rem}}
+.perks{list-style:none;margin:1.8rem 0 0;padding:0}
+.perks li{display:flex;gap:.9rem;align-items:center;padding:.55rem 0;color:var(--muted)}
+.perks .ic{width:40px;height:40px}
+.perks .ic svg{width:19px;height:19px}
+.card{background:var(--card);border:1.5px solid var(--fg);border-radius:22px;box-shadow:var(--shadow)}
+.rsvp-card{padding:1.7rem 1.5rem 1.5rem;overflow:hidden}
+.prog-head{display:flex;justify-content:space-between;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.55rem}
+.track{height:4px;background:var(--line);border-radius:4px;margin-bottom:1.8rem}
+.track i{display:block;height:100%;background:linear-gradient(90deg,#B98A22,#F3D27A);border-radius:4px;width:0;transition:width .4s ease}
+.step{display:none}
+.step.on{display:block;animation:in .35s ease both}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.h3{font-family:var(--serif);font-weight:600;font-variation-settings:"opsz" 96;font-size:clamp(1.9rem,6vw,2.4rem);line-height:1.08;letter-spacing:-.015em;margin:0 0 1.5rem}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.choice{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;min-height:110px;border:1.5px solid var(--line);border-radius:16px;background:var(--card);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}
+.choice svg{width:28px;height:28px}
+.choice[aria-pressed="true"]{background:var(--fg);color:var(--on-fg);border-color:var(--fg)}
+.choice[aria-pressed="true"] svg{color:var(--gold)}
+.stepper{display:grid;grid-template-columns:56px 1fr 56px;align-items:center;margin:.4rem 0 .4rem}
+.round{width:56px;height:56px;border-radius:50%;border:1.5px solid var(--fg);background:var(--card);cursor:pointer;display:grid;place-items:center}
 .round svg{width:22px;height:22px}
 .round[disabled]{border-color:var(--line);color:var(--faint);cursor:not-allowed}
-.count{text-align:center;font-family:var(--display);font-weight:400;font-size:5.6rem;line-height:1.05;color:var(--maroon);font-variant-numeric:tabular-nums}
-.hint{display:flex;align-items:center;justify-content:center;gap:.45rem;margin:.2rem 0 0;font-style:italic;font-size:1.05rem;color:var(--muted)}
-.hint svg{width:17px;height:17px;color:var(--gold-dk)}
-.guest-actions{display:flex;justify-content:center;margin-top:2rem}
-.guest-actions .btn{min-width:250px}
-.submit-status{margin:1rem 0 0;text-align:center;font-style:italic;color:var(--muted)}
-.err{margin:.8rem 0 0;text-align:center;color:var(--err);font-size:1rem;line-height:1.5}
+.count{text-align:center;font-family:var(--serif);font-weight:300;font-size:6rem;line-height:1}
+.hint{display:flex;align-items:center;justify-content:center;gap:.4rem;color:var(--muted);font-size:.88rem;margin:.2rem 0 0}
+.hint svg{width:16px;height:16px}
+.food{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
+.dish{border:1.5px solid var(--line);border-radius:16px;background:var(--card);padding:1.3rem .8rem 1rem;cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:1rem;min-height:210px}
+.dish svg.plate{width:100%;height:84px;color:var(--fg)}
+.dish .name{font-family:var(--serif);font-weight:600;font-size:1.15rem;margin-top:auto}
+.dish .sel{display:flex;align-items:center;gap:.5rem;font-size:.64rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.dish .dot{width:16px;height:16px;border-radius:50%;border:1.5px solid var(--faint);display:grid;place-items:center}
+.dish[aria-pressed="true"]{border-color:var(--fg);box-shadow:var(--shadow)}
+.dish[aria-pressed="true"] .dot{border-color:var(--fg);background:var(--fg)}
+.dish[aria-pressed="true"] .dot::after{content:"";width:6px;height:6px;border-radius:50%;background:var(--on-fg)}
+.dish:not([aria-pressed="true"]) .plate{opacity:.45}
+.clock{display:block;width:min(200px,60vw);height:auto;margin:0 auto}
+.hand{transform-origin:100px 100px;transition:transform .6s cubic-bezier(.3,.9,.3,1)}
+.time-cap{text-align:center;font-size:.64rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:1rem 0 .2rem}
+.time-big{text-align:center;font-family:var(--serif);font-weight:700;font-size:clamp(2.8rem,12vw,3.6rem);line-height:1;margin:0 0 1.4rem}
+.slots{display:flex;flex-wrap:wrap;gap:.5rem;justify-content:center}
+.slot{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:.55rem .95rem;font-size:.84rem;font-weight:500;cursor:pointer;min-height:42px}
+.slot[aria-pressed="true"]{background:var(--fg);color:var(--on-fg);border-color:var(--fg)}
+.field{margin-bottom:1rem}
+.field label{display:block;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.input{position:relative}
+.input svg{position:absolute;left:.9rem;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--faint);pointer-events:none}
+.input input{width:100%;font:1rem var(--sans);color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:.85rem .9rem .85rem 2.7rem}
+.input input:focus{outline:none;border-color:var(--fg)}
+.err{color:var(--err);font-size:.88rem;min-height:1.3em;margin:.2rem 0 0}
+.summary{border-top:1px solid var(--line);margin:0 0 1.4rem}
+.summary div{display:flex;justify-content:space-between;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--line)}
+.summary dt{font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.summary dd{margin:0;font-weight:600;text-align:right}
+.wa{width:100%}
+.note{text-align:center;color:var(--muted);font-size:.85rem;margin:.9rem 0 0}
+.closed-note{display:flex;gap:.7rem;align-items:flex-start;background:var(--gold-bg);color:var(--gold-dk);border-radius:14px;padding:.9rem 1rem;font-size:.92rem;margin:1.4rem 0 0}
+.closed-note svg{width:20px;height:20px;flex:none;margin-top:.15rem}
+.nav{display:flex;justify-content:space-between;gap:.8rem;margin-top:1.8rem}
+.nav .btn{flex:1}
+.nav .btn.hide{visibility:hidden}
+
+footer{margin-top:6rem;background:#050505;color:rgba(255,255,255,.7)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.2rem;padding-top:2.2rem;padding-bottom:2.6rem}
+footer .brand{color:#fff}
+footer .contact{display:flex;align-items:center;gap:.5rem;font-size:.9rem}
+footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .fifty .num{animation:none;background-position:30% 0}
+  .wreath,.step.on{animation:none}
+  .ticker-track{animation:none}
+  .track i,.hand{transition:none!important}
+}
+
+
+/* ===== Existing RSVP functionality, matched to the selected design ===== */
+.hero{--banner-play-state:running}
+.hero[data-motion="paused"]{--banner-play-state:paused}
+#heroFireworks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:.9;mix-blend-mode:screen}
+.hero-in{position:relative;z-index:2}
+.hero-tools{display:flex;align-items:center;gap:.5rem}
+.motion-control{height:42px;display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:0 .85rem;border:1.5px solid rgba(255,255,255,.5);border-radius:999px;background:transparent;color:#fff;cursor:pointer;font-size:.72rem;font-weight:600;letter-spacing:.05em}
+.motion-control:hover:not(:disabled){border-color:var(--gold-lt);color:var(--gold-lt)}
+.motion-control svg{width:14px;height:14px}
+.motion-control[aria-pressed="false"] .play-icon,.motion-control[aria-pressed="true"] .pause-icon{display:none}
+.motion-control:disabled{opacity:.55;cursor:default}
+.decorative-motion-paused .ticker-track{animation-play-state:paused}
+
+#rsvp .rsvp-intro{align-self:start}
+#rsvp .rsvp-card{min-height:410px}
+#rsvp .step{min-height:290px}
+#rsvp .step[data-s="thankyou"],#rsvp .step[data-s="already"]{min-height:300px}
+.choice[data-attend="yes"]{background:linear-gradient(180deg,#171717,#050505);color:#fff;border-color:#111;box-shadow:0 14px 28px -20px rgba(0,0,0,.65)}
+.choice[data-attend="yes"] svg{color:var(--gold)}
+.choice[data-attend="no"]{background:var(--card)}
+.choice[data-attend="yes"]::after{content:"Tap to confirm";font-size:.58rem;letter-spacing:.13em;color:var(--gold-lt);opacity:.9}
+.choice[data-attend="yes"][aria-pressed="true"]{background:#050505;color:#fff;border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-bg)}
+.choice[data-attend="no"][aria-pressed="true"]{background:var(--gold-bg);color:var(--fg);border-color:var(--gold)}
+
+.arrival-step{text-align:center}
+.arrival-clock-wrap{display:grid;place-items:center;margin:.2rem auto 1.25rem}
+.arrival-clock{position:relative;width:166px;height:166px;border-radius:50%;background:radial-gradient(circle at 38% 28%,#fff 0 20%,#fbf7ec 60%,#efe1b8 100%);border:2px solid var(--gold);box-shadow:0 15px 34px -24px rgba(0,0,0,.55),inset 0 0 0 6px #fff}
+.arrival-clock::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:11px;border-radius:50%;background:#111;transform:translate(-50%,-50%);z-index:6;box-shadow:0 0 0 3px var(--gold-lt)}
+.arrival-clock .mark{position:absolute;left:50%;top:7px;width:2px;height:10px;background:var(--gold-dk);transform-origin:50% 76px}
+.arrival-clock .mark:nth-child(1){transform:translateX(-50%) rotate(0deg)}
+.arrival-clock .mark:nth-child(2){transform:translateX(-50%) rotate(30deg)}
+.arrival-clock .mark:nth-child(3){transform:translateX(-50%) rotate(60deg)}
+.arrival-clock .mark:nth-child(4){transform:translateX(-50%) rotate(90deg)}
+.arrival-clock .mark:nth-child(5){transform:translateX(-50%) rotate(120deg)}
+.arrival-clock .mark:nth-child(6){transform:translateX(-50%) rotate(150deg)}
+.arrival-clock .mark:nth-child(7){transform:translateX(-50%) rotate(180deg)}
+.arrival-clock .mark:nth-child(8){transform:translateX(-50%) rotate(210deg)}
+.arrival-clock .mark:nth-child(9){transform:translateX(-50%) rotate(240deg)}
+.arrival-clock .mark:nth-child(10){transform:translateX(-50%) rotate(270deg)}
+.arrival-clock .mark:nth-child(11){transform:translateX(-50%) rotate(300deg)}
+.arrival-clock .mark:nth-child(12){transform:translateX(-50%) rotate(330deg)}
+.arrival-clock .clock-hand{position:absolute;left:50%;bottom:50%;transform-origin:50% 100%;border-radius:999px;z-index:5;transition:transform .45s cubic-bezier(.2,.8,.2,1)}
+.arrival-clock .hour{width:5px;height:42px;margin-left:-2.5px;background:#111}
+.arrival-clock .minute{width:3px;height:58px;margin-left:-1.5px;background:var(--gold-dk)}
+.arrival-clock .second{width:1.5px;height:61px;margin-left:-.75px;background:#B3261E;animation:arrival-second 60s linear infinite}
+@keyframes arrival-second{to{transform:rotate(360deg)}}
+.arrival-time-card{max-width:420px;margin:0 auto;padding:1rem 1rem 1.1rem;border:1px solid var(--line);border-radius:16px;background:var(--soft)}
+.arrival-time-card label{display:block;margin-bottom:.6rem;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.arrival-picker{display:grid;grid-template-columns:1fr auto 1fr auto;gap:.55rem;align-items:center}
+.arrival-segment{position:relative}
+.arrival-segment select{width:100%;min-height:54px;appearance:none;-webkit-appearance:none;border:1.5px solid var(--line);border-radius:12px;background:var(--card);color:var(--fg);font:700 1.15rem var(--sans);text-align:center;text-align-last:center;padding:.55rem 2rem .55rem .7rem;outline:none;cursor:pointer}
+.arrival-segment select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(212,167,44,.15)}
+.arrival-segment::after{content:"⌄";position:absolute;right:.7rem;top:50%;transform:translateY(-56%);color:var(--gold-dk);pointer-events:none}
+.arrival-colon{font-family:var(--serif);font-size:1.5rem;color:var(--gold-dk)}
+.arrival-period-fixed{min-width:70px;min-height:54px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:#111;color:var(--gold-lt);font-weight:700}
+.arrival-time-value{margin:.8rem 0 0;font-family:var(--serif);font-size:1.45rem;font-weight:700;color:var(--gold-dk)}
+.arrival-min-note{margin:.25rem 0 0;color:var(--muted);font-size:.8rem}
+.arrival-actions,.guest-actions{display:flex;justify-content:center;gap:.7rem;flex-wrap:wrap;margin-top:1.3rem}
+.arrival-actions .btn{min-width:145px}
+.guest-actions .btn{min-width:230px}
+.submit-status{margin:.8rem 0 0;text-align:center;color:var(--muted);font-size:.88rem}
 .honeypot{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 
-/* Thank you + already submitted */
-.thankyou-only,.already-only{text-align:center;padding:1rem .5rem .4rem;outline:none}
-.thankyou-mark,.already-mark{width:84px;height:84px;margin:0 auto 1.4rem;display:grid;place-items:center;border-radius:50%;background:var(--wine);color:var(--gold-lt);box-shadow:0 0 0 6px var(--paper-hi),0 0 0 7px var(--gold);animation:mark-pop .7s cubic-bezier(.2,.8,.2,1) both}
-.thankyou-mark svg,.already-mark svg{width:38px;height:38px}
-@keyframes mark-pop{0%{opacity:0;transform:scale(.7)}70%{opacity:1;transform:scale(1.06)}100%{transform:scale(1)}}
-.thankyou-only h3,.already-only h3{margin:.2rem 0 .7rem;font-family:var(--display);font-weight:400;font-size:clamp(2rem,4vw,2.7rem);line-height:1.15;color:var(--maroon)}
-.thankyou-only p,.already-only p{max-width:28rem;margin:0 auto;font-size:1.15rem;color:var(--muted)}
-.already-summary{max-width:400px;margin:1.8rem auto 0;border-top:1px solid var(--line);text-align:left}
-.already-summary>div{display:flex;justify-content:space-between;gap:1rem;padding:.8rem .2rem;border-bottom:1px solid var(--line)}
-.already-summary span{font-style:italic;color:var(--muted)}
-.already-summary strong{font-family:var(--display);font-weight:400;color:var(--maroon);text-align:right;overflow-wrap:anywhere}
+.thankyou-only,.already-only{text-align:center;padding:1rem .25rem;outline:none}
+.thankyou-mark,.already-mark{width:82px;height:82px;margin:0 auto 1.2rem;border-radius:50%;display:grid;place-items:center;background:#111;color:var(--gold-lt);box-shadow:0 0 0 5px #fff,0 0 0 7px var(--gold);animation:result-pop .65s cubic-bezier(.2,.8,.2,1) both}
+.thankyou-mark svg,.already-mark svg{width:36px;height:36px}
+@keyframes result-pop{0%{opacity:0;transform:scale(.72)}70%{opacity:1;transform:scale(1.06)}100%{transform:scale(1)}}
+.thankyou-only h3,.already-only h3{font-family:var(--serif);font-size:clamp(2rem,5vw,2.7rem);line-height:1.1;margin:.2rem 0 .7rem}
+.thankyou-only>p,.already-only>p{max-width:29rem;margin:0 auto;color:var(--muted)}
+.already-summary{max-width:410px;margin:1.4rem auto 0;border:1px solid var(--line);border-radius:14px;padding:.5rem 1rem;background:var(--soft);text-align:left}
+.already-summary>div{display:flex;justify-content:space-between;gap:1rem;padding:.65rem 0;border-bottom:1px solid var(--line)}
+.already-summary>div:last-child{border-bottom:0}
+.already-summary span{color:var(--muted);font-size:.82rem}
+.already-summary strong{text-align:right;font-size:.86rem}
 
-/* Footer — continues the maroon band */
-footer{background:var(--maroon-deep);color:rgba(246,239,224,.75);border-top:1px solid rgba(201,164,83,.3);padding-bottom:env(safe-area-inset-bottom,0px)}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;padding-top:2rem;padding-bottom:2.2rem}
-footer .brand{font-size:.92rem;letter-spacing:.12em;color:var(--gold-lt)}
-footer .contact{display:flex;align-items:center;gap:.5rem;font-size:1.02rem}
-footer .contact svg{width:17px;height:17px;color:var(--gold)}
-
-/* =========================================================
-   Responsive
-   ========================================================= */
-@media (max-width:1080px){
-  .hero-in{padding-inline:2.4rem}
-  .hero-stage{grid-template-columns:minmax(0,1fr) minmax(300px,.85fr);gap:1.5rem;min-height:700px}
-  .anniv-frame{width:min(330px,96%);height:470px;border-radius:165px 165px 6px 6px}
-  .anniv-frame::before{border-radius:156px 156px 3px 3px}
-  .anniv-panel{width:calc(min(330px,96%) - 36px);height:434px;border-radius:147px 147px 2px 2px}
-  .anniv-fifty{font-size:7rem}
-  .lantern-one{left:44%}
-  .lantern-three{display:none}
-  .details{padding-inline:2.2rem}
-}
-@media (max-width:880px){
-  .hero-stage{grid-template-columns:1fr;min-height:0;padding:3rem 0 3.5rem;gap:2.5rem}
-  .hero-copy{max-width:620px}
-  .jubilee-badge-wrap{min-height:500px}
-  .lantern-one{left:auto;right:22%;top:-1rem}
-  .lantern-three{display:none}
-  .occasion{grid-template-columns:1fr;gap:2.5rem}
-  .facts{grid-template-columns:1fr}
-  .fact{flex-direction:row;justify-content:flex-start;text-align:left;padding:1.3rem .4rem;gap:1.1rem}
-  .fact+.fact{border-left:0;border-top:1px solid var(--line)}
-}
-@media (max-width:640px){
-  body{font-size:18px}
-  .hero::after{inset:8px}
-  .wrap,.hero-in{padding-inline:1.4rem}
-  .hero-bar{min-height:76px;padding-block:1.1rem .9rem;gap:.6rem}
-  .brand{font-size:.8rem;letter-spacing:.1em;gap:.5rem}
-  .brand svg{width:19px;height:19px}
-  .hero-tools{gap:.4rem}
-  .motion-control{width:42px;height:42px;padding:0;border-radius:50%}
+@media(max-width:640px){
+  .motion-control{width:42px;padding:0;border-radius:50%}
   .motion-control span{display:none}
-  .share{width:42px;height:42px}
-  .hero{--fall-distance:1100px}
-  .hero-stage{padding:2.2rem 0 2.8rem;gap:1.8rem}
-  .hero-script{font-size:1.6rem;margin-bottom:.6rem}
-  .hero-title-main{font-size:clamp(3.5rem,17vw,4.6rem)}
-  .hero-title-sub{font-size:clamp(1.15rem,5.6vw,1.5rem);letter-spacing:.38em;margin-top:.5rem}
-  .hero h1{margin-bottom:1.4rem}
-  .hero-sub{font-size:1.1rem;padding-top:1.2rem;margin-bottom:1.5rem}
-  .hero-when{font-size:1rem;margin-bottom:1.5rem}
-  .hero-cta{flex-direction:column;align-items:stretch}
-  .hero-cta .btn{width:100%}
-  .hero-botanical{width:210px;right:-3.5rem;top:-4.5rem}
-  .lantern-one{display:none}
-  .lantern-two{width:30px;height:120px;right:3%;top:-1.2rem}
-  .stacks .lbl{font-size:26px}
-  .jubilee-badge-wrap{min-height:440px}
-  .anniv-frame{width:min(290px,86vw);height:410px;border-radius:145px 145px 5px 5px}
-  .anniv-frame::before{inset:7px;border-radius:138px 138px 2px 2px}
-  .anniv-panel{width:calc(min(290px,86vw) - 30px);height:380px;border-radius:130px 130px 2px 2px}
-  .anniv-center{padding-top:1rem}
-  .anniv-dates{font-size:.85rem}
-  .anniv-fifty{font-size:5.6rem}
-  .sathiyo-bg{width:84px;height:84px;margin-bottom:.6rem}
-  .anniv-years{font-size:1.6rem;margin-bottom:.9rem}
-  .anniv-golden{font-size:.95rem}
-  .anniv-liberty{font-size:.95rem}
-  .anniv-laurel{width:min(290px,84vw);transform:translate(-50%,-35%)}
-  section{padding-top:4.5rem}
-  h2{font-size:2.15rem}
-  .lede{font-size:1.1rem}
-  .details{margin-top:4.5rem;padding:2.6rem 1.4rem 2.2rem}
-  .details::before{inset:6px}
-  #rsvp{margin-top:4.5rem;padding:4.5rem 0 4rem}
-  #rsvp .wrap{padding-inline:1rem}
-  .rsvp-card{padding:2.4rem 1.4rem 2rem}
-  .card::before{inset:6px}
-  .pair{grid-template-columns:1fr;gap:.8rem}
-  .choice{min-height:118px}
+  #rsvp .rsvp-card{min-height:0}
+  #rsvp .step{min-height:0}
   .arrival-picker{grid-template-columns:1fr auto 1fr}
-  .arrival-ampm{grid-column:1/-1;min-width:0}
-  .arrival-period-fixed{min-height:48px}
-  .arrival-actions .btn{flex:1;min-width:0}
-  .count{font-size:4.8rem}
-  .guest-actions .btn{width:100%;min-width:0}
-  footer .wrap{flex-direction:column;align-items:flex-start}
+  .arrival-ampm{grid-column:1/-1}
+  .arrival-period-fixed{min-height:46px}
+  .arrival-actions .btn,.guest-actions .btn{width:100%;min-width:0}
 }
-@media (max-width:360px){
-  .wrap,.hero-in{padding-inline:1.1rem}
-  .brand{font-size:.72rem;letter-spacing:.06em}
-  .hero-title-main{font-size:3.3rem}
-  .anniv-fifty{font-size:5rem}
+@media(prefers-reduced-motion:reduce){
+  .arrival-clock .second,.thankyou-mark,.already-mark{animation:none!important}
 }
 
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .hero-copy{opacity:1;transform:none;animation:none}
-  .sathiyo-bg *{animation:none!important}
-  .sathiyo-bg .sth-arm,.sathiyo-bg .sth-inlay path,.sathiyo-bg .sth-ring{stroke-dashoffset:0}
-  .sathiyo-bg .sth-tips,.sathiyo-bg .sth-dots,.sathiyo-bg .sth-heart{opacity:1;transform:none}
-  .hero-botanical,.hanging-lantern,.lantern-glow,.falling-leaf,.step.on,.ticker-track,.anniv-panel::after,.anniv-sparkles i,.event-clock .clock-glow,.choice,.thankyou-mark,.already-mark{animation:none!important}
-  .falling-leaves,#heroFireworks{display:none}
-  .arrival-clock .second{animation:none!important;transform:rotate(0deg)}
-  .btn,.choice,.round{transition:none!important}
-}
-
-/* ===== Design 4 — Shahi Jamuni: royal plum & gold, round medallion on the left ===== */
-:root{
-  --maroon:#33123F;--maroon-deep:#1E0826;--wine:#4E1D5E;--wine-hi:#652A78;
-  --ink:#2A1830;--muted:#625468;--faint:#968A9A;
-  --shade:20 5 26;--panel-a:#46195A;--panel-b:#26092E;
-  --book1:#4E1D5E;--book2:#B8925A;--book3:#7A4A8A;--book4:#A27BB0;
-}
-.hero{background-image:
-  radial-gradient(ellipse 55% 60% at 24% 50%,rgba(201,164,83,.18),transparent 70%),
-  radial-gradient(ellipse 80% 60% at 100% 110%,rgb(var(--shade) / .7),transparent 70%)}
-.hero-stage{grid-template-columns:minmax(340px,.95fr) minmax(0,1.05fr);gap:3rem}
-.jubilee-badge-wrap{order:-1;min-height:600px}
-.hero-copy{justify-self:end}
-.anniv-frame{width:480px;height:480px;border-radius:50%}
-.anniv-frame::before{border-radius:50%}
-.anniv-panel{width:444px;height:444px;border-radius:50%}
-.anniv-orbit-one{display:block;position:absolute;left:50%;top:50%;width:540px;height:540px;margin:-270px 0 0 -270px;border-radius:50%;border:1px dashed rgba(201,164,83,.45);pointer-events:none;animation:orbit-spin 80s linear infinite;animation-play-state:var(--banner-play-state)}
-@keyframes orbit-spin{to{transform:rotate(360deg)}}
-.anniv-center{padding-top:0}
-.sathiyo-bg{width:80px;height:80px;margin-bottom:.6rem}
-.anniv-dates{font-size:.9rem}
-.anniv-fifty{font-size:6.6rem}
-.anniv-years{font-size:1.7rem;margin-bottom:.8rem}
-.anniv-rule{margin-bottom:.8rem}
-.anniv-golden{margin-bottom:.5rem}
-.anniv-laurel{width:350px;transform:translate(-50%,-39%)}
-.lantern-one{display:none}
-.lantern-two{right:auto;left:43%;width:44px;height:180px}
-.lantern-three{left:-3rem}
-.hero-botanical{right:auto;left:-2.5rem;transform:scaleX(-1);transform-origin:0 0;animation:none}
-@media (max-width:1080px){
-  .hero-stage{grid-template-columns:minmax(300px,.9fr) minmax(0,1.1fr);gap:1.5rem}
-  .anniv-frame{width:400px;height:400px}.anniv-panel{width:368px;height:368px}
-  .anniv-orbit-one{width:450px;height:450px;margin:-225px 0 0 -225px}
-  .jubilee-badge-wrap{min-height:500px}
-  .sathiyo-bg{width:64px;height:64px}.anniv-fifty{font-size:5.6rem}.anniv-laurel{width:300px}
-  .anniv-liberty{display:none}
-}
-@media (max-width:880px){
-  .hero-stage{grid-template-columns:1fr;gap:2rem}
-  .jubilee-badge-wrap{order:0;min-height:520px}
-  .hero-copy{justify-self:start}
-  .lantern-two{display:none}
-}
-@media (max-width:640px){
-  .jubilee-badge-wrap{min-height:400px}
-  .anniv-frame{width:min(330px,88vw);height:min(330px,88vw)}
-  .anniv-frame::before{inset:7px;border-radius:50%}
-  .anniv-panel{width:calc(min(330px,88vw) - 28px);height:calc(min(330px,88vw) - 28px);border-radius:50%}
-  .anniv-orbit-one{width:min(370px,96vw);height:min(370px,96vw);margin:0;transform:translate(-50%,-50%);animation:none}
-  .sathiyo-bg{width:54px;height:54px;margin-bottom:.4rem}
-  .anniv-dates{font-size:.75rem;margin-bottom:.1rem}
-  .anniv-fifty{font-size:4.6rem}
-  .anniv-years{font-size:1.35rem;margin-bottom:.55rem}
-  .anniv-rule{display:none}
-  .anniv-golden{font-size:.82rem}
-  .anniv-laurel{width:min(240px,64vw);transform:translate(-50%,-44%)}
-  .hero-botanical{left:-3.5rem}
-}
-
-/* ---- background sathiyo: shared ---- */
-.sth-svg{overflow:visible;pointer-events:none;max-width:none}
-/* the arch without its own sathiyo */
-.anniv-center{padding-top:1.4rem}
-.anniv-fifty{font-size:clamp(7.4rem,11vw,9rem)}
-.anniv-laurel{transform:translate(-50%,-55%)}
-@media (max-width:1080px){.anniv-fifty{font-size:7.6rem}}
-@media (max-width:640px){.anniv-center{padding-top:1rem}.anniv-fifty{font-size:6.2rem}.anniv-laurel{transform:translate(-50%,-52%)}}
-.sth-svg *{animation-duration:12s;animation-iteration-count:infinite;animation-play-state:var(--banner-play-state)}
-.sth-svg .sth-inlay path{stroke:var(--maroon)}
-@media (prefers-reduced-motion:reduce){
-  .sth-svg,.sth-svg *,.sth-mandal{animation:none!important}
-  .sth-svg .sth-arm,.sth-svg .sth-inlay path,.sth-svg .sth-ring{stroke-dashoffset:0}
-  .sth-svg .sth-tips,.sth-svg .sth-dots,.sth-svg .sth-heart,.sth-svg .sth-ring-dots{opacity:1;transform:none}
-}
-
-/* BG4 — Chakra: one giant sathiyo turning slowly behind the arch, like a sun wheel */
-.sth-chakra{position:absolute;left:50%;top:50%;width:1150px;height:1150px;margin:-575px 0 0 -575px;z-index:0;opacity:.09;animation:chakra-turn 180s linear infinite;animation-play-state:var(--banner-play-state)}
-.sth-chakra .sth-svg{width:100%;height:100%}
-.chk .sth-arm{stroke-width:13}
-@keyframes chakra-turn{to{transform:rotate(360deg)}}
-@media (max-width:640px){.sth-chakra{width:760px;height:760px;margin:-380px 0 0 -380px;opacity:.1}}
-@media (prefers-reduced-motion:reduce){.sth-chakra{animation:none}}
+/* RSVP spacing correction: content-height card, vertically centred beside the intro. */
+#rsvp .rsvp-card{min-height:0!important;height:auto!important;align-self:center!important}
+#rsvp .step,#rsvp .step[data-s="thankyou"],#rsvp .step[data-s="already"]{min-height:0!important}
+@media(max-width:880px){#rsvp .rsvp-card{width:100%}}
 
 
-.anniv-orbit-one{display:none}.sth-chakra{opacity:.1;width:1300px;height:1300px;margin:-650px 0 0 -650px}
-/* bigger medallion */
-.jubilee-badge-wrap{min-height:660px}
-.anniv-frame{width:590px;height:590px}
-.anniv-frame::before{inset:11px}
-.anniv-panel{width:546px;height:546px}
-.anniv-dates{font-size:1.12rem;margin-bottom:.5rem}
-.anniv-fifty{font-size:10rem}
-.anniv-years{font-size:2.3rem;margin:-.1rem 0 1.1rem}
-.anniv-golden{font-size:1.3rem;margin-bottom:.9rem}
-.anniv-rule{width:150px;margin-bottom:.9rem}
-.anniv-liberty{font-size:1.2rem}
-.anniv-laurel{width:450px;transform:translate(-50%,-54%)}
-.anniv-sparkles i:nth-child(1){left:4%;top:14%}.anniv-sparkles i:nth-child(3){left:2%;bottom:18%}
-@media (max-width:1180px){
-  .anniv-frame{width:520px;height:520px}.anniv-panel{width:480px;height:480px}
-  .anniv-fifty{font-size:8.6rem}.anniv-laurel{width:395px}.jubilee-badge-wrap{min-height:580px}
+/* RSVP layout: remove the explanatory column and give the original form more room. */
+#rsvp .rsvp-wrap{
+  display:grid;
+  grid-template-columns:minmax(0,1fr);
+  gap:0;
+  max-width:860px;
+  margin-inline:auto;
+  justify-items:center;
 }
-@media (max-width:1080px){
-  .anniv-frame{width:410px;height:410px}.anniv-panel{width:376px;height:376px}
-  .jubilee-badge-wrap{min-height:480px}
-  .anniv-fifty{font-size:6.8rem}.anniv-years{font-size:1.75rem;margin-bottom:.8rem}.anniv-golden{font-size:1rem;margin-bottom:.6rem}.anniv-rule{margin-bottom:.6rem}
-  .anniv-laurel{width:310px}.anniv-liberty{display:block;font-size:1.02rem}
+#rsvp .rsvp-card{
+  width:100%;
+  max-width:820px;
+  padding:2.6rem clamp(1.6rem,4.5vw,3.4rem) 2.7rem;
+  border-radius:24px;
 }
-@media (max-width:880px){
-  .anniv-frame{width:min(500px,90vw);height:min(500px,90vw)}.anniv-panel{width:calc(min(500px,90vw) - 40px);height:calc(min(500px,90vw) - 40px)}
-  .jubilee-badge-wrap{min-height:min(560px,100vw)}
-  .anniv-fifty{font-size:clamp(5.8rem,16vw,8.4rem)}.anniv-laurel{width:min(380px,68vw)}
+@media(max-width:640px){
+  #rsvp .rsvp-wrap{max-width:100%}
+  #rsvp .rsvp-card{width:100%;padding:1.8rem 1.35rem 2rem;border-radius:20px}
 }
-@media (max-width:640px){
-  .jubilee-badge-wrap{min-height:400px}
-  .anniv-frame{width:94vw;height:94vw}.anniv-frame::before{inset:7px}
-  .anniv-panel{width:calc(94vw - 26px);height:calc(94vw - 26px)}
-  .sth-chakra{width:820px;height:820px;margin:-410px 0 0 -410px}
-  .anniv-center{padding-top:0}
-  .anniv-dates{font-size:.82rem;margin-bottom:.2rem}
-  .anniv-fifty{font-size:5.9rem}
-  .anniv-years{font-size:1.55rem;margin-bottom:.6rem}
-  .anniv-golden{font-size:.9rem;margin-bottom:.4rem}
-  .anniv-rule{display:block;width:90px;margin-bottom:.5rem}
-  .anniv-liberty{display:block;font-size:.88rem}
-  .anniv-laurel{width:min(275px,72vw);transform:translate(-50%,-50%)}
-}
-
 </style>
 </head>
 <body>
-<canvas id="confetti" aria-hidden="true"></canvas>
+<canvas aria-hidden="true" id="confetti"></canvas>
+<header class="hero" data-motion="playing" id="invitationBanner"><canvas aria-hidden="true" id="heroFireworks"></canvas>
+<div class="hero-in">
+<div class="hero-bar">
+<span class="brand"><i data-lucide="library"></i>Liberty Publications</span>
 
-<header class="hero" id="invitationBanner" data-motion="playing">
-  <canvas id="heroFireworks" aria-hidden="true"></canvas>
-  <div class="hero-in">
-    <div class="hero-bar">
-      <span class="brand"><i data-lucide="library" aria-hidden="true"></i><span>Liberty Publications</span></span>
-      <div class="hero-tools">
-        <button class="motion-control" id="motionToggle" type="button" aria-pressed="false" aria-label="Animation playing. Pause animation." title="Pause animation">
-          <svg class="pause-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="4" y="3" width="2.5" height="10" rx=".7"/><rect x="9.5" y="3" width="2.5" height="10" rx=".7"/></svg>
-          <svg class="play-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M5 2.8a.7.7 0 0 1 1.05-.6l7 4.6a1.4 1.4 0 0 1 0 2.4l-7 4.6A.7.7 0 0 1 5 13.2Z"/></svg>
-          <span id="motionLabel">Pause animation</span>
-        </button>
-        <button class="share" id="shareBtn" type="button" aria-label="Share this invitation" title="Share invitation"><i data-lucide="share-2" aria-hidden="true"></i></button>
-      </div>
-    </div>
-    <div class="hero-stage">
-      <svg class="hero-botanical" viewBox="0 0 440 510" aria-hidden="true"><defs><path id="oliveLeaf" d="M0 0C-17-19-17-58 0-94C17-64 19-24 0 0Z"/></defs><path d="M437-18C355 24 326 110 355 184C395 268 422 346 414 471M350 119C302 62 243 26 168 8" fill="none" stroke="#737A3F" stroke-width="3" stroke-linecap="round"/><use href="#oliveLeaf" transform="translate(372 90) rotate(-65) scale(1.0)" fill="#737B3D"/><use href="#oliveLeaf" transform="translate(350 115) rotate(28) scale(0.95)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(343 150) rotate(-65) scale(1.05)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(352 184) rotate(35) scale(0.98)" fill="#737B3D"/><use href="#oliveLeaf" transform="translate(369 220) rotate(-70) scale(0.95)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(387 256) rotate(37) scale(1.0)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(402 294) rotate(-66) scale(0.9)" fill="#737B3D"/><use href="#oliveLeaf" transform="translate(411 334) rotate(34) scale(0.92)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(415 376) rotate(-55) scale(0.85)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(416 416) rotate(30) scale(0.8)" fill="#737B3D"/><use href="#oliveLeaf" transform="translate(300 69) rotate(-65) scale(0.9)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(253 42) rotate(-65) scale(0.86)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(326 96) rotate(11) scale(0.9)" fill="#737B3D"/><use href="#oliveLeaf" transform="translate(292 76) rotate(14) scale(0.85)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(233 30) rotate(-82) scale(0.8)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(195 17) rotate(-87) scale(0.78)" fill="#737B3D"/><use href="#oliveLeaf" transform="translate(361 157) rotate(73) scale(0.9)" fill="#626D35"/><use href="#oliveLeaf" transform="translate(387 216) rotate(82) scale(0.85)" fill="#626D35"/><path d="M353 139Q320 154 319 178M374 219Q346 232 345 254M407 315Q381 327 381 349" fill="none" stroke="#7A8049" stroke-width="1.5"/><ellipse cx="319" cy="187" rx="10" ry="15" fill="#808642" transform="rotate(15 319 187)"/><ellipse cx="345" cy="264" rx="11" ry="16" fill="#747C36" transform="rotate(-12 345 264)"/><ellipse cx="381" cy="358" rx="10" ry="14" fill="#858D48" transform="rotate(18 381 358)"/></svg>
-      <svg class="hanging-lantern lantern-one" viewBox="0 0 80 300" aria-hidden="true"><defs><radialGradient id="lanternGlow1"><stop offset="0" stop-color="#FFF0A3" stop-opacity=".85"/><stop offset=".55" stop-color="#FFE898" stop-opacity=".35"/><stop offset="1" stop-color="#FFE898" stop-opacity="0"/></radialGradient></defs><path d="M40 0V139" fill="none" stroke="#9C914F" stroke-width="1"/><ellipse class="lantern-glow" cx="40" cy="177" rx="38" ry="51" fill="url(#lanternGlow1)"/><g fill="none" stroke="#AB9850" stroke-width="1"><rect x="35" y="139" width="10" height="5" rx="1" fill="#D3BF72"/><ellipse cx="40" cy="177" rx="24" ry="34" fill="#FFF5CB" fill-opacity=".6"/><ellipse cx="40" cy="177" rx="16" ry="34"/><ellipse cx="40" cy="177" rx="7" ry="34"/><path d="M40 143V211M32 213H48M35 216H45M40 217V249M37 244V255M43 244V255"/><path d="M35 138L40 130L45 138"/><rect x="36" y="211" width="8" height="5" rx="1" fill="#D3BF72"/></g></svg>
-      <svg class="hanging-lantern lantern-two" viewBox="0 0 80 300" aria-hidden="true"><defs><radialGradient id="lanternGlow2"><stop offset="0" stop-color="#FFF0A3" stop-opacity=".85"/><stop offset=".55" stop-color="#FFE898" stop-opacity=".35"/><stop offset="1" stop-color="#FFE898" stop-opacity="0"/></radialGradient></defs><path d="M40 0V139" fill="none" stroke="#9C914F" stroke-width="1"/><ellipse class="lantern-glow" cx="40" cy="177" rx="38" ry="51" fill="url(#lanternGlow2)"/><g fill="none" stroke="#AB9850" stroke-width="1"><rect x="35" y="139" width="10" height="5" rx="1" fill="#D3BF72"/><ellipse cx="40" cy="177" rx="24" ry="34" fill="#FFF5CB" fill-opacity=".6"/><ellipse cx="40" cy="177" rx="16" ry="34"/><ellipse cx="40" cy="177" rx="7" ry="34"/><path d="M40 143V211M32 213H48M35 216H45M40 217V249M37 244V255M43 244V255"/><path d="M35 138L40 130L45 138"/><rect x="36" y="211" width="8" height="5" rx="1" fill="#D3BF72"/></g></svg>
-      <svg class="hanging-lantern lantern-three" viewBox="0 0 80 300" aria-hidden="true"><defs><radialGradient id="lanternGlow3"><stop offset="0" stop-color="#FFF0A3" stop-opacity=".85"/><stop offset=".55" stop-color="#FFE898" stop-opacity=".35"/><stop offset="1" stop-color="#FFE898" stop-opacity="0"/></radialGradient></defs><path d="M40 0V139" fill="none" stroke="#9C914F" stroke-width="1"/><ellipse class="lantern-glow" cx="40" cy="177" rx="38" ry="51" fill="url(#lanternGlow3)"/><g fill="none" stroke="#AB9850" stroke-width="1"><rect x="35" y="139" width="10" height="5" rx="1" fill="#D3BF72"/><ellipse cx="40" cy="177" rx="24" ry="34" fill="#FFF5CB" fill-opacity=".6"/><ellipse cx="40" cy="177" rx="16" ry="34"/><ellipse cx="40" cy="177" rx="7" ry="34"/><path d="M40 143V211M32 213H48M35 216H45M40 217V249M37 244V255M43 244V255"/><path d="M35 138L40 130L45 138"/><rect x="36" y="211" width="8" height="5" rx="1" fill="#D3BF72"/></g></svg>
-      <div class="falling-leaves" aria-hidden="true"><svg class="falling-leaf" viewBox="0 0 24 43" style="--leaf-x:88%;--duration:17s;--delay:-3s;--drift:-60px;--leaf-width:24px" aria-hidden="true"><path d="M12 42C-2 29 0 11 18 0C24 17 23 31 12 42Z" fill="#6F7A36"/><path d="M12 40L17 6" fill="none" stroke="#B3B977" stroke-width=".6"/></svg><svg class="falling-leaf" viewBox="0 0 24 43" style="--leaf-x:69%;--duration:20s;--delay:-11s;--drift:42px;--leaf-width:20px" aria-hidden="true"><path d="M12 42C-2 29 0 11 18 0C24 17 23 31 12 42Z" fill="#858C43"/><path d="M12 40L17 6" fill="none" stroke="#B3B977" stroke-width=".6"/></svg><svg class="falling-leaf" viewBox="0 0 24 43" style="--leaf-x:42%;--duration:23s;--delay:-16s;--drift:60px;--leaf-width:18px" aria-hidden="true"><path d="M12 42C-2 29 0 11 18 0C24 17 23 31 12 42Z" fill="#798444"/><path d="M12 40L17 6" fill="none" stroke="#B3B977" stroke-width=".6"/></svg><svg class="falling-leaf" viewBox="0 0 24 43" style="--leaf-x:94%;--duration:19s;--delay:-8s;--drift:-35px;--leaf-width:22px" aria-hidden="true"><path d="M12 42C-2 29 0 11 18 0C24 17 23 31 12 42Z" fill="#717B39"/><path d="M12 40L17 6" fill="none" stroke="#B3B977" stroke-width=".6"/></svg></div>
-      <div class="hero-copy">
-        <p class="hero-kicker">Golden Jubilee Celebration</p>
-        <p class="hero-script">You’re cordially invited</p>
-        <h1 aria-label="50 years of Liberty Publications"><span class="hero-title-main">50 YEARS</span><span class="hero-title-sub">OF LIBERTY</span></h1>
-        <p class="hero-sub">Liberty Publications cordially invites you to an evening of distinction as we commemorate fifty years of learning, trust, shared purpose and enduring relationships.</p>
-        <div class="hero-highlights" aria-label="Golden Jubilee highlights">
-          <span>Since 1976</span>
-          <span>50 Years of Trust</span>
-          <span>Golden Jubilee Celebration</span>
-        </div>
-        <p class="hero-mini-note">An elegant evening celebrating a legacy built with educators, families, partners and well-wishers across generations.</p>
-        <div class="countdown" id="countdown" hidden>
-          <div><b id="cdD">0</b><small>Days</small></div>
-          <div><b id="cdH">0</b><small>Hours</small></div>
-          <div><b id="cdM">0</b><small>Mins</small></div>
-          <div><b id="cdS">0</b><small>Secs</small></div>
-        </div>
-        <p class="hero-when"><i data-lucide="calendar" aria-hidden="true"></i><span id="heroWhen">Date and venue to be announced</span></p>
-        <div class="hero-cta">
-          <a class="btn btn-gold" href="#rsvp"><i data-lucide="send" aria-hidden="true"></i>Respond to the invitation</a>
-          <a class="btn btn-ghost" href="#details">View details<i data-lucide="arrow-down-right" aria-hidden="true"></i></a>
-        </div>
-        <p class="toast" id="toast" role="status"></p>
-      </div>
-      <div class="jubilee-badge-wrap refined-anniversary" aria-label="Liberty Publications 50 Years Golden Jubilee">
-<div class="sth-chakra" aria-hidden="true"><svg class="sth-svg chk" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><defs><linearGradient id="sathiyoGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F6E3A6"/><stop offset=".45" stop-color="#D4AE57"/><stop offset=".7" stop-color="#F2DC97"/><stop offset="1" stop-color="#A9822F"/></linearGradient></defs><circle class="sth-ring" cx="100" cy="100" r="93" pathLength="100"/><circle class="sth-ring-dots" cx="100" cy="100" r="86"/><g class="sth-arms"><path class="sth-arm" pathLength="100" d="M152 38H100V100"/><path class="sth-arm" pathLength="100" d="M162 152V100H100"/><path class="sth-arm" pathLength="100" d="M48 162H100V100"/><path class="sth-arm" pathLength="100" d="M38 48V100H100"/></g><g class="sth-inlay"><path pathLength="100" d="M152 38H100V100"/><path pathLength="100" d="M162 152V100H100"/><path pathLength="100" d="M48 162H100V100"/><path pathLength="100" d="M38 48V100H100"/></g><g class="sth-tips"><path d="M152 30L161 38L152 46L146 38Z"/><path d="M170 152L162 161L154 152L162 146Z"/><path d="M48 170L39 162L48 154L54 162Z"/><path d="M30 48L38 39L46 48L38 54Z"/></g><g class="sth-dots"><g><circle cx="68" cy="68" r="7"/><circle class="halo" cx="68" cy="68" r="11.5"/></g><g><circle cx="132" cy="68" r="7"/><circle class="halo" cx="132" cy="68" r="11.5"/></g><g><circle cx="132" cy="132" r="7"/><circle class="halo" cx="132" cy="132" r="11.5"/></g><g><circle cx="68" cy="132" r="7"/><circle class="halo" cx="68" cy="132" r="11.5"/></g></g><path class="sth-heart" d="M100 91L109 100L100 109L91 100Z"/></svg></div>
-        <div class="anniv-orbit anniv-orbit-one" aria-hidden="true"></div>
-        <div class="anniv-orbit anniv-orbit-two" aria-hidden="true"></div>
-        <div class="anniv-sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="anniv-frame" aria-hidden="true"></div>
-        <div class="anniv-panel" aria-hidden="true"></div>
-        <div class="anniv-chip anniv-chip-top" aria-hidden="true"><strong>Golden</strong><span>Jubilee</span></div>
-        <div class="anniv-chip anniv-chip-left" aria-hidden="true"><strong>50</strong><span>Years</span></div>
-        <div class="anniv-chip anniv-chip-bottom" aria-hidden="true"><strong>Since</strong><span>1976</span></div>
-        <svg class="anniv-laurel" viewBox="0 0 540 540" aria-hidden="true">
-          <path d="M184 416C118 371 88 304 105 236C117 187 147 148 190 121"/>
-          <path d="M356 416C422 371 452 304 435 236C423 187 393 148 350 121"/>
-          <g class="anniv-leaves-left">
-            <ellipse cx="133" cy="365" rx="10" ry="27" transform="rotate(-48 133 365)"/>
-            <ellipse cx="111" cy="327" rx="10" ry="26" transform="rotate(-67 111 327)"/>
-            <ellipse cx="105" cy="282" rx="10" ry="25" transform="rotate(-82 105 282)"/>
-            <ellipse cx="112" cy="238" rx="10" ry="25" transform="rotate(-100 112 238)"/>
-            <ellipse cx="129" cy="198" rx="10" ry="24" transform="rotate(-116 129 198)"/>
-            <ellipse cx="154" cy="163" rx="10" ry="23" transform="rotate(-132 154 163)"/>
-          </g>
-          <g class="anniv-leaves-right">
-            <ellipse cx="407" cy="365" rx="10" ry="27" transform="rotate(48 407 365)"/>
-            <ellipse cx="429" cy="327" rx="10" ry="26" transform="rotate(67 429 327)"/>
-            <ellipse cx="435" cy="282" rx="10" ry="25" transform="rotate(82 435 282)"/>
-            <ellipse cx="428" cy="238" rx="10" ry="25" transform="rotate(100 428 238)"/>
-            <ellipse cx="411" cy="198" rx="10" ry="24" transform="rotate(116 411 198)"/>
-            <ellipse cx="386" cy="163" rx="10" ry="23" transform="rotate(132 386 163)"/>
-          </g>
-        </svg>
-        <div class="anniv-center">
-          <div class="anniv-eyebrow"><span></span> Celebrating a Legacy <span></span></div>
-          <div class="anniv-dates">1976 <b>✦</b> 2026</div>
-          <div class="anniv-fifty"><span>5</span><span>0</span></div>
-          <div class="anniv-years">Years</div>
-          <div class="anniv-golden">Golden Jubilee</div>
-          <div class="anniv-rule"></div>
-          <div class="anniv-liberty">Liberty Publications</div>
-          <div class="anniv-tagline">Fifty years of learning, trust &amp; legacy</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i></span><span>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i></span></div></div>
-
-<main>
-  <section>
-    <div class="wrap occasion">
-      <div>
-        <p class="label">The occasion</p>
-        <h2>A golden milestone, shared with those who shaped the journey.</h2>
-        <p class="lede">For five decades, Liberty Publications has been strengthened by the trust, goodwill and association of educators, partners, families, readers and distinguished well-wishers across generations. As we mark this golden milestone, your presence would add special meaning to an evening dedicated to the relationships that have shaped our journey.</p>
-      </div>
-      <figure style="margin:0">
-        <svg class="stacks" viewBox="0 130 600 210" role="img" aria-label="Five stacks of books growing taller, one for each decade"><rect x="31" y="280" width="74" height="20" rx="2.5" fill="#59613F"/><rect x="91" y="283" width="3" height="14" fill="#fff" opacity=".35"/><rect x="37" y="289" width="33" height="2" fill="#fff" opacity=".3"/><rect x="31" y="297" width="74" height="3" fill="#000" opacity=".12"/><rect x="34" y="264" width="72" height="16" rx="2.5" fill="#A87F72"/><rect x="92" y="267" width="3" height="10" fill="#fff" opacity=".35"/><rect x="40" y="271" width="32" height="2" fill="#fff" opacity=".3"/><rect x="34" y="277" width="72" height="3" fill="#000" opacity=".12"/><text x="68.0" y="326" text-anchor="middle" class="lbl">Decade 1</text><rect x="144" y="284" width="81" height="16" rx="2.5" fill="#8D9670"/><rect x="212" y="287" width="3" height="10" fill="#fff" opacity=".35"/><rect x="150" y="291" width="36" height="2" fill="#fff" opacity=".3"/><rect x="144" y="297" width="81" height="3" fill="#000" opacity=".12"/><rect x="136" y="268" width="86" height="16" rx="2.5" fill="#6F7255"/><rect x="208" y="271" width="3" height="10" fill="#fff" opacity=".35"/><rect x="142" y="275" width="39" height="2" fill="#fff" opacity=".3"/><rect x="136" y="281" width="86" height="3" fill="#000" opacity=".12"/><rect x="146" y="252" width="72" height="16" rx="2.5" fill="#B19A6D"/><rect x="204" y="255" width="3" height="10" fill="#fff" opacity=".35"/><rect x="152" y="259" width="32" height="2" fill="#fff" opacity=".3"/><rect x="146" y="265" width="72" height="3" fill="#000" opacity=".12"/><text x="182.0" y="326" text-anchor="middle" class="lbl">Decade 2</text><rect x="257" y="278" width="72" height="22" rx="2.5" fill="#59613F"/><rect x="315" y="281" width="3" height="16" fill="#fff" opacity=".35"/><rect x="263" y="288" width="32" height="2" fill="#fff" opacity=".3"/><rect x="257" y="297" width="72" height="3" fill="#000" opacity=".12"/><rect x="252" y="262" width="87" height="16" rx="2.5" fill="#A87F72"/><rect x="326" y="265" width="3" height="10" fill="#fff" opacity=".35"/><rect x="258" y="269" width="39" height="2" fill="#fff" opacity=".3"/><rect x="252" y="275" width="87" height="3" fill="#000" opacity=".12"/><rect x="247" y="246" width="88" height="16" rx="2.5" fill="#768357"/><rect x="321" y="249" width="3" height="10" fill="#fff" opacity=".35"/><rect x="253" y="253" width="40" height="2" fill="#fff" opacity=".3"/><rect x="247" y="259" width="88" height="3" fill="#000" opacity=".12"/><rect x="255" y="228" width="90" height="18" rx="2.5" fill="#8D9670"/><rect x="331" y="231" width="3" height="12" fill="#fff" opacity=".35"/><rect x="261" y="236" width="40" height="2" fill="#fff" opacity=".3"/><rect x="255" y="243" width="90" height="3" fill="#000" opacity=".12"/><text x="296.0" y="326" text-anchor="middle" class="lbl">Decade 3</text><rect x="369" y="284" width="88" height="16" rx="2.5" fill="#8D9670"/><rect x="443" y="287" width="3" height="10" fill="#fff" opacity=".35"/><rect x="375" y="291" width="40" height="2" fill="#fff" opacity=".3"/><rect x="369" y="297" width="88" height="3" fill="#000" opacity=".12"/><rect x="372" y="262" width="71" height="22" rx="2.5" fill="#6F7255"/><rect x="428" y="265" width="3" height="16" fill="#fff" opacity=".35"/><rect x="378" y="272" width="32" height="2" fill="#fff" opacity=".3"/><rect x="372" y="281" width="71" height="3" fill="#000" opacity=".12"/><rect x="362" y="246" width="87" height="16" rx="2.5" fill="#B19A6D"/><rect x="436" y="249" width="3" height="10" fill="#fff" opacity=".35"/><rect x="368" y="253" width="39" height="2" fill="#fff" opacity=".3"/><rect x="362" y="259" width="87" height="3" fill="#000" opacity=".12"/><rect x="364" y="226" width="83" height="20" rx="2.5" fill="#59613F"/><rect x="434" y="229" width="3" height="14" fill="#fff" opacity=".35"/><rect x="370" y="235" width="37" height="2" fill="#fff" opacity=".3"/><rect x="364" y="243" width="83" height="3" fill="#000" opacity=".12"/><rect x="364" y="210" width="88" height="16" rx="2.5" fill="#A87F72"/><rect x="438" y="213" width="3" height="10" fill="#fff" opacity=".35"/><rect x="370" y="217" width="40" height="2" fill="#fff" opacity=".3"/><rect x="364" y="223" width="88" height="3" fill="#000" opacity=".12"/><text x="410.0" y="326" text-anchor="middle" class="lbl">Decade 4</text><rect x="490" y="282" width="73" height="18" rx="2.5" fill="#59613F"/><rect x="550" y="285" width="3" height="12" fill="#fff" opacity=".35"/><rect x="496" y="290" width="33" height="2" fill="#fff" opacity=".3"/><rect x="490" y="297" width="73" height="3" fill="#000" opacity=".12"/><rect x="478" y="264" width="81" height="18" rx="2.5" fill="#A87F72"/><rect x="546" y="267" width="3" height="12" fill="#fff" opacity=".35"/><rect x="484" y="272" width="36" height="2" fill="#fff" opacity=".3"/><rect x="478" y="279" width="81" height="3" fill="#000" opacity=".12"/><rect x="474" y="248" width="88" height="16" rx="2.5" fill="#768357"/><rect x="548" y="251" width="3" height="10" fill="#fff" opacity=".35"/><rect x="480" y="255" width="40" height="2" fill="#fff" opacity=".3"/><rect x="474" y="261" width="88" height="3" fill="#000" opacity=".12"/><rect x="486" y="230" width="85" height="18" rx="2.5" fill="#8D9670"/><rect x="556" y="233" width="3" height="12" fill="#fff" opacity=".35"/><rect x="492" y="238" width="38" height="2" fill="#fff" opacity=".3"/><rect x="486" y="245" width="85" height="3" fill="#000" opacity=".12"/><rect x="485" y="208" width="80" height="22" rx="2.5" fill="#6F7255"/><rect x="551" y="211" width="3" height="16" fill="#fff" opacity=".35"/><rect x="491" y="218" width="36" height="2" fill="#fff" opacity=".3"/><rect x="485" y="227" width="80" height="3" fill="#000" opacity=".12"/><rect x="482" y="186" width="81" height="22" rx="2.5" fill="#B79D58"/><rect x="548" y="189" width="3" height="16" fill="#fff" opacity=".35"/><rect x="488" y="196" width="36" height="2" fill="#fff" opacity=".3"/><rect x="482" y="205" width="81" height="3" fill="#000" opacity=".12"/><path d="M524.0 144 L528.0 156 L540.0 160 L528.0 164 L524.0 176 L520.0 164 L508.0 160 L520.0 156Z" fill="#B79D58"/><text x="524.0" y="326" text-anchor="middle" class="lbl">Decade 5</text><line x1="10" y1="300" x2="590" y2="300" stroke="currentColor" stroke-width="2"/></svg>
-        <figcaption class="figcap">Five decades, one shelf at a time.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <div class="details" id="details">
-      <p class="label">Celebration details</p>
-      <h2>It would be our privilege to welcome you.</h2>
-      <div class="facts">
-        <div class="fact"><span class="ic"><i data-lucide="calendar"></i></span><div><small>Date</small><b data-c="date"></b></div></div>
-        <div class="fact fact-time">
-  <div class="event-clock" aria-label="Event starts at 5:30 PM">
-    <span class="clock-glow"></span>
-    <span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
-    <span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
-    <span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
-    <span class="hand hour-hand"></span>
-    <span class="hand minute-hand"></span>
-  </div>
-  <div><small>Time</small><b data-c="time"></b></div>
+<div class="hero-tools"><button aria-label="Animation playing. Pause animation." aria-pressed="false" class="motion-control" id="motionToggle" title="Pause animation" type="button"><svg aria-hidden="true" class="pause-icon" fill="currentColor" viewbox="0 0 16 16"><rect height="10" rx=".7" width="2.5" x="4" y="3"></rect><rect height="10" rx=".7" width="2.5" x="9.5" y="3"></rect></svg><svg aria-hidden="true" class="play-icon" fill="currentColor" viewbox="0 0 16 16"><path d="M5 2.8a.7.7 0 0 1 1.05-.6l7 4.6a1.4 1.4 0 0 1 0 2.4l-7 4.6A.7.7 0 0 1 5 13.2Z"></path></svg><span id="motionLabel">Pause animation</span></button><button aria-label="Share this invitation" class="share" id="shareBtn" type="button"><i data-lucide="share-2"></i></button></div></div>
+<p class="hero-kicker"><i data-lucide="sparkles"></i> Golden Jubilee Celebration · 2027 <i data-lucide="sparkles"></i></p>
+<div aria-label="50 years, inside a golden laurel wreath" class="emblem" role="img">
+<svg aria-hidden="true" class="wreath" viewbox="0 0 400 400"><defs><lineargradient id="lg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#FFF0B8"></stop><stop offset=".45" stop-color="#D4A72C"></stop><stop offset="1" stop-color="#8E6210"></stop></lineargradient></defs><path d="M251.9 359.8 L278.9 348.3 L303.4 332.4 L324.8 312.4 L342.5 289.0 L355.8 262.9 L364.3 234.9 L367.9 205.9 L366.4 176.6 L359.8 148.1 L348.3 121.1 L332.4 96.6 L312.4 75.2 L289.0 57.5 L262.9 44.2" fill="none" stroke="url(#lg)" stroke-linecap="round" stroke-width="2.4"></path><path d="M148.1 359.8 L121.1 348.3 L96.6 332.4 L75.2 312.4 L57.5 289.0 L44.2 262.9 L35.7 234.9 L32.1 205.9 L33.6 176.6 L40.2 148.1 L51.7 121.1 L67.6 96.6 L87.6 75.2 L111.0 57.5 L137.1 44.2" fill="none" stroke="url(#lg)" stroke-linecap="round" stroke-width="2.4"></path><ellipse cx="151.5" cy="349.3" fill="url(#lg)" rx="14.0" ry="5.6" transform="rotate(-124.0 151.5 349.3)"></ellipse><ellipse cx="144.7" cy="370.2" fill="url(#lg)" rx="14.0" ry="5.6" transform="rotate(-124.0 144.7 370.2)"></ellipse><ellipse cx="126.1" cy="338.9" fill="url(#lg)" rx="13.55" ry="5.42" transform="rotate(-114.0 126.1 338.9)"></ellipse><ellipse cx="116.1" cy="357.7" fill="url(#lg)" rx="13.55" ry="5.42" transform="rotate(-114.0 116.1 357.7)"></ellipse><ellipse cx="102.9" cy="324.3" fill="url(#lg)" rx="13.1" ry="5.239999999999999" transform="rotate(-104.0 102.9 324.3)"></ellipse><ellipse cx="90.2" cy="340.5" fill="url(#lg)" rx="13.1" ry="5.239999999999999" transform="rotate(-104.0 90.2 340.5)"></ellipse><ellipse cx="82.5" cy="305.8" fill="url(#lg)" rx="12.65" ry="5.06" transform="rotate(-94.0 82.5 305.8)"></ellipse><ellipse cx="67.8" cy="319.1" fill="url(#lg)" rx="12.65" ry="5.06" transform="rotate(-94.0 67.8 319.1)"></ellipse><ellipse cx="65.7" cy="283.9" fill="url(#lg)" rx="12.2" ry="4.88" transform="rotate(-84.0 65.7 283.9)"></ellipse><ellipse cx="49.4" cy="294.1" fill="url(#lg)" rx="12.2" ry="4.88" transform="rotate(-84.0 49.4 294.1)"></ellipse><ellipse cx="52.8" cy="259.5" fill="url(#lg)" rx="11.75" ry="4.7" transform="rotate(-74.0 52.8 259.5)"></ellipse><ellipse cx="35.7" cy="266.4" fill="url(#lg)" rx="11.75" ry="4.7" transform="rotate(-74.0 35.7 266.4)"></ellipse><ellipse cx="44.4" cy="233.1" fill="url(#lg)" rx="11.3" ry="4.52" transform="rotate(-64.0 44.4 233.1)"></ellipse><ellipse cx="27.0" cy="236.8" fill="url(#lg)" rx="11.3" ry="4.52" transform="rotate(-64.0 27.0 236.8)"></ellipse><ellipse cx="40.6" cy="205.6" fill="url(#lg)" rx="10.85" ry="4.34" transform="rotate(-54.0 40.6 205.6)"></ellipse><ellipse cx="23.6" cy="206.2" fill="url(#lg)" rx="10.85" ry="4.34" transform="rotate(-54.0 23.6 206.2)"></ellipse><ellipse cx="41.7" cy="177.8" fill="url(#lg)" rx="10.4" ry="4.16" transform="rotate(-44.0 41.7 177.8)"></ellipse><ellipse cx="25.5" cy="175.5" fill="url(#lg)" rx="10.4" ry="4.16" transform="rotate(-44.0 25.5 175.5)"></ellipse><ellipse cx="47.7" cy="150.5" fill="url(#lg)" rx="9.95" ry="3.979999999999999" transform="rotate(-34.0 47.7 150.5)"></ellipse><ellipse cx="32.8" cy="145.7" fill="url(#lg)" rx="9.95" ry="3.979999999999999" transform="rotate(-34.0 32.8 145.7)"></ellipse><ellipse cx="58.3" cy="124.6" fill="url(#lg)" rx="9.5" ry="3.8" transform="rotate(-24.0 58.3 124.6)"></ellipse><ellipse cx="45.1" cy="117.6" fill="url(#lg)" rx="9.5" ry="3.8" transform="rotate(-24.0 45.1 117.6)"></ellipse><ellipse cx="73.2" cy="100.9" fill="url(#lg)" rx="9.049999999999999" ry="3.619999999999999" transform="rotate(-14.0 73.2 100.9)"></ellipse><ellipse cx="62.0" cy="92.2" fill="url(#lg)" rx="9.049999999999999" ry="3.619999999999999" transform="rotate(-14.0 62.0 92.2)"></ellipse><ellipse cx="92.1" cy="80.2" fill="url(#lg)" rx="8.600000000000001" ry="3.44" transform="rotate(-4.0 92.1 80.2)"></ellipse><ellipse cx="83.1" cy="70.1" fill="url(#lg)" rx="8.600000000000001" ry="3.44" transform="rotate(-4.0 83.1 70.1)"></ellipse><ellipse cx="114.4" cy="63.0" fill="url(#lg)" rx="8.149999999999999" ry="3.2599999999999993" transform="rotate(6.0 114.4 63.0)"></ellipse><ellipse cx="107.6" cy="52.1" fill="url(#lg)" rx="8.149999999999999" ry="3.2599999999999993" transform="rotate(6.0 107.6 52.1)"></ellipse><ellipse cx="139.3" cy="49.8" fill="url(#lg)" rx="7.700000000000001" ry="3.08" transform="rotate(16.0 139.3 49.8)"></ellipse><ellipse cx="134.8" cy="38.6" fill="url(#lg)" rx="7.700000000000001" ry="3.08" transform="rotate(16.0 134.8 38.6)"></ellipse><ellipse cx="248.5" cy="349.3" fill="url(#lg)" rx="14.0" ry="5.6" transform="rotate(20.0 248.5 349.3)"></ellipse><ellipse cx="255.3" cy="370.2" fill="url(#lg)" rx="14.0" ry="5.6" transform="rotate(20.0 255.3 370.2)"></ellipse><ellipse cx="273.9" cy="338.9" fill="url(#lg)" rx="13.55" ry="5.42" transform="rotate(10.0 273.9 338.9)"></ellipse><ellipse cx="283.9" cy="357.7" fill="url(#lg)" rx="13.55" ry="5.42" transform="rotate(10.0 283.9 357.7)"></ellipse><ellipse cx="297.1" cy="324.3" fill="url(#lg)" rx="13.1" ry="5.239999999999999" transform="rotate(0.0 297.1 324.3)"></ellipse><ellipse cx="309.8" cy="340.5" fill="url(#lg)" rx="13.1" ry="5.239999999999999" transform="rotate(0.0 309.8 340.5)"></ellipse><ellipse cx="317.5" cy="305.8" fill="url(#lg)" rx="12.65" ry="5.06" transform="rotate(-10.0 317.5 305.8)"></ellipse><ellipse cx="332.2" cy="319.1" fill="url(#lg)" rx="12.65" ry="5.06" transform="rotate(-10.0 332.2 319.1)"></ellipse><ellipse cx="334.3" cy="283.9" fill="url(#lg)" rx="12.2" ry="4.88" transform="rotate(-20.0 334.3 283.9)"></ellipse><ellipse cx="350.6" cy="294.1" fill="url(#lg)" rx="12.2" ry="4.88" transform="rotate(-20.0 350.6 294.1)"></ellipse><ellipse cx="347.2" cy="259.5" fill="url(#lg)" rx="11.75" ry="4.7" transform="rotate(-30.0 347.2 259.5)"></ellipse><ellipse cx="364.3" cy="266.4" fill="url(#lg)" rx="11.75" ry="4.7" transform="rotate(-30.0 364.3 266.4)"></ellipse><ellipse cx="355.6" cy="233.1" fill="url(#lg)" rx="11.3" ry="4.52" transform="rotate(-40.0 355.6 233.1)"></ellipse><ellipse cx="373.0" cy="236.8" fill="url(#lg)" rx="11.3" ry="4.52" transform="rotate(-40.0 373.0 236.8)"></ellipse><ellipse cx="359.4" cy="205.6" fill="url(#lg)" rx="10.85" ry="4.34" transform="rotate(-50.0 359.4 205.6)"></ellipse><ellipse cx="376.4" cy="206.2" fill="url(#lg)" rx="10.85" ry="4.34" transform="rotate(-50.0 376.4 206.2)"></ellipse><ellipse cx="358.3" cy="177.8" fill="url(#lg)" rx="10.4" ry="4.16" transform="rotate(-60.0 358.3 177.8)"></ellipse><ellipse cx="374.5" cy="175.5" fill="url(#lg)" rx="10.4" ry="4.16" transform="rotate(-60.0 374.5 175.5)"></ellipse><ellipse cx="352.3" cy="150.5" fill="url(#lg)" rx="9.95" ry="3.979999999999999" transform="rotate(-70.0 352.3 150.5)"></ellipse><ellipse cx="367.2" cy="145.7" fill="url(#lg)" rx="9.95" ry="3.979999999999999" transform="rotate(-70.0 367.2 145.7)"></ellipse><ellipse cx="341.7" cy="124.6" fill="url(#lg)" rx="9.5" ry="3.8" transform="rotate(-80.0 341.7 124.6)"></ellipse><ellipse cx="354.9" cy="117.6" fill="url(#lg)" rx="9.5" ry="3.8" transform="rotate(-80.0 354.9 117.6)"></ellipse><ellipse cx="326.8" cy="100.9" fill="url(#lg)" rx="9.049999999999999" ry="3.619999999999999" transform="rotate(-90.0 326.8 100.9)"></ellipse><ellipse cx="338.0" cy="92.2" fill="url(#lg)" rx="9.049999999999999" ry="3.619999999999999" transform="rotate(-90.0 338.0 92.2)"></ellipse><ellipse cx="307.9" cy="80.2" fill="url(#lg)" rx="8.600000000000001" ry="3.44" transform="rotate(-100.0 307.9 80.2)"></ellipse><ellipse cx="316.9" cy="70.1" fill="url(#lg)" rx="8.600000000000001" ry="3.44" transform="rotate(-100.0 316.9 70.1)"></ellipse><ellipse cx="285.6" cy="63.0" fill="url(#lg)" rx="8.149999999999999" ry="3.2599999999999993" transform="rotate(-110.0 285.6 63.0)"></ellipse><ellipse cx="292.4" cy="52.1" fill="url(#lg)" rx="8.149999999999999" ry="3.2599999999999993" transform="rotate(-110.0 292.4 52.1)"></ellipse><ellipse cx="260.7" cy="49.8" fill="url(#lg)" rx="7.700000000000001" ry="3.08" transform="rotate(-120.0 260.7 49.8)"></ellipse><ellipse cx="265.2" cy="38.6" fill="url(#lg)" rx="7.700000000000001" ry="3.08" transform="rotate(-120.0 265.2 38.6)"></ellipse><path d="M186 372 q14 -8 28 0" fill="none" stroke="url(#lg)" stroke-width="3"></path></svg>
+<div aria-hidden="true" class="fifty"><span class="num">50</span><span class="yrs">glorious years</span></div>
 </div>
-        <div class="fact"><span class="ic"><i data-lucide="map-pin"></i></span><div><small>Venue</small><b data-c="venue"></b></div></div>
-      </div>
-      <a class="btn btn-dark" id="mapLink" href="#" target="_blank" rel="noopener"><i data-lucide="navigation"></i>Get directions</a>
-    </div>
-  </div>
+<h1>You’re cordially invited</h1>
+<p class="hero-sub">Liberty Publications cordially invites you to an evening of distinction as we commemorate fifty years of learning, trust and enduring relationships.</p>
+<div class="countdown" hidden="" id="countdown">
+<div><b id="cdD">0</b><small>Days</small></div>
+<div><b id="cdH">0</b><small>Hours</small></div>
+<div><b id="cdM">0</b><small>Mins</small></div>
+<div><b id="cdS">0</b><small>Secs</small></div>
+</div>
+<p class="hero-when"><i data-lucide="calendar"></i><span id="heroWhen">Date and venue to be announced</span></p>
+<div class="hero-cta">
+<a class="btn btn-gold" href="#rsvp"><i data-lucide="party-popper"></i>Respond to the invitation</a>
+<a class="btn btn-ghost" href="#details">View details</a>
+</div>
 
-  <section id="rsvp">
-    <div class="wrap rsvp-wrap">
-      <div class="card rsvp-card">
-        <div class="step on" data-s="attend">
-          <p class="h3">May we have the honour of your company?</p>
-          <div class="pair">
-            <button class="choice" type="button" data-attend="yes" aria-pressed="false">
-              <i data-lucide="check-circle-2" aria-hidden="true"></i>
-              <span>Yes, with pleasure</span>
-            </button>
-            <button class="choice" type="button" data-attend="no" aria-pressed="false">
-              <i data-lucide="sparkles" aria-hidden="true"></i>
-              <span>With regret, unable to join</span>
-            </button>
-          </div>
-        </div>
+</div>
+</header>
+<div aria-hidden="true" class="ticker"><div class="ticker-track"><span>Golden Jubilee 2027<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee 2027<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited</span><span>Golden Jubilee 2027<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited<i>✦</i>Golden Jubilee 2027<i>✦</i>50 Years of Liberty Publications<i>✦</i>You’re cordially invited</span></div></div>
+<main>
+<section>
+<div class="wrap occasion">
+<div>
+<p class="label">The occasion</p>
+<h2>A golden milestone, shared with those who shaped the journey.</h2>
+<p class="lede">For five decades, Liberty Publications has been strengthened by the trust, goodwill and association of educators, partners, families, readers and distinguished well-wishers across generations. As we mark this golden milestone, your presence would add special meaning to the celebration.</p>
+</div>
+<figure style="margin:0">
+<svg aria-label="Five stacks of books growing taller, one for each decade" class="stacks" role="img" viewbox="0 130 600 210"><rect fill="#1F3A68" height="20" rx="2.5" width="74" x="31" y="280"></rect><rect fill="#fff" height="14" opacity=".35" width="3" x="91" y="283"></rect><rect fill="#fff" height="2" opacity=".3" width="33" x="37" y="289"></rect><rect fill="#000" height="3" opacity=".12" width="74" x="31" y="297"></rect><rect fill="#8E2B2B" height="16" rx="2.5" width="72" x="34" y="264"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="92" y="267"></rect><rect fill="#fff" height="2" opacity=".3" width="32" x="40" y="271"></rect><rect fill="#000" height="3" opacity=".12" width="72" x="34" y="277"></rect><text class="lbl" text-anchor="middle" x="68.0" y="326">Decade 1</text><rect fill="#2A7F86" height="16" rx="2.5" width="81" x="144" y="284"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="212" y="287"></rect><rect fill="#fff" height="2" opacity=".3" width="36" x="150" y="291"></rect><rect fill="#000" height="3" opacity=".12" width="81" x="144" y="297"></rect><rect fill="#4B3B7A" height="16" rx="2.5" width="86" x="136" y="268"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="208" y="271"></rect><rect fill="#fff" height="2" opacity=".3" width="39" x="142" y="275"></rect><rect fill="#000" height="3" opacity=".12" width="86" x="136" y="281"></rect><rect fill="#B5651D" height="16" rx="2.5" width="72" x="146" y="252"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="204" y="255"></rect><rect fill="#fff" height="2" opacity=".3" width="32" x="152" y="259"></rect><rect fill="#000" height="3" opacity=".12" width="72" x="146" y="265"></rect><text class="lbl" text-anchor="middle" x="182.0" y="326">Decade 2</text><rect fill="#1F3A68" height="22" rx="2.5" width="72" x="257" y="278"></rect><rect fill="#fff" height="16" opacity=".35" width="3" x="315" y="281"></rect><rect fill="#fff" height="2" opacity=".3" width="32" x="263" y="288"></rect><rect fill="#000" height="3" opacity=".12" width="72" x="257" y="297"></rect><rect fill="#8E2B2B" height="16" rx="2.5" width="87" x="252" y="262"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="326" y="265"></rect><rect fill="#fff" height="2" opacity=".3" width="39" x="258" y="269"></rect><rect fill="#000" height="3" opacity=".12" width="87" x="252" y="275"></rect><rect fill="#2E6B4E" height="16" rx="2.5" width="88" x="247" y="246"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="321" y="249"></rect><rect fill="#fff" height="2" opacity=".3" width="40" x="253" y="253"></rect><rect fill="#000" height="3" opacity=".12" width="88" x="247" y="259"></rect><rect fill="#2A7F86" height="18" rx="2.5" width="90" x="255" y="228"></rect><rect fill="#fff" height="12" opacity=".35" width="3" x="331" y="231"></rect><rect fill="#fff" height="2" opacity=".3" width="40" x="261" y="236"></rect><rect fill="#000" height="3" opacity=".12" width="90" x="255" y="243"></rect><text class="lbl" text-anchor="middle" x="296.0" y="326">Decade 3</text><rect fill="#2A7F86" height="16" rx="2.5" width="88" x="369" y="284"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="443" y="287"></rect><rect fill="#fff" height="2" opacity=".3" width="40" x="375" y="291"></rect><rect fill="#000" height="3" opacity=".12" width="88" x="369" y="297"></rect><rect fill="#4B3B7A" height="22" rx="2.5" width="71" x="372" y="262"></rect><rect fill="#fff" height="16" opacity=".35" width="3" x="428" y="265"></rect><rect fill="#fff" height="2" opacity=".3" width="32" x="378" y="272"></rect><rect fill="#000" height="3" opacity=".12" width="71" x="372" y="281"></rect><rect fill="#B5651D" height="16" rx="2.5" width="87" x="362" y="246"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="436" y="249"></rect><rect fill="#fff" height="2" opacity=".3" width="39" x="368" y="253"></rect><rect fill="#000" height="3" opacity=".12" width="87" x="362" y="259"></rect><rect fill="#1F3A68" height="20" rx="2.5" width="83" x="364" y="226"></rect><rect fill="#fff" height="14" opacity=".35" width="3" x="434" y="229"></rect><rect fill="#fff" height="2" opacity=".3" width="37" x="370" y="235"></rect><rect fill="#000" height="3" opacity=".12" width="83" x="364" y="243"></rect><rect fill="#8E2B2B" height="16" rx="2.5" width="88" x="364" y="210"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="438" y="213"></rect><rect fill="#fff" height="2" opacity=".3" width="40" x="370" y="217"></rect><rect fill="#000" height="3" opacity=".12" width="88" x="364" y="223"></rect><text class="lbl" text-anchor="middle" x="410.0" y="326">Decade 4</text><rect fill="#1F3A68" height="18" rx="2.5" width="73" x="490" y="282"></rect><rect fill="#fff" height="12" opacity=".35" width="3" x="550" y="285"></rect><rect fill="#fff" height="2" opacity=".3" width="33" x="496" y="290"></rect><rect fill="#000" height="3" opacity=".12" width="73" x="490" y="297"></rect><rect fill="#8E2B2B" height="18" rx="2.5" width="81" x="478" y="264"></rect><rect fill="#fff" height="12" opacity=".35" width="3" x="546" y="267"></rect><rect fill="#fff" height="2" opacity=".3" width="36" x="484" y="272"></rect><rect fill="#000" height="3" opacity=".12" width="81" x="478" y="279"></rect><rect fill="#2E6B4E" height="16" rx="2.5" width="88" x="474" y="248"></rect><rect fill="#fff" height="10" opacity=".35" width="3" x="548" y="251"></rect><rect fill="#fff" height="2" opacity=".3" width="40" x="480" y="255"></rect><rect fill="#000" height="3" opacity=".12" width="88" x="474" y="261"></rect><rect fill="#2A7F86" height="18" rx="2.5" width="85" x="486" y="230"></rect><rect fill="#fff" height="12" opacity=".35" width="3" x="556" y="233"></rect><rect fill="#fff" height="2" opacity=".3" width="38" x="492" y="238"></rect><rect fill="#000" height="3" opacity=".12" width="85" x="486" y="245"></rect><rect fill="#4B3B7A" height="22" rx="2.5" width="80" x="485" y="208"></rect><rect fill="#fff" height="16" opacity=".35" width="3" x="551" y="211"></rect><rect fill="#fff" height="2" opacity=".3" width="36" x="491" y="218"></rect><rect fill="#000" height="3" opacity=".12" width="80" x="485" y="227"></rect><rect fill="#D4A72C" height="22" rx="2.5" width="81" x="482" y="186"></rect><rect fill="#fff" height="16" opacity=".35" width="3" x="548" y="189"></rect><rect fill="#fff" height="2" opacity=".3" width="36" x="488" y="196"></rect><rect fill="#000" height="3" opacity=".12" width="81" x="482" y="205"></rect><path d="M524.0 144 L528.0 156 L540.0 160 L528.0 164 L524.0 176 L520.0 164 L508.0 160 L520.0 156Z" fill="#D4A72C"></path><text class="lbl" text-anchor="middle" x="524.0" y="326">Decade 5</text><line stroke="currentColor" stroke-width="2" x1="10" x2="590" y1="300" y2="300"></line></svg>
+<figcaption class="figcap">Five decades, one shelf at a time.</figcaption>
+</figure>
+</div>
+</section>
 
-        
-        <div class="step arrival-step" data-s="arrival">
-          <p class="h3">What time may we expect you?</p>
-          <div class="arrival-clock-wrap">
-            <div class="arrival-clock" id="arrivalClock" aria-label="Selected arrival time shown on an analogue clock">
-              <span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span>
-              <span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span>
-              <span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span>
-              <span class="clock-hand hour" id="arrivalHourHand"></span>
-              <span class="clock-hand minute" id="arrivalMinuteHand"></span>
-              <span class="clock-hand second"></span>
-            </div>
-          </div>
-          <div class="arrival-time-card">
-            <label>Preferred arrival time</label>
-            <div class="arrival-picker" role="group" aria-label="Preferred arrival time">
-              <div class="arrival-segment">
-                <select id="arrivalHour" aria-label="Hour"><option selected>05</option><option>06</option><option>07</option><option>08</option></select>
-              </div>
-              <span class="arrival-colon">:</span>
-              <div class="arrival-segment">
-                <select id="arrivalMinute" aria-label="Minute"><option selected>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option><option>50</option><option>51</option><option>52</option><option>53</option><option>54</option><option>55</option><option>56</option><option>57</option><option>58</option><option>59</option></select>
-              </div>
-              <div class="arrival-ampm arrival-ampm-fixed" aria-label="PM">
-                <span class="arrival-period-fixed">PM</span>
-              </div>
-            </div>
-            <p class="arrival-time-value" id="arrivalTimeValue">5:30 PM</p>
-            <p class="arrival-time-caption">Choose your preferred arrival time</p><p class="arrival-min-note">Available from 5:30 PM to 8:30 PM</p>
-          </div>
-          <div class="arrival-actions">
-            <button class="btn btn-line" type="button" id="arrivalBackBtn">Back</button>
-            <button class="btn btn-dark" type="button" id="arrivalContinueBtn">Continue</button>
-          </div>
-        </div>
+<div class="wrap">
+<div class="details" id="details">
+<p class="label">Celebration details</p>
+<h2>It would be our privilege to welcome you.</h2>
+<div class="facts">
+<div class="fact"><span class="ic"><i data-lucide="calendar"></i></span><div><small>Date</small><b data-c="date"></b></div></div>
+<div class="fact"><span class="ic"><i data-lucide="clock"></i></span><div><small>Time</small><b data-c="time"></b></div></div>
+<div class="fact"><span class="ic"><i data-lucide="map-pin"></i></span><div><small>Venue</small><b data-c="venue"></b></div></div>
+</div>
+<a class="btn btn-dark" href="#" id="mapLink" rel="noopener" target="_blank"><i data-lucide="navigation"></i>Get directions</a>
+</div>
+</div>
 
-        <div class="step" data-s="guests">
-          <p class="h3">How many guests will join you?</p>
-          <div class="stepper">
-            <button class="round" type="button" id="minus" aria-label="Fewer guests"><i data-lucide="minus"></i></button>
-            <div class="count" id="count" aria-live="polite">1</div>
-            <button class="round" type="button" id="plus" aria-label="More guests"><i data-lucide="plus"></i></button>
-          </div>
-          <p class="hint"><i data-lucide="users"></i>Including yourself</p>
-          <div class="guest-actions">
-            <button class="btn btn-dark" type="button" id="sendResponseBtn">Send response</button>
-          </div>
-          <p class="submit-status" id="submitStatus" role="status" aria-live="polite" hidden></p>
-          <p class="err" id="submitError" role="alert" hidden></p>
-        </div>
-
-        <div class="step" data-s="thankyou">
-          <div class="thankyou-only" tabindex="-1" id="thankYouPanel">
-            <div class="thankyou-mark"><i data-lucide="check"></i></div>
-            <h3>Thank You</h3>
-            <p>Your gracious response has been received with thanks.</p>
-          </div>
-        </div>
-
-        <div class="step" data-s="already">
-          <div class="already-only" tabindex="-1" id="alreadySubmittedPanel">
-            <div class="already-mark"><i data-lucide="badge-check"></i></div>
-            <h3>Response Already Submitted</h3>
-            <p>Thank you. Your RSVP has already been received, so no further action is required.</p>
-            <div class="already-summary" id="alreadySummary" hidden>
-              <div><span>Response</span><strong id="alreadyResponse">—</strong></div>
-              <div id="alreadyPersonsRow"><span>Persons</span><strong id="alreadyPersons">—</strong></div>
-              <div id="alreadyArrivalRow"><span>Arrival Time</span><strong id="alreadyArrival">—</strong></div>
-              <div><span>Submitted</span><strong id="alreadySubmittedAt">—</strong></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="honeypot" aria-hidden="true">
-          <label for="website">Leave this field empty</label>
-          <input id="website" name="website" type="text" autocomplete="off" tabindex="-1">
-        </div>
-      </div>
-    </div>
-  </section>
-
+<section id="rsvp">
+<div class="wrap rsvp-wrap">
+<div class="card rsvp-card">
+<div class="prog-head"><span id="stepTxt">Step 1 of 3</span><span id="stepName">Attendance</span></div>
+<div class="track"><i id="trackBar"></i></div>
+<div class="step on" data-s="attend">
+<p class="h3">Will you attend?</p>
+<div class="pair">
+<button aria-pressed="false" class="choice" data-attend="yes" type="button"><i data-lucide="check-circle-2"></i><span>Yes, with pleasure</span></button>
+<button aria-pressed="false" class="choice" data-attend="no" type="button"><i data-lucide="sparkles"></i><span>With regret, unable to join</span></button>
+</div>
+</div>
+<div class="step arrival-step" data-s="arrival">
+<p class="h3">What time may we expect you?</p>
+<div class="arrival-clock-wrap">
+<div aria-label="Selected arrival time shown on an analogue clock" class="arrival-clock" id="arrivalClock">
+<span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span>
+<span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span>
+<span class="mark"></span><span class="mark"></span><span class="mark"></span><span class="mark"></span>
+<span class="clock-hand hour" id="arrivalHourHand"></span>
+<span class="clock-hand minute" id="arrivalMinuteHand"></span>
+<span class="clock-hand second"></span>
+</div>
+</div>
+<div class="arrival-time-card">
+<label>Preferred arrival time</label>
+<div aria-label="Preferred arrival time" class="arrival-picker" role="group">
+<div class="arrival-segment"><select aria-label="Hour" id="arrivalHour"><option selected="">05</option><option>06</option><option>07</option><option>08</option></select></div>
+<span class="arrival-colon">:</span>
+<div class="arrival-segment"><select aria-label="Minute" id="arrivalMinute"><option selected="">30</option></select></div>
+<div class="arrival-ampm"><span class="arrival-period-fixed">PM</span></div>
+</div>
+<p class="arrival-time-value" id="arrivalTimeValue">5:30 PM</p>
+<p class="arrival-min-note">Available from 5:30 PM to 8:30 PM</p>
+</div>
+<div class="arrival-actions">
+<button class="btn btn-line" id="arrivalBackBtn" type="button">Back</button>
+<button class="btn btn-dark" id="arrivalContinueBtn" type="button">Continue</button>
+</div>
+</div>
+<div class="step" data-s="guests">
+<p class="h3">How many guests may we look forward to welcoming?</p>
+<div class="stepper">
+<button aria-label="Fewer persons" class="round" id="minus" type="button"><i data-lucide="minus"></i></button>
+<div aria-live="polite" class="count" id="count">1</div>
+<button aria-label="More persons" class="round" id="plus" type="button"><i data-lucide="plus"></i></button>
+</div>
+<p class="hint"><i data-lucide="users"></i>Kindly select the total number in your party.</p>
+<div class="guest-actions"><button class="btn btn-dark" id="sendResponseBtn" type="button">Send response</button></div>
+<p aria-live="polite" class="submit-status" hidden="" id="submitStatus" role="status"></p>
+<p class="err" hidden="" id="submitError" role="alert"></p>
+</div>
+<div class="step" data-s="thankyou">
+<div class="thankyou-only" id="thankYouPanel" tabindex="-1">
+<div class="thankyou-mark"><i data-lucide="check"></i></div>
+<h3>Thank You</h3>
+<p>Your gracious response has been received with thanks.</p>
+</div>
+</div>
+<div class="step" data-s="already">
+<div class="already-only" id="alreadySubmittedPanel" tabindex="-1">
+<div class="already-mark"><i data-lucide="badge-check"></i></div>
+<h3>Response Already Submitted</h3>
+<p>Thank you. Your RSVP has already been received, so no further action is required.</p>
+<div class="already-summary" hidden="" id="alreadySummary">
+<div><span>Response</span><strong id="alreadyResponse">—</strong></div>
+<div id="alreadyPersonsRow"><span>Persons</span><strong id="alreadyPersons">—</strong></div>
+<div id="alreadyArrivalRow"><span>Arrival Time</span><strong id="alreadyArrival">—</strong></div>
+<div><span>Submitted</span><strong id="alreadySubmittedAt">—</strong></div>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="honeypot"><label for="website">Leave this field empty</label><input autocomplete="off" id="website" name="website" tabindex="-1" type="text"/></div>
+</div>
+</div>
+</section>
 </main>
-
 <footer>
-  <div class="wrap">
-    <span class="brand"><i data-lucide="library"></i>Liberty Publications · 50 Years</span>
-    <span class="contact" id="footContact"><i data-lucide="phone"></i><span data-c="phone"></span></span>
-  </div>
+<div class="wrap">
+<span class="brand"><i data-lucide="library"></i>Liberty Publications · Golden Jubilee 2027</span>
+<span class="contact" id="footContact"><i data-lucide="phone"></i><span data-c="phone"></span></span>
+</div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script>
-<script>
-/* ---------- Event details: replace the [ ] values ---------- */
+
+<script src="https://cdn.jsdelivr.net/npm/lucide@0.344.0/dist/umd/lucide.min.js"></script><script>
 const CONFIG = {
-  date:  "[Date]",
-  time:  "5:30 PM onwards",
+  date: "[Date]",
+  time: "5:30 PM onwards",
   venue: "[Venue name and address]",
   phone: "[Phone number]",
-  eventISO: "",               // e.g. "2027-03-15T18:00:00+05:30" turns on the countdown
+  eventISO: "",
   maxGuests: 5
 };
 
 const $ = (id) => document.getElementById(id);
 const isPlaceholder = (v) => /^\[.*\]$/.test(v);
 
-/* Event details */
 document.querySelectorAll("[data-c]").forEach(el => {
   const v = CONFIG[el.dataset.c];
-  if (isPlaceholder(v)){
-    if (el.dataset.c === "phone"){ $("footContact").hidden = true; return; }
+  if (isPlaceholder(v)) {
+    if (el.dataset.c === "phone") { $("footContact").hidden = true; return; }
     el.textContent = "To be announced";
   } else el.textContent = v;
 });
@@ -864,7 +507,6 @@ const map = $("mapLink");
 if (isPlaceholder(CONFIG.venue)) map.hidden = true;
 else map.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(CONFIG.venue);
 
-/* Hero date line + countdown */
 (function(){
   const parts = [CONFIG.date, CONFIG.time].filter(v => !isPlaceholder(v));
   if (parts.length) $("heroWhen").textContent = parts.join("  |  ");
@@ -881,28 +523,32 @@ else map.href = "https://www.google.com/maps/search/?api=1&query=" + encodeURICo
   tick(); setInterval(tick, 1000);
 })();
 
-/* Share */
 $("shareBtn").addEventListener("click", async () => {
   const url = location.href.split("#")[0];
-  const data = { title: "You’re cordially invited: Liberty Publications Golden Jubilee", text: "You are cordially invited to join Liberty Publications in commemorating its Golden Jubilee.", url };
-  try { if (navigator.share){ await navigator.share(data); return; } }
-  catch(e){ if (e && e.name === "AbortError") return; }
-  try { await navigator.clipboard.writeText(url); $("toast").textContent = "Invitation link copied."; }
-  catch(e){ $("toast").textContent = "Copy this page’s link from the address bar to share."; }
+  const data = { title: "Liberty Publications Golden Jubilee Invitation 2027", text: "You are cordially invited to the Golden Jubilee celebration of Liberty Publications.", url };
+  try { if (navigator.share) { await navigator.share(data); return; } }
+  catch(e) { if (e && e.name === "AbortError") return; }
+  try {
+    await navigator.clipboard.writeText(url);
+    const btn = $("shareBtn"), oldTitle = btn.title;
+    btn.title = "Invitation link copied";
+    btn.setAttribute("aria-label", "Invitation link copied");
+    setTimeout(() => { btn.title = oldTitle || "Share invitation"; btn.setAttribute("aria-label", "Share this invitation"); }, 1800);
+  } catch(e) {
+    $("shareBtn").title = "Copy this page link from the address bar";
+  }
 });
 
-
-/* Decorative animation and motion preferences */
 const motionPreference = matchMedia("(prefers-reduced-motion: reduce)");
 let reduceMotion = motionPreference.matches;
 let animationPausedByUser = false;
 let bannerInView = true;
 const banner = $("invitationBanner"), motionToggle = $("motionToggle");
 
-/* Continuous colourful fireworks + paper confetti in the invitation banner */
 const fwCanvas = $("heroFireworks"), fwCtx = fwCanvas && fwCanvas.getContext("2d");
-let fwParticles = [], fwPaper = [], fwRaf = null, fwLastBurst = 0, fwLastPaper = 0;
-const festivePalette = ["#7A102B","#A61E4D","#7A3E00","#B35C00","#0F766E","#1F4E5F","#214E34","#5B2A86","#7C3AED","#B8860B","#D97706","#C2410C"];
+let fwParticles = [], fwRaf = null, fwLastBurst = 0, fwNextBurstAt = 0;
+let continuousFireworksEnabled = false;
+const festivePalette = ["#8A6414","#A97816","#B98A22","#D4A72C","#E9B949","#F3D27A","#FFF3C4"];
 function sizeFireworks(){
   if (!fwCanvas || !fwCtx) return;
   const ratio = Math.min(devicePixelRatio || 1, 2);
@@ -910,461 +556,211 @@ function sizeFireworks(){
   fwCanvas.height = Math.max(1, Math.round(banner.clientHeight * ratio));
   fwCtx.setTransform(ratio,0,0,ratio,0,0);
 }
-function addFireworkBurst(){
-  if (!fwCtx || reduceMotion || animationPausedByUser || document.hidden || !bannerInView) return;
+function addFireworkBurst(side="right", tier=0){
+  if (!fwCtx || !continuousFireworksEnabled || reduceMotion || animationPausedByUser || document.hidden || !bannerInView) return;
   const w = banner.clientWidth, h = banner.clientHeight;
-  const x = w * (.12 + Math.random() * .76);
-  const y = h * (.08 + Math.random() * .34);
+  const mobile = w < 640;
+  // Keep the sparkles near the edges, clear of the central 50 emblem and heading.
+  const x = side === "left"
+    ? w * (mobile ? (.095 + Math.random()*.055) : (.09 + Math.random()*.12))
+    : w * (mobile ? (.85 + Math.random()*.055) : (.79 + Math.random()*.12));
+  const y = h * (.18 + (tier%3)*.09 + Math.random()*.045);
+  const count = (mobile ? 18 : 24) + Math.floor(Math.random()*(mobile ? 8 : 10));
   const base = festivePalette[Math.floor(Math.random()*festivePalette.length)];
-  const second = festivePalette[Math.floor(Math.random()*festivePalette.length)];
-  const count = 40 + Math.floor(Math.random() * 24);
+  const light = festivePalette[4 + Math.floor(Math.random()*3)];
   for (let i=0;i<count;i++){
-    const a = (Math.PI*2*i/count) + (Math.random()-.5)*.10;
-    const sp = 1.7 + Math.random()*3.5;
-    fwParticles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:0,max:58+Math.random()*34,size:1.3+Math.random()*2.1,c:i%3===0?second:base,trail:[]});
-  }
-  /* bright centre sparkle */
-  for (let i=0;i<12;i++){
-    const a=Math.random()*Math.PI*2, sp=.8+Math.random()*2;
-    fwParticles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:0,max:32+Math.random()*16,size:1.8+Math.random()*1.8,c:"#FFF7D6",trail:[]});
-  }
-}
-function addPaperPieces(n=1){
-  const w=banner.clientWidth;
-  /* Keep paper confetti near the outer edges so the invitation stays readable. */
-  for(let i=0;i<n;i++){
-    const leftSide = Math.random() < .5;
-    const edgeBand = w * (innerWidth < 640 ? .10 : .13);
-    const x = leftSide ? Math.random()*edgeBand : w - Math.random()*edgeBand;
-    fwPaper.push({
-      x,
-      y:-18-Math.random()*45,
-      vx:(leftSide ? .12 : -.12) + (Math.random()-.5)*.28,
-      vy:.65+Math.random()*.8,
-      rot:Math.random()*Math.PI*2,
-      vr:(Math.random()-.5)*.10,
-      w:4+Math.random()*6,
-      h:7+Math.random()*9,
-      c:festivePalette[Math.floor(Math.random()*festivePalette.length)],
-      wave:Math.random()*Math.PI*2,
-      side:leftSide ? 'left' : 'right'
+    const a = (Math.PI*2*i/count)+(Math.random()-.5)*.17;
+    const sp = 1.05+Math.random()*2.35;
+    fwParticles.push({
+      x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:0,
+      max:53+Math.random()*32,
+      size:1.45+Math.random()*1.95,
+      c:i%5===0?light:base,
+      glow:i%4===0,
+      trail:[]
     });
+  }
+  // A few brighter, larger solid-gold centers — not coloured bubble outlines.
+  for (let i=0;i<5;i++){
+    const a=Math.random()*Math.PI*2,sp=.45+Math.random()*1.1;
+    fwParticles.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,life:0,
+      max:30+Math.random()*22,size:1.9+Math.random()*1.8,
+      c:"#FFF3C4",glow:true,trail:[]});
   }
 }
 function fireworksFrame(ts){
-  if (!fwCtx || reduceMotion || animationPausedByUser || document.hidden || !bannerInView){
-    if (fwCtx) fwCtx.clearRect(0,0,banner.clientWidth,banner.clientHeight);
-    fwParticles=[]; fwPaper=[]; fwRaf=null; return;
+  if (!fwCtx || !continuousFireworksEnabled || reduceMotion || animationPausedByUser || document.hidden || !bannerInView){
+    if(fwCtx) fwCtx.clearRect(0,0,banner.clientWidth,banner.clientHeight);
+    fwParticles=[];fwRaf=null;fwLastBurst=0;fwNextBurstAt=0;return;
   }
-  const W=banner.clientWidth, H=banner.clientHeight;
-  fwCtx.clearRect(0,0,W,H);
-  if (!fwLastBurst || ts-fwLastBurst > 900 + Math.random()*700){ addFireworkBurst(); fwLastBurst=ts; }
-  if (!fwLastPaper || ts-fwLastPaper > 720){ if (fwPaper.length < (innerWidth<640?7:12)) addPaperPieces(1); fwLastPaper=ts; }
-
-  fwParticles = fwParticles.filter(p=>p.life<p.max);
+  fwCtx.clearRect(0,0,banner.clientWidth,banner.clientHeight);
+  if(!fwNextBurstAt) fwNextBurstAt = ts + 350;
+  if(ts >= fwNextBurstAt){
+    // Each wave contains 2–3 small gold bursts at once, across both sides.
+    const burstCount = banner.clientWidth < 640 ? 2 : (Math.random() < .5 ? 2 : 3);
+    for(let i=0;i<burstCount;i++) addFireworkBurst(i%2===0?"right":"left",i);
+    fwLastBurst = ts;
+    fwNextBurstAt = ts + 2300 + Math.random()*1300;
+  }
+  fwParticles=fwParticles.filter(p=>p.life<p.max);
   fwParticles.forEach(p=>{
     p.life++;
-    p.trail.unshift({x:p.x,y:p.y}); if(p.trail.length>5)p.trail.pop();
-    p.x+=p.vx; p.y+=p.vy; p.vx*=.986; p.vy=p.vy*.986+.022;
+    p.trail.unshift({x:p.x,y:p.y});
+    if(p.trail.length>3)p.trail.pop();
+    p.x+=p.vx;p.y+=p.vy;p.vx*=.987;p.vy=p.vy*.987+.012;
     const alpha=Math.max(0,1-p.life/p.max);
     if(p.trail.length>1){
-      fwCtx.globalAlpha=alpha*.28;
-      fwCtx.strokeStyle=p.c; fwCtx.lineWidth=Math.max(.6,p.size*.55);
-      fwCtx.beginPath(); fwCtx.moveTo(p.trail[0].x,p.trail[0].y);
-      for(let j=1;j<p.trail.length;j++) fwCtx.lineTo(p.trail[j].x,p.trail[j].y);
+      fwCtx.globalAlpha=alpha*.14;
+      fwCtx.strokeStyle=p.c;
+      fwCtx.lineWidth=.55;
+      fwCtx.beginPath();
+      fwCtx.moveTo(p.trail[0].x,p.trail[0].y);
+      for(let j=1;j<p.trail.length;j++)fwCtx.lineTo(p.trail[j].x,p.trail[j].y);
       fwCtx.stroke();
     }
-    fwCtx.globalAlpha=alpha*.95; fwCtx.fillStyle=p.c;
-    fwCtx.beginPath(); fwCtx.arc(p.x,p.y,p.size,0,Math.PI*2); fwCtx.fill();
-  });
-
-  fwPaper = fwPaper.filter(p=>p.y<H+35 && (p.side==='left' ? p.x<W*.20 : p.x>W*.80));
-  fwPaper.forEach(p=>{
-    p.wave+=.035; p.x+=p.vx+Math.sin(p.wave)*.16; p.y+=p.vy; p.rot+=p.vr;
-    fwCtx.save(); fwCtx.translate(p.x,p.y); fwCtx.rotate(p.rot);
-    fwCtx.globalAlpha=.84; fwCtx.fillStyle=p.c;
-    fwCtx.fillRect(-p.w/2,-p.h/2,p.w,p.h);
-    fwCtx.restore();
+    fwCtx.globalAlpha=alpha*(p.glow?.92:.78);
+    fwCtx.fillStyle=p.c;
+    fwCtx.shadowBlur=p.glow?7:0;
+    fwCtx.shadowColor=p.c;
+    fwCtx.beginPath();
+    fwCtx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    fwCtx.fill();
+    fwCtx.shadowBlur=0;
   });
   fwCtx.globalAlpha=1;
   fwRaf=requestAnimationFrame(fireworksFrame);
 }
 function syncFireworks(){
-  if (!fwCtx) return;
+  if(!fwCtx)return;
   sizeFireworks();
-  const shouldRun = !reduceMotion && !animationPausedByUser && !document.hidden && bannerInView;
-  if (shouldRun && fwRaf===null){ fwLastBurst=0; fwLastPaper=0; fwRaf=requestAnimationFrame(fireworksFrame); }
-  if (!shouldRun && fwRaf!==null){ cancelAnimationFrame(fwRaf); fwRaf=null; fwParticles=[]; fwPaper=[]; fwCtx.clearRect(0,0,banner.clientWidth,banner.clientHeight); }
+  const shouldRun=continuousFireworksEnabled&&!reduceMotion&&!animationPausedByUser&&!document.hidden&&bannerInView;
+  if(shouldRun&&fwRaf===null){fwLastBurst=0;fwNextBurstAt=0;fwRaf=requestAnimationFrame(fireworksFrame);}
+  if(!shouldRun&&fwRaf!==null){cancelAnimationFrame(fwRaf);fwRaf=null;fwParticles=[];fwLastBurst=0;fwNextBurstAt=0;fwCtx.clearRect(0,0,banner.clientWidth,banner.clientHeight);}
 }
-addEventListener("resize", sizeFireworks);
+addEventListener("resize",sizeFireworks);
 
+const cv=$("confetti"),cx=cv&&cv.getContext("2d");
+let bits=[],raf=null;
+function sizeCanvas(){if(!cx)return;const r=Math.min(devicePixelRatio||1,2);cv.width=innerWidth*r;cv.height=innerHeight*r;cx.setTransform(r,0,0,r,0,0);}
+addEventListener("resize",sizeCanvas);sizeCanvas();
+function stopConfetti(){if(raf!==null)cancelAnimationFrame(raf);raf=null;bits=[];if(cx)cx.clearRect(0,0,innerWidth,innerHeight);}
+function burst(x,y,n){
+  if(!cx||reduceMotion||animationPausedByUser||document.hidden)return;
+  const cols=["#D4A72C","#F3D27A","#FFF3C4","#B98A22","#FFFFFF","#111111"];
+  for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,sp=4+Math.random()*9;bits.push({x,y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp-6,w:5+Math.random()*7,h:8+Math.random()*10,r:Math.random()*6,vr:(Math.random()-.5)*.35,c:cols[i%cols.length],life:0});}
+  if(raf===null)raf=requestAnimationFrame(confettiFrame);
+}
+function confettiFrame(){
+  if(!cx||reduceMotion||animationPausedByUser||document.hidden){stopConfetti();return;}
+  cx.clearRect(0,0,innerWidth,innerHeight);bits=bits.filter(b=>b.life<190&&b.y<innerHeight+40);
+  bits.forEach(b=>{b.life++;b.vy+=.28;b.vx*=.985;b.x+=b.vx;b.y+=b.vy;b.r+=b.vr;const k=Math.abs(Math.cos(b.r*2));cx.save();cx.translate(b.x,b.y);cx.rotate(b.r);cx.globalAlpha=Math.min(1,(190-b.life)/40);cx.fillStyle=b.c;cx.fillRect(-b.w/2,-b.h/2*k,b.w,b.h*k+1);cx.restore();});
+  raf=bits.length?requestAnimationFrame(confettiFrame):null;
+}
 
-/* Confetti appears only when a guest chooses to attend. */
-const cv = $("confetti"), cx = cv.getContext("2d");
-let bits = [], raf = null;
-function sizeCanvas(){
-  if (!cx) return;
-  const r = Math.min(devicePixelRatio || 1, 2);
-  cv.width = innerWidth * r; cv.height = innerHeight * r; cx.setTransform(r,0,0,r,0,0);
-}
-addEventListener("resize", sizeCanvas); sizeCanvas();
-function stopConfetti(){
-  if (raf !== null) cancelAnimationFrame(raf);
-  raf = null; bits = [];
-  if (cx) cx.clearRect(0, 0, innerWidth, innerHeight);
-}
-function burst(x, y, n){
-  if (!cx || reduceMotion || animationPausedByUser || document.hidden) return;
-  const cols = ["#C7A96D","#EAD7AC","#F7EACB","#AC8C52","#FFFFFF","#25251E"];
-  for (let i = 0; i < n; i++){
-    const a = Math.random() * Math.PI * 2, sp = 4 + Math.random() * 9;
-    bits.push({x, y, vx:Math.cos(a)*sp, vy:Math.sin(a)*sp - 6, w:5+Math.random()*7, h:8+Math.random()*10, r:Math.random()*6, vr:(Math.random()-.5)*.35, c:cols[i % cols.length], life:0});
-  }
-  if (raf === null) raf = requestAnimationFrame(frame);
-}
-function frame(){
-  if (!cx || reduceMotion || animationPausedByUser || document.hidden){ stopConfetti(); return; }
-  cx.clearRect(0, 0, innerWidth, innerHeight);
-  bits = bits.filter(b => b.life < 190 && b.y < innerHeight + 40);
-  bits.forEach(b => {
-    b.life++; b.vy += .28; b.vx *= .985; b.x += b.vx; b.y += b.vy; b.r += b.vr;
-    const k = Math.abs(Math.cos(b.r * 2));
-    cx.save(); cx.translate(b.x, b.y); cx.rotate(b.r); cx.globalAlpha = Math.min(1, (190 - b.life) / 40);
-    cx.fillStyle = b.c; cx.fillRect(-b.w/2, -b.h/2 * k, b.w, b.h * k + 1); cx.restore();
-  });
-  raf = bits.length ? requestAnimationFrame(frame) : null;
-}
-function syncDecorativeMotion(){
-  const paused = reduceMotion || animationPausedByUser;
-  banner.dataset.motion = paused || document.hidden || !bannerInView ? "paused" : "playing";
-  document.documentElement.classList.toggle("decorative-motion-paused", paused || document.hidden);
-  motionToggle.setAttribute("aria-pressed", String(paused));
-  motionToggle.disabled = reduceMotion;
-  const action = reduceMotion ? "Animation off" : paused ? "Resume animation" : "Pause animation";
-  $("motionLabel").textContent = action;
-  const label = reduceMotion ? "Animation off to respect your reduced motion preference." : paused ? "Animation paused. Resume animation." : "Animation playing. Pause animation.";
-  motionToggle.setAttribute("aria-label", label);
-  motionToggle.title = label;
-  if (paused || document.hidden) stopConfetti();
+/* Reference opening crackers first. Once they settle, continue only the soft gold
+   particle bursts shown in the supplied screenshot. No bubble rings are used. */
+setTimeout(()=>{
+  if(reduceMotion||animationPausedByUser||document.hidden)return;
+  burst(innerWidth*.3,innerHeight*.35,70);
+  burst(innerWidth*.7,innerHeight*.35,70);
+},700);
+setTimeout(()=>{
+  continuousFireworksEnabled=true;
   syncFireworks();
+},3300);
+function syncDecorativeMotion(){
+  const paused=reduceMotion||animationPausedByUser;
+  banner.dataset.motion=paused||document.hidden||!bannerInView?"paused":"playing";
+  document.documentElement.classList.toggle("decorative-motion-paused",paused||document.hidden);
+  motionToggle.setAttribute("aria-pressed",String(paused));motionToggle.disabled=reduceMotion;
+  const action=reduceMotion?"Animation off":paused?"Resume animation":"Pause animation";
+  $("motionLabel").textContent=action;motionToggle.title=action;
+  if(paused||document.hidden)stopConfetti();syncFireworks();
 }
-motionToggle.addEventListener("click", () => {
-  if (reduceMotion) return;
-  animationPausedByUser = !animationPausedByUser;
-  syncDecorativeMotion();
-});
-const updateMotionPreference = () => { reduceMotion = motionPreference.matches; syncDecorativeMotion(); };
-if (typeof motionPreference.addEventListener === "function") motionPreference.addEventListener("change", updateMotionPreference);
-else if (typeof motionPreference.addListener === "function") motionPreference.addListener(updateMotionPreference);
-document.addEventListener("visibilitychange", syncDecorativeMotion);
-if (typeof IntersectionObserver === "function"){
-  const bannerObserver = new IntersectionObserver(entries => {
-    bannerInView = entries[0].isIntersecting;
-    syncDecorativeMotion();
-  }, { threshold: 0 });
-  bannerObserver.observe(banner);
-}
+motionToggle.addEventListener("click",()=>{if(reduceMotion)return;animationPausedByUser=!animationPausedByUser;syncDecorativeMotion();});
+const updateMotionPreference=()=>{reduceMotion=motionPreference.matches;syncDecorativeMotion();};
+if(typeof motionPreference.addEventListener==="function")motionPreference.addEventListener("change",updateMotionPreference);else if(typeof motionPreference.addListener==="function")motionPreference.addListener(updateMotionPreference);
+document.addEventListener("visibilitychange",syncDecorativeMotion);
+if(typeof IntersectionObserver==="function"){const obs=new IntersectionObserver(entries=>{bannerInView=entries[0].isIntersecting;syncDecorativeMotion();},{threshold:0});obs.observe(banner);}
 syncDecorativeMotion();
 
-
-/* Simplified RSVP flow */
-const state = { attend:null, guests:1, arrivalTime:"17:30" };
-let submitting = false, confirmed = false, pendingAttempt = null;
-
+const state={attend:null,guests:1,arrivalTime:"17:30"};
+let submitting=false,confirmed=false,pendingAttempt=null;
 function createSubmissionId(){
-  const secureCrypto = globalThis.crypto;
-  if (secureCrypto && typeof secureCrypto.randomUUID === "function") return secureCrypto.randomUUID();
-  if (!secureCrypto || typeof secureCrypto.getRandomValues !== "function"){
-    return "preview-" + Date.now() + "-" + Math.random().toString(36).slice(2,10);
-  }
-  const bytes = new Uint8Array(16);
-  secureCrypto.getRandomValues(bytes);
-  bytes[6] = (bytes[6] & 0x0f) | 0x40;
-  bytes[8] = (bytes[8] & 0x3f) | 0x80;
-  const hex = Array.from(bytes, byte => byte.toString(16).padStart(2, "0")).join("");
-  return `${hex.slice(0,8)}-${hex.slice(8,12)}-${hex.slice(12,16)}-${hex.slice(16,20)}-${hex.slice(20)}`;
+  const c=globalThis.crypto;if(c&&typeof c.randomUUID==="function")return c.randomUUID();
+  return "rsvp-"+Date.now()+"-"+Math.random().toString(36).slice(2,10);
 }
-
+const STEP_META={attend:["Step 1 of 3","Attendance",33.33],arrival:["Step 2 of 3","Arrival time",66.66],guests:["Step 3 of 3","Persons",100],thankyou:["Response received","Complete",100],already:["Response received","Complete",100]};
 function showResponseStep(name){
-  document.querySelectorAll("#rsvp .step").forEach(el => el.classList.toggle("on", el.dataset.s === name));
+  document.querySelectorAll("#rsvp .step").forEach(el=>el.classList.toggle("on",el.dataset.s===name));
+  const m=STEP_META[name];if(m){$("stepTxt").textContent=m[0];$("stepName").textContent=m[1];$("trackBar").style.width=m[2]+"%";}
+  const progress=$("stepTxt").parentElement;progress.hidden=name==="thankyou"||name==="already";$("trackBar").parentElement.hidden=progress.hidden;
 }
+function renderCount(){$("count").textContent=state.guests;$("minus").disabled=state.guests<=1;$("plus").disabled=state.guests>=CONFIG.maxGuests;}
+function showThankYou(){confirmed=true;showResponseStep("thankyou");const p=$("thankYouPanel");if(p)p.focus();try{if(window.lucide)lucide.createIcons();}catch(e){}}
 
-function renderCount(){
-  $("count").textContent = state.guests;
-  $("minus").disabled = state.guests <= 1;
-  $("plus").disabled = state.guests >= CONFIG.maxGuests;
-}
-
-function showThankYou(){
-  confirmed = true;
-  showResponseStep("thankyou");
-  const panel = $("thankYouPanel");
-  if (panel) panel.focus();
-  try { if (window.lucide) lucide.createIcons(); } catch(e){}
-}
-
-const RSVP_PARAMS = new URLSearchParams(location.search);
-const RSVP_GUEST_ID = (RSVP_PARAMS.get("id") || "").trim();
-const RSVP_ENDPOINT = (RSVP_PARAMS.get("api") || "https://script.google.com/macros/s/AKfycby5UTjqusLVJUzM96zjnvaNbJec0vDWxLvRMzWOlcRRa7x0imR4QN__kUDUo6lR_8UCXA/exec").trim();
-const RSVP_LOCK_KEY = RSVP_GUEST_ID ? `libertyGoldenJubileeSubmitted:${RSVP_GUEST_ID}` : "";
-
-function formatSubmittedAt(value){
-  if (!value) return "—";
-  const d = new Date(value);
-  return Number.isNaN(d.getTime()) ? String(value) : d.toLocaleString();
-}
-function saveSubmissionLock(data){
-  if (!RSVP_LOCK_KEY) return;
-  try{ localStorage.setItem(RSVP_LOCK_KEY, JSON.stringify(data)); }catch(e){}
-}
-function readSubmissionLock(){
-  if (!RSVP_LOCK_KEY) return null;
-  try{ return JSON.parse(localStorage.getItem(RSVP_LOCK_KEY) || "null"); }catch(e){ return null; }
-}
-function showAlreadySubmitted(data = {}){
-  confirmed = true;
-  const response = data.response || data.attending || (data.attend === "yes" ? "Coming" : data.attend === "no" ? "Not Coming" : "Submitted");
-  const coming = response === "Coming";
-  if ($("alreadyResponse")) $("alreadyResponse").textContent = response;
-  if ($("alreadyPersons")) $("alreadyPersons").textContent = coming ? String(data.persons ?? data.guests ?? "—") : "0";
-  if ($("alreadyArrival")) $("alreadyArrival").textContent = coming ? (data.arrivalTime || "—") : "—";
-  if ($("alreadySubmittedAt")) $("alreadySubmittedAt").textContent = formatSubmittedAt(data.submittedAt);
-  if ($("alreadyPersonsRow")) $("alreadyPersonsRow").hidden = !coming;
-  if ($("alreadyArrivalRow")) $("alreadyArrivalRow").hidden = !coming;
-  if ($("alreadySummary")) $("alreadySummary").hidden = false;
-  showResponseStep("already");
-  const panel = $("alreadySubmittedPanel");
-  if (panel) panel.focus();
-  try { if (window.lucide) lucide.createIcons(); } catch(e){}
+const RSVP_PARAMS=new URLSearchParams(location.search);
+const RSVP_GUEST_ID=(RSVP_PARAMS.get("id")||"").trim();
+const RSVP_ENDPOINT=(RSVP_PARAMS.get("api")||"https://script.google.com/macros/s/AKfycby5UTjqusLVJUzM96zjnvaNbJec0vDWxLvRMzWOlcRRa7x0imR4QN__kUDUo6lR_8UCXA/exec").trim();
+const RSVP_LOCK_KEY=RSVP_GUEST_ID?`libertyGoldenJubileeSubmitted:${RSVP_GUEST_ID}`:"";
+function formatSubmittedAt(value){if(!value)return"—";const d=new Date(value);return Number.isNaN(d.getTime())?String(value):d.toLocaleString();}
+function saveSubmissionLock(data){if(!RSVP_LOCK_KEY)return;try{localStorage.setItem(RSVP_LOCK_KEY,JSON.stringify(data));}catch(e){}}
+function readSubmissionLock(){if(!RSVP_LOCK_KEY)return null;try{return JSON.parse(localStorage.getItem(RSVP_LOCK_KEY)||"null");}catch(e){return null;}}
+function showAlreadySubmitted(data={}){
+  confirmed=true;const response=data.response||data.attending||(data.attend==="yes"?"Coming":data.attend==="no"?"Not Coming":"Submitted");const coming=response==="Coming";
+  $("alreadyResponse").textContent=response;$("alreadyPersons").textContent=coming?String(data.persons??data.guests??"—"):"0";$("alreadyArrival").textContent=coming?(data.arrivalTime||"—"):"—";$("alreadySubmittedAt").textContent=formatSubmittedAt(data.submittedAt);
+  $("alreadyPersonsRow").hidden=!coming;$("alreadyArrivalRow").hidden=!coming;$("alreadySummary").hidden=false;showResponseStep("already");const p=$("alreadySubmittedPanel");if(p)p.focus();try{if(window.lucide)lucide.createIcons();}catch(e){}
 }
 function checkRemoteSubmission(){
-  if (!RSVP_GUEST_ID || !RSVP_ENDPOINT) return Promise.resolve(false);
-  return new Promise((resolve) => {
-    const cb = "__libertyRsvpStatus_" + Date.now() + "_" + Math.random().toString(36).slice(2);
-    const script = document.createElement("script");
-    let settled = false;
-    const finish = (value) => {
-      if (settled) return; settled = true;
-      try{ delete window[cb]; script.remove(); }catch(e){}
-      resolve(value);
-    };
-    window[cb] = (result) => {
-      if (result && result.ok && result.submitted){
-        const data = {
-          response: result.response || "Submitted",
-          persons: result.persons || 0,
-          arrivalTime: result.arrivalTime || "",
-          submittedAt: result.submittedAt || ""
-        };
-        saveSubmissionLock(data);
-        showAlreadySubmitted(data);
-        finish(true);
-      } else finish(false);
-    };
-    script.async = true;
-    script.onerror = () => finish(false);
-    script.src = RSVP_ENDPOINT + (RSVP_ENDPOINT.includes("?") ? "&" : "?") +
-      "id=" + encodeURIComponent(RSVP_GUEST_ID) +
-      "&check=1&callback=" + encodeURIComponent(cb) + "&_=" + Date.now();
-    document.head.appendChild(script);
-    setTimeout(() => finish(false), 4500);
+  if(!RSVP_GUEST_ID||!RSVP_ENDPOINT)return Promise.resolve(false);
+  return new Promise(resolve=>{
+    const cb="__libertyRsvpStatus_"+Date.now()+"_"+Math.random().toString(36).slice(2),script=document.createElement("script");let settled=false;
+    const finish=v=>{if(settled)return;settled=true;try{delete window[cb];script.remove();}catch(e){}resolve(v);};
+    window[cb]=result=>{if(result&&result.ok&&result.submitted){const data={response:result.response||"Submitted",persons:result.persons||0,arrivalTime:result.arrivalTime||"",submittedAt:result.submittedAt||""};saveSubmissionLock(data);showAlreadySubmitted(data);finish(true);}else finish(false);};
+    script.async=true;script.onerror=()=>finish(false);script.src=RSVP_ENDPOINT+(RSVP_ENDPOINT.includes("?")?"&":"?")+"id="+encodeURIComponent(RSVP_GUEST_ID)+"&check=1&callback="+encodeURIComponent(cb)+"&_="+Date.now();document.head.appendChild(script);setTimeout(()=>finish(false),4500);
   });
 }
-
 function postRsvpToEndpoint(fields){
-  return new Promise((resolve) => {
-    const frameName = "libertyRsvpFrame_" + Date.now();
-    const iframe = document.createElement("iframe");
-    iframe.name = frameName;
-    iframe.style.display = "none";
-    iframe.setAttribute("aria-hidden", "true");
-    document.body.appendChild(iframe);
-
-    const form = document.createElement("form");
-    form.method = "POST";
-    form.action = RSVP_ENDPOINT;
-    form.target = frameName;
-    form.style.display = "none";
-
-    Object.entries(fields).forEach(([name,value]) => {
-      const input = document.createElement("input");
-      input.type = "hidden";
-      input.name = name;
-      input.value = value == null ? "" : String(value);
-      form.appendChild(input);
-    });
-
-    document.body.appendChild(form);
-    let done = false;
-    const finish = () => {
-      if (done) return;
-      done = true;
-      setTimeout(() => { try{ form.remove(); iframe.remove(); }catch(e){} }, 250);
-      resolve();
-    };
-    iframe.addEventListener("load", () => setTimeout(finish, 500), {once:true});
-    form.submit();
-    setTimeout(finish, 2200);
+  return new Promise(resolve=>{
+    const frameName="libertyRsvpFrame_"+Date.now(),iframe=document.createElement("iframe");iframe.name=frameName;iframe.style.display="none";iframe.setAttribute("aria-hidden","true");document.body.appendChild(iframe);
+    const form=document.createElement("form");form.method="POST";form.action=RSVP_ENDPOINT;form.target=frameName;form.style.display="none";
+    Object.entries(fields).forEach(([name,value])=>{const input=document.createElement("input");input.type="hidden";input.name=name;input.value=value==null?"":String(value);form.appendChild(input);});document.body.appendChild(form);
+    let done=false;const finish=()=>{if(done)return;done=true;setTimeout(()=>{try{form.remove();iframe.remove();}catch(e){}},250);resolve();};iframe.addEventListener("load",()=>setTimeout(finish,500),{once:true});form.submit();setTimeout(finish,2200);
   });
 }
-
 async function submitSimpleResponse(){
-  if (submitting || confirmed || !state.attend) return;
-  const yes = state.attend === "yes";
-  const payload = {
-    guestId: RSVP_GUEST_ID,
-    attend: state.attend,
-    guests: yes ? state.guests : 0,
-    arrivalTime: yes ? state.arrivalTime : "",
-    name: "",
-    mobile: "",
-    city: "",
-    website: $("website") ? $("website").value : ""
-  };
-  const payloadKey = JSON.stringify(payload);
-  submitting = true;
-  const btn = $("sendResponseBtn");
-  const status = $("submitStatus");
-  const error = $("submitError");
-  if (btn){ btn.disabled = true; btn.textContent = "Sending…"; }
-  if (error){ error.hidden = true; error.textContent = ""; }
-  if (status){ status.hidden = false; status.textContent = "Sharing your response…"; }
-
+  if(submitting||confirmed||!state.attend)return;const yes=state.attend==="yes",payload={guestId:RSVP_GUEST_ID,attend:state.attend,guests:yes?state.guests:0,arrivalTime:yes?state.arrivalTime:"",website:$("website")?$("website").value:""},payloadKey=JSON.stringify(payload);
+  submitting=true;const btn=$("sendResponseBtn"),status=$("submitStatus"),error=$("submitError");if(btn){btn.disabled=true;btn.textContent="Sending…";}if(error){error.hidden=true;error.textContent="";}if(status){status.hidden=false;status.textContent="Sharing your response…";}
   try{
-    if (!pendingAttempt || pendingAttempt.key !== payloadKey){
-      pendingAttempt = { key: payloadKey, id: createSubmissionId() };
-    }
-    const submissionId = pendingAttempt.id;
-    if (RSVP_ENDPOINT && RSVP_GUEST_ID){
-      await postRsvpToEndpoint({
-        id: RSVP_GUEST_ID,
-        attending: yes ? "Coming" : "Not Coming",
-        persons: String(yes ? state.guests : 0),
-        arrivalTime: yes ? formatArrivalTime12() : "",
-        submittedAt: new Date().toISOString()
-      });
-    } else {
-      const previewEntry = {submissionId, ...payload, submittedAt:new Date().toISOString()};
-      try{
-        const previewKey = "libertyGoldenJubileePreviewResponses";
-        const saved = JSON.parse(localStorage.getItem(previewKey) || "[]");
-        saved.push(previewEntry);
-        localStorage.setItem(previewKey, JSON.stringify(saved.slice(-100)));
-      }catch(e){}
-    }
-
-    if (status) status.hidden = true;
-    saveSubmissionLock({
-      response: yes ? "Coming" : "Not Coming",
-      persons: yes ? state.guests : 0,
-      arrivalTime: yes ? formatArrivalTime12() : "",
-      submittedAt: new Date().toISOString()
-    });
-    showThankYou();
-  } catch(err){
-    if (status) status.hidden = true;
-    if (error){
-      error.hidden = false;
-      error.textContent = err && err.name === "AbortError"
-        ? "The connection took too long. Please try again."
-        : (err && err.message ? err.message : "We couldn’t send your response. Please try again.");
-    }
-    if (btn){ btn.disabled = false; btn.textContent = "Try again"; }
-  } finally {
-    submitting = false;
-  }
+    if(!pendingAttempt||pendingAttempt.key!==payloadKey)pendingAttempt={key:payloadKey,id:createSubmissionId()};
+    if(RSVP_ENDPOINT&&RSVP_GUEST_ID){await postRsvpToEndpoint({id:RSVP_GUEST_ID,attending:yes?"Coming":"Not Coming",persons:String(yes?state.guests:0),arrivalTime:yes?formatArrivalTime12():"",submittedAt:new Date().toISOString()});}
+    else{const previewEntry={submissionId:pendingAttempt.id,...payload,submittedAt:new Date().toISOString()};try{const k="libertyGoldenJubileePreviewResponses",saved=JSON.parse(localStorage.getItem(k)||"[]");saved.push(previewEntry);localStorage.setItem(k,JSON.stringify(saved.slice(-100)));}catch(e){}}
+    if(status)status.hidden=true;saveSubmissionLock({response:yes?"Coming":"Not Coming",persons:yes?state.guests:0,arrivalTime:yes?formatArrivalTime12():"",submittedAt:new Date().toISOString()});showThankYou();
+  }catch(err){if(status)status.hidden=true;if(error){error.hidden=false;error.textContent=err&&err.message?err.message:"We couldn’t send your response. Please try again.";}if(btn){btn.disabled=false;btn.textContent="Try again";}}
+  finally{submitting=false;}
 }
 
-document.querySelectorAll("[data-attend]").forEach(b => b.addEventListener("click", () => {
-  if (submitting || confirmed) return;
-  state.attend = b.dataset.attend;
-  document.querySelectorAll("[data-attend]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
-
-  if (state.attend === "yes"){
-    const r = b.getBoundingClientRect();
-    burst(r.left + r.width/2, r.top + r.height/2, 70);
-    setTimeout(() => showResponseStep("arrival"), 520);
-  } else {
-    setTimeout(() => submitSimpleResponse(), 520);
-  }
+document.querySelectorAll("[data-attend]").forEach(b=>b.addEventListener("click",()=>{
+  if(submitting||confirmed)return;state.attend=b.dataset.attend;document.querySelectorAll("[data-attend]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+  if(state.attend==="yes"){const r=b.getBoundingClientRect();burst(r.left+r.width/2,r.top+r.height/2,70);setTimeout(()=>showResponseStep("arrival"),480);}else setTimeout(()=>submitSimpleResponse(),480);
 }));
-
-$("minus").addEventListener("click", () => {
-  if (!submitting && !confirmed && state.guests > 1){ state.guests--; renderCount(); }
-});
-$("plus").addEventListener("click", () => {
-  if (!submitting && !confirmed && state.guests < CONFIG.maxGuests){ state.guests++; renderCount(); }
-});
-const arrivalHour = $("arrivalHour");
-const arrivalMinute = $("arrivalMinute");
-const arrivalHourHand = $("arrivalHourHand");
-const arrivalMinuteHand = $("arrivalMinuteHand");
-const arrivalTimeValue = $("arrivalTimeValue");
-
+$("minus").addEventListener("click",()=>{if(!submitting&&!confirmed&&state.guests>1){state.guests--;renderCount();}});
+$("plus").addEventListener("click",()=>{if(!submitting&&!confirmed&&state.guests<CONFIG.maxGuests){state.guests++;renderCount();}});
+const arrivalHour=$("arrivalHour"),arrivalMinute=$("arrivalMinute"),arrivalHourHand=$("arrivalHourHand"),arrivalMinuteHand=$("arrivalMinuteHand"),arrivalTimeValue=$("arrivalTimeValue");
 function rebuildMinuteOptions(){
-  if (!arrivalHour || !arrivalMinute) return;
-  const hour = Number(arrivalHour.value || 5);
-  const previous = Number(arrivalMinute.value || 30);
-  const startMinute = hour === 5 ? 30 : 0;
-  const endMinute = hour === 8 ? 30 : 59;
-
-  arrivalMinute.replaceChildren();
-  for (let m = startMinute; m <= endMinute; m++){
-    const option = document.createElement("option");
-    option.value = String(m).padStart(2,"0");
-    option.textContent = String(m).padStart(2,"0");
-    arrivalMinute.appendChild(option);
-  }
-
-  const safeMinute = Math.max(startMinute, Math.min(endMinute, previous));
-  arrivalMinute.value = String(safeMinute).padStart(2,"0");
+  if(!arrivalHour||!arrivalMinute)return;const hour=Number(arrivalHour.value||5),previous=Number(arrivalMinute.value||30),startMinute=hour===5?30:0,endMinute=hour===8?30:59;
+  arrivalMinute.replaceChildren();for(let m=startMinute;m<=endMinute;m++){const option=document.createElement("option");option.value=String(m).padStart(2,"0");option.textContent=String(m).padStart(2,"0");arrivalMinute.appendChild(option);}const safeMinute=Math.max(startMinute,Math.min(endMinute,previous));arrivalMinute.value=String(safeMinute).padStart(2,"0");
 }
-
-function formatArrivalTime12(){
-  const h = Number(arrivalHour ? arrivalHour.value : 5);
-  const m = Number(arrivalMinute ? arrivalMinute.value : 30);
-  return `${h}:${String(m).padStart(2,"0")} PM`;
-}
-
+function formatArrivalTime12(){const h=Number(arrivalHour?arrivalHour.value:5),m=Number(arrivalMinute?arrivalMinute.value:30);return`${h}:${String(m).padStart(2,"0")} PM`;}
 function syncArrivalClock(){
-  rebuildMinuteOptions();
-
-  const h12 = Number(arrivalHour ? arrivalHour.value : 5);
-  const m = Number(arrivalMinute ? arrivalMinute.value : 30);
-  const h24 = h12 === 12 ? 12 : h12 + 12;
-
-  state.arrivalTime = `${String(h24).padStart(2,"0")}:${String(m).padStart(2,"0")}`;
-
-  const hourAngle = ((h12 % 12) + m / 60) * 30;
-  const minuteAngle = m * 6;
-  if (arrivalHourHand) arrivalHourHand.style.transform = `rotate(${hourAngle}deg)`;
-  if (arrivalMinuteHand) arrivalMinuteHand.style.transform = `rotate(${minuteAngle}deg)`;
-  if (arrivalTimeValue) arrivalTimeValue.textContent = formatArrivalTime12();
+  rebuildMinuteOptions();const h12=Number(arrivalHour?arrivalHour.value:5),m=Number(arrivalMinute?arrivalMinute.value:30),h24=h12===12?12:h12+12;state.arrivalTime=`${String(h24).padStart(2,"0")}:${String(m).padStart(2,"0")}`;
+  const hourAngle=((h12%12)+m/60)*30,minuteAngle=m*6;if(arrivalHourHand)arrivalHourHand.style.transform=`rotate(${hourAngle}deg)`;if(arrivalMinuteHand)arrivalMinuteHand.style.transform=`rotate(${minuteAngle}deg)`;if(arrivalTimeValue)arrivalTimeValue.textContent=formatArrivalTime12();
 }
+if(arrivalHour)arrivalHour.addEventListener("change",syncArrivalClock);if(arrivalMinute)arrivalMinute.addEventListener("change",syncArrivalClock);
+$("arrivalBackBtn").addEventListener("click",()=>showResponseStep("attend"));$("arrivalContinueBtn").addEventListener("click",()=>{syncArrivalClock();showResponseStep("guests");});
+$("sendResponseBtn").addEventListener("click",submitSimpleResponse);
 
-if (arrivalHour) arrivalHour.addEventListener("change", syncArrivalClock);
-if (arrivalMinute) arrivalMinute.addEventListener("change", syncArrivalClock);
-
-if ($("arrivalBackBtn")) $("arrivalBackBtn").addEventListener("click", () => showResponseStep("attend"));
-if ($("arrivalContinueBtn")) $("arrivalContinueBtn").addEventListener("click", () => {
-  syncArrivalClock();
-  showResponseStep("guests");
-});
-
-syncArrivalClock();
-$("sendResponseBtn").addEventListener("click", submitSimpleResponse);
-
-
-renderCount();
-const existingLocalSubmission = readSubmissionLock();
-if (existingLocalSubmission){
-  showAlreadySubmitted(existingLocalSubmission);
-} else {
-  showResponseStep("attend");
-  checkRemoteSubmission();
-}
-
-try { if (window.lucide) lucide.createIcons(); } catch(e){}
-</script>
-</body>
+syncArrivalClock();renderCount();const existingLocalSubmission=readSubmissionLock();if(existingLocalSubmission)showAlreadySubmitted(existingLocalSubmission);else{showResponseStep("attend");checkRemoteSubmission();}
+try{if(window.lucide)lucide.createIcons();}catch(e){}
+</script></body>
 </html>
