@@ -451,6 +451,28 @@ footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
   #details .venue-copy p{font-size:.84rem}
 }
 
+
+/* RSVP is intentionally unavailable until the Guest ID is verified with Google Sheets. */
+html:not(.rsvp-access-confirmed) #rsvp,
+html:not(.rsvp-access-confirmed) .hero-cta a[href="#rsvp"] {display:none!important}
+/* Invalid or unverifiable IDs: keep the invitation visible, with a separate red notice. */
+#invitationAccessNotice{margin-top:2rem;margin-bottom:1.5rem}
+#invitationAccessNotice .invitation-error{
+  width:100%;max-width:860px;margin:0 auto;
+  padding:clamp(2rem,5vw,3.6rem) 1rem;
+  text-align:center;color:#B3261E;
+}
+#invitationAccessNotice .invitation-error h2{
+  margin:0 auto .8rem;
+  font-family:var(--serif);font-size:clamp(2.1rem,5vw,3.25rem);
+  font-weight:700;letter-spacing:-.025em;line-height:1.15;color:#B3261E;
+}
+#invitationAccessNotice .invitation-error p{
+  margin:0 auto;max-width:42rem;
+  font-family:var(--sans);font-size:clamp(1.05rem,2.3vw,1.3rem);
+  font-weight:500;line-height:1.65;color:#B3261E;
+}
+
 </style>
 </head>
 <body>
@@ -528,9 +550,15 @@ footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
 </div>
 </div>
 
-<section id="rsvp">
+<div class="wrap" id="invitationAccessNotice" hidden>
+<div class="invitation-error" id="invitationError" role="alert" aria-live="assertive">
+  <h2 id="invitationErrorTitle">Invalid Invitation Link</h2>
+  <p id="invitationErrorText">This invitation link is not valid. Please contact Liberty Publications for the correct invitation.</p>
+</div>
+</div>
+<section id="rsvp" hidden>
 <div class="wrap rsvp-wrap">
-<div class="card rsvp-card">
+<div class="card rsvp-card" id="rsvpFormCard" hidden>
 <div class="prog-head"><span id="stepTxt">Step 1 of 3</span><span id="stepName">Attendance</span></div>
 <div class="track"><i id="trackBar"></i></div>
 <div class="step on" data-s="attend">
@@ -602,6 +630,7 @@ footer .contact svg{width:17px;height:17px;color:var(--gold-lt)}
 </div>
 <div aria-hidden="true" class="honeypot"><label for="website">Leave this field empty</label><input autocomplete="off" id="website" name="website" tabindex="-1" type="text"/></div>
 </div>
+
 </div>
 </section>
 </main>
@@ -936,7 +965,7 @@ async function waitForConfirmedResponse(delays){
 }
 
 async function submitSimpleResponse(){
-  if (submitting || confirmed || !state.attend) return;
+  if (submitting || confirmed || !state.attend || !rsvpGuestVerified) return;
   if (!RSVP_GUEST_ID || !RSVP_ENDPOINT){
     showRsvpError('Unable to submit RSVP from this page.');
     return;
@@ -992,31 +1021,65 @@ async function submitSimpleResponse(){
   }
 }
 
+// Only a server-confirmed Guest ID may open the RSVP form.
+// Malformed and non-existent IDs show a red notice instead of any RSVP steps.
+let rsvpGuestVerified=false;
+function showInvitationError(message, title='Invalid Invitation Link'){
+  rsvpGuestVerified=false;
+  document.documentElement.classList.remove('rsvp-access-confirmed');
+  const section=$('rsvp');
+  const notice=$('invitationAccessNotice');
+  if(section) section.hidden=true;
+  if(notice){
+    $('invitationErrorTitle').textContent=title;
+    $('invitationErrorText').textContent=message;
+    notice.hidden=false;
+  }
+}
 async function initializeRsvp(){
+  const section=$('rsvp');
+  const card=$('rsvpFormCard');
+  const notice=$('invitationAccessNotice');
+  const choices=[...document.querySelectorAll('#rsvp [data-attend]')];
+  if(section) section.hidden=true;
+  if(card) card.hidden=true;
+  if(notice) notice.hidden=true;
+  document.documentElement.classList.remove('rsvp-access-confirmed');
   showResponseStep('attend');
-  // Keep a general invitation view clean: no missing-link notice on page load.
-  // Submissions still require a valid guest ID and a server-confirmed save.
-  if (!RSVP_GUEST_ID || !RSVP_ENDPOINT){
-    showAttendStatus('');
+
+  // Without an ID, show the public invitation page only, never the RSVP section.
+  if(!RSVP_PARAMS.has('id')) return;
+  // Empty, malformed, and unknown IDs cannot access the RSVP steps.
+  if(!/^G\d{4,6}$/i.test(RSVP_GUEST_ID)){
+    showInvitationError('This invitation link is not valid. Please contact Liberty Publications for the correct invitation.');
     return;
   }
-  const choices=[...document.querySelectorAll('#rsvp [data-attend]')];
+  if(!RSVP_ENDPOINT){
+    showInvitationError('We could not verify this invitation right now. Please try again later.','Unable to Verify Invitation');
+    return;
+  }
   choices.forEach(button=>button.disabled=true);
-  showAttendStatus('Verifying your invitation…',false);
   const cached=readSubmissionLock();
   const result=await checkRemoteSubmission();
-  choices.forEach(button=>button.disabled=false);
-  if(result?.ok && result.submitted){
-    saveSubmissionLock(result);
-    showAlreadySubmitted(result);
-  }else if(result?.ok && !result.submitted){
-    // An old website version showed Thank You before the server saved anything.
-    // Clear such unverified local locks automatically; the guest may submit again.
-    if(cached) clearSubmissionLock();
-    showAttendStatus('');
+  if(result?.ok===true){
+    rsvpGuestVerified=true;
+    if(card) card.hidden=false;
+    if(section) section.hidden=false;
+    document.documentElement.classList.add('rsvp-access-confirmed');
+    if(notice) notice.hidden=true;
+    choices.forEach(button=>button.disabled=false);
+    if(result.submitted){
+      saveSubmissionLock(result);
+      showAlreadySubmitted(result);
+    }else{
+      // An old local success must not hide an unsubmitted RSVP.
+      if(cached) clearSubmissionLock();
+      showAttendStatus('');
+    }
+  }else if(/(?:guest\s*id\s*not\s*found|invalid\s*guest\s*id|guest\s*not\s*found)/i.test(result?.error||'')){
+    showInvitationError('This invitation link is not valid. Please contact Liberty Publications for the correct invitation.');
   }else{
-    // Network check failed. Never assume localStorage proves the server has saved a response.
-    showAttendStatus(result?.error||'Unable to verify RSVP status. Please try again.',true);
+    showInvitationError('We could not verify your invitation right now. Please try again later.','Unable to Verify Invitation');
   }
 }
 
